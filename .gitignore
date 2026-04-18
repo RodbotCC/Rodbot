@@ -8,6 +8,7 @@
 !CLAUDE.md
 !ledgers/
 !intake/
+!scripts/
 
 # Inside tracked dirs, still exclude noisy artifacts.
 .DS_Store

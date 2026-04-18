@@ -50,6 +50,26 @@ TCL entries must include: `date`, `operator`, `assistants`, `status`, and the se
 
 ---
 
+## 3.5. The intake watcher — nothing lands on this machine without being seen
+
+A `SessionStart` hook runs `scripts/audit_intake.sh` on every Claude Code boot. It scans `Downloads/`, `Desktop/`, `Documents/`, `Pictures/` for files not yet recorded in `ledgers/intake_state.json`, and injects the pending list into session context.
+
+**Your job when the queue is non-empty:**
+
+1. Read `scripts/triage_protocol.md` (it may have been updated since your last session).
+2. For each pending file, apply the rules in order (first match wins). Move, rename, or defer per the rules.
+3. **Screenshots require a vision audit.** Read the image. Produce a `{title, summary, slug_hint, contains_sensitive, tags}` JSON. Rename to `intake/screenshots/YYYY-MM/screenshot-YYYY-MM-DD-HHMM-<slug>.png` and write a matching `.json` sidecar.
+4. Append one line per file to `ledgers/intake_events.jsonl` following the schema in `ledgers/intake_ledger.md`.
+5. Add a sweep summary to `ledgers/intake_ledger.md` under "## Sweeps".
+6. Update `ledgers/intake_state.json`: set `last_swept[dir]` to the sweep timestamp, and append handled paths to `known_handled_paths`.
+7. Log the whole triage as a TCL entry if anything non-trivial happened (new rule added, deferred items needing follow-up, surprise file types).
+
+**When a file's type doesn't match any rule:** disposition = `deferred`, log it, surface it to the operator. Do not invent new rules silently — accumulate evidence first, then update `scripts/triage_protocol.md` explicitly in a TCL entry.
+
+**Sensitive screenshots** (passwords, tokens, private DMs, identifying info not already public): move locally but gitignore; note reason in sidecar. Never push a sensitive image to the public repo.
+
+---
+
 ## 4. Operating principles (operator preferences, memorized)
 
 1. **Build one piece of functionality at a time.** Build → test → certify → log TCL → update directory + contents ledgers → commit → next. No batching. (Memory: `feedback_build_style.md`)
@@ -70,7 +90,7 @@ TCL entries must include: `date`, `operator`, `assistants`, `status`, and the se
 - **Branch:** `main`. Always push after each session commit.
 - **Identity:** `user.name = RodbotCC`, `user.email = tech@comeketocatering.com` (repo-local config).
 - **Auth:** `gh` CLI, authed as `RodbotCC`.
-- **Scope:** `.gitignore` is **allowlist**-style — ignores everything in `$HOME` except `README.md`, `ledgers/`, `intake/`. Do not add entries to the allowlist casually; `Library/`, `Desktop/`, `Downloads/`, `Documents/` are deliberately invisible to git. Intake material goes in `intake/YYYY-MM-DD-<slug>/`, never in `Downloads/`.
+- **Scope:** `.gitignore` is **allowlist**-style — ignores everything in `$HOME` except `README.md`, `CLAUDE.md`, `ledgers/`, `intake/`, `scripts/`. Do not add entries to the allowlist casually; `Library/`, `Desktop/`, `Downloads/`, `Documents/`, `Pictures/` are deliberately invisible to git. Intake material goes in `intake/YYYY-MM-DD-<slug>/`, never in `Downloads/`.
 - **Commit template:**
   ```
   Session NNNN: <short description>

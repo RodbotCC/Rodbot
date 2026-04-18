@@ -31,3 +31,11 @@ Update rule: any file created/renamed/deleted → update in the same session it 
 - `ledgers/contents_ledger.md` — this file; map of file purposes.
 - `ledgers/ratio_lattice.md` — scoring system relating ledger entries to each other (v0 conventions).
 - `ledgers/north_star.md` — the goals RodBot is built to achieve; NS-01..NS-09 drafted, pending operator ratification.
+- `ledgers/TCL/0008-intake-watcher.md` — builds the intake watcher: detection script, triage protocol, SessionStart hook, first sweep.
+- `ledgers/intake_ledger.md` — narrative index of every intake sweep (grouped events, rationale, open questions).
+- `ledgers/intake_events.jsonl` — append-only JSONL event log; one object per file triaged.
+- `ledgers/intake_state.json` — state file for the watcher (watched dirs, last_swept timestamps, known_handled_paths).
+- `scripts/triage_protocol.md` — v0 rules for categorizing files landing in watched dirs (hard-noise, screenshots, business source, installers, etc.).
+- `scripts/audit_intake.sh` — detection script; enumerates pending files and emits SessionStart `additionalContext` JSON.
+- `intake/screenshots/2026-04/screenshot-2026-04-18-1049-claude-rodbot-setup-questions.{png,json}` — Claude Code session asking RodBot setup clarifying questions; sidecar holds title/summary/tags.
+- `intake/screenshots/2026-04/screenshot-2026-04-18-1058-rodbot-origin-diagram.{png,json}` — whiteboard timeline of RodBot's birth arc; sidecar holds title/summary/tags.

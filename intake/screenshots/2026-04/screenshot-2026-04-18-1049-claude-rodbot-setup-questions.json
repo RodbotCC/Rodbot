@@ -1,0 +1,11 @@
+{
+  "title": "Claude Code session — open questions on RodBot intake watcher setup",
+  "summary": "Screenshot of a Claude Code session asking four clarifying questions about directory coverage, move-vs-propose behavior, backfill of existing files, and where the audit script should live.",
+  "slug_hint": "claude-rodbot-setup-questions",
+  "contains_sensitive": false,
+  "tags": ["claude-code", "rodbot", "intake-watcher", "setup", "session-0008"],
+  "original_name": "CleanShot 2026-04-18 at 10.49.00@2x.png",
+  "original_path": "/Users/rodbot/Desktop/CleanShot 2026-04-18 at 10.49.00@2x.png",
+  "captured_at": "2026-04-18T10:49:00Z",
+  "vision_audited_at": "2026-04-18T15:22:00Z"
+}
