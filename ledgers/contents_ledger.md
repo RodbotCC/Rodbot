@@ -37,8 +37,9 @@ Update rule: any file created/renamed/deleted → update in the same session it 
 - `ledgers/intake_state.json` — state file for the watcher (watched dirs, last_swept timestamps, known_handled_paths).
 - `scripts/triage_protocol.md` — v0 rules for categorizing files landing in watched dirs (hard-noise, screenshots, business source, installers, etc.).
 - `scripts/audit_intake.sh` — detection script; enumerates pending files and emits SessionStart `additionalContext` JSON.
-- `intake/screenshots/2026-04/screenshot-2026-04-18-1049-claude-rodbot-setup-questions.{png,json}` — Claude Code session asking RodBot setup clarifying questions; sidecar holds title/summary/tags.
-- `intake/screenshots/2026-04/screenshot-2026-04-18-1058-rodbot-origin-diagram.{png,json}` — whiteboard timeline of RodBot's birth arc; sidecar holds title/summary/tags.
+- `intake/screenshots/2026-04/claude-rodbot-setup-questions.{png,json}` — Claude Code session asking RodBot setup clarifying questions; sidecar holds title/summary/tags.
+- `intake/screenshots/2026-04/rodbot-origin-diagram.{png,json}` — whiteboard timeline of RodBot's birth arc; sidecar holds title/summary/tags.
 - `ledgers/TCL/0009-pieces-ingest.md` — sets up the `pieces/` subsystem and ingests the first drop of 10 Pieces exports.
+- `ledgers/TCL/0010-screenshot-naming.md` — drops the `screenshot-YYYY-MM-DD-HHMM-` prefix from screenshot filenames; the slug is now the whole name.
 - `ledgers/pieces_memory_ledger.md` — narrative index of Pieces exports ingested; describes the third-party memory feed and directory layout.
 - `pieces/exports/2026-04-18/2026-04-18-HHMM-<slug>.md` — 10 Pieces-curated session summaries covering the 2026-04-17/18 bootstrap arc (project-initiation/initialization, system-setup, infrastructure-setup, ai-setup + ai-setup-complete, setup-ai-comm, project-setup + project-setup-analysis, ledger-ai-files).

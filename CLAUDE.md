@@ -60,7 +60,7 @@ A `SessionStart` hook runs `scripts/audit_intake.sh` on every Claude Code boot. 
 
 1. Read `scripts/triage_protocol.md` (it may have been updated since your last session).
 2. For each pending file, apply the rules in order (first match wins). Move, rename, or defer per the rules.
-3. **Screenshots require a vision audit.** Read the image. Produce a `{title, summary, slug_hint, contains_sensitive, tags}` JSON. Rename to `intake/screenshots/YYYY-MM/screenshot-YYYY-MM-DD-HHMM-<slug>.png` and write a matching `.json` sidecar.
+3. **Screenshots require a vision audit.** Read the image. Produce a `{title, summary, slug_hint, contains_sensitive, tags}` JSON. Rename to `intake/screenshots/YYYY-MM/<slug>.png` and write a matching `.json` sidecar. No `screenshot-` prefix or date in the filename — the month folder + file mtime carry that. On slug collision, append `-2`, `-3`, etc.
 4. Append one line per file to `ledgers/intake_events.jsonl` following the schema in `ledgers/intake_ledger.md`.
 5. Add a sweep summary to `ledgers/intake_ledger.md` under "## Sweeps".
 6. Update `ledgers/intake_state.json`: set `last_swept[dir]` to the sweep timestamp, and append handled paths to `known_handled_paths`.

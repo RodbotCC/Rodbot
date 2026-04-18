@@ -24,15 +24,15 @@ Detection: filename starts with `CleanShot` (any case), OR is a `.png`/`.jpg`/`.
 
 Action: **vision audit** (Claude reads the image and writes a short title + 1-sentence summary), then move to:
 ```
-intake/screenshots/YYYY-MM/screenshot-YYYY-MM-DD-HHMM-<slug>.png
+intake/screenshots/YYYY-MM/<slug>.png
 ```
-where `<slug>` is a 2–4 word kebab-case description derived from the vision audit.
+where `<slug>` is a 2–4 word kebab-case description derived from the vision audit. No `screenshot-` prefix, no date in the filename — the parent directory encodes the month, and the file's mtime is authoritative for the exact capture time. If a slug collides with an existing file in the same month folder, append `-2`, `-3`, etc.
 
 Also write a sidecar JSON next to the moved file:
 ```
-intake/screenshots/YYYY-MM/screenshot-YYYY-MM-DD-HHMM-<slug>.json
+intake/screenshots/YYYY-MM/<slug>.json
 ```
-containing `{title, summary, original_name, original_path, captured_at, vision_audited_at}`.
+containing `{title, summary, original_name, original_path, captured_at, vision_audited_at}`. The sidecar's `captured_at` is the authoritative timestamp; the filename intentionally carries only the content.
 
 ### 2.5. Pieces exports
 
