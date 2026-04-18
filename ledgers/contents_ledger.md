@@ -25,6 +25,16 @@ Update rule: any file created/renamed/deleted → update in the same session it 
 - `intake/2026-04-17-bootstrap/pasted-text-1.txt`, `pasted-text-2.txt` — two clipboard-sourced notes from the bootstrap upload.
 - `intake/2026-04-17-bootstrap/raw-ai-mission-control.html` — "RAW AI Mission Control" dashboard concept from prior iterations; informs any future unified-weekly-view design.
 - `.gitignore` — allowlist config; ignores everything in `$HOME` except core tracked roots (`README.md`, `AGENTS.md`, `CLAUDE.md`, `ledgers/`, `intake/`, `scripts/`, `pieces/`).
+- `scripts/moves_phase1_detector.sh` — phase-1 filesystem detector; runs `fswatch` on an allowlist and appends raw events to `ledgers/moves/events.log`.
+- `scripts/moves_phase2_debouncer.sh` — phase-2 stream processor; tails `events.log`, debounces/coalesces file events, filters hard-noise, and writes settled JSONL lines to `ledgers/moves/settled.log`.
+- `scripts/moves_phase3_inbox_writer.sh` — phase-3 inbox writer; reads `settled.log` by byte cursor, hashes files, deduplicates, and writes atomic `ledgers/moves/inbox/<id>.json` jobs.
+- `scripts/launchd/com.rodbot.moves.phase1-detector.plist` — launchd LaunchAgent definition for phase-1 detector autostart/restart.
+- `scripts/launchd/com.rodbot.moves.phase2-debouncer.plist` — launchd LaunchAgent definition for phase-2 debouncer autostart/restart.
+- `scripts/launchd/com.rodbot.moves.phase3-inbox-writer.plist` — launchd LaunchAgent definition for phase-3 inbox-writer autostart/restart.
+- `scripts/setup_moves_phase1_launchagent.sh` — helper to install/reload the phase-1 LaunchAgent into `~/Library/LaunchAgents/`.
+- `scripts/setup_moves_phase2_launchagent.sh` — helper to install/reload the phase-2 LaunchAgent into `~/Library/LaunchAgents/`.
+- `scripts/setup_moves_phase3_launchagent.sh` — helper to install/reload the phase-3 LaunchAgent into `~/Library/LaunchAgents/`.
+- `ledgers/moves/README.md` — phase status, kill-switch behavior, and runtime artifact map for the filesystem-trigger pipeline.
 - `intake/2026-04-17-bootstrap/⭐SALES PLAYBOOK V2.0 - Comeketo Catering.txt` — Comeketo's inbound sales playbook V2.0 (SDR/Closer roles, 5-min speed-to-lead, tasting pipeline, Close CRM SOPs).
 - `intake/2026-04-17-bootstrap/Tasting.txt` — Rodrigo's narrated walkthrough of the Comeketo tasting experience.
 - `intake/2026-04-17-bootstrap/Extraction.txt` — 33-point analysis of the business's current operating shape; key framing: "manually overextended, not broken."
@@ -43,5 +53,6 @@ Update rule: any file created/renamed/deleted → update in the same session it 
 - `ledgers/TCL/0009-pieces-ingest.md` — sets up the `pieces/` subsystem and ingests the first drop of 10 Pieces exports.
 - `ledgers/TCL/0010-screenshot-naming.md` — drops the `screenshot-YYYY-MM-DD-HHMM-` prefix from screenshot filenames; the slug is now the whole name.
 - `ledgers/TCL/0011-north-stars-10-18.md` — drafts NS-10..NS-18 in RodBot-native terms; separates from Delta-side experimental architecture; all pending ratification.
+- `ledgers/TCL/0012-moves-pipeline-scaffold.md` — scaffolds phases 1–3 of the filesystem-trigger pipeline (detector, debouncer, inbox-writer) built by Cursor from Claude Code specs; propagates no-date-folders and move-not-copy preferences into the triage protocol; live bring-up and soak pending.
 - `ledgers/pieces_memory_ledger.md` — narrative index of Pieces exports ingested; describes the third-party memory feed and directory layout.
 - `pieces/exports/2026-04-18/2026-04-18-HHMM-<slug>.md` — 10 Pieces-curated session summaries covering the 2026-04-17/18 bootstrap arc (project-initiation/initialization, system-setup, infrastructure-setup, ai-setup + ai-setup-complete, setup-ai-comm, project-setup + project-setup-analysis, ledger-ai-files).

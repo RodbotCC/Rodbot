@@ -108,7 +108,7 @@ Downstream layers (`normalized/`, `packets/`, `visuals/`) are deliberately defer
 - **Branch:** `main`. Always push after each session commit.
 - **Identity:** `user.name = RodbotCC`, `user.email = tech@comeketocatering.com` (repo-local config).
 - **Auth:** `gh` CLI, authed as `RodbotCC`.
-- **Scope:** `.gitignore` is **allowlist**-style — ignores everything in `$HOME` except `README.md`, `AGENTS.md`, `CLAUDE.md`, `ledgers/`, `intake/`, `scripts/`, `pieces/`. Do not add entries to the allowlist casually; `Library/`, `Desktop/`, `Downloads/`, `Documents/`, `Pictures/` are deliberately invisible to git. Intake material goes in `intake/YYYY-MM-DD-<slug>/`, never in `Downloads/`.
+- **Scope:** `.gitignore` is **allowlist**-style — ignores everything in `$HOME` except `README.md`, `AGENTS.md`, `CLAUDE.md`, `ledgers/`, `intake/`, `scripts/`, `pieces/`. Do not add entries to the allowlist casually; `Library/`, `Desktop/`, `Downloads/`, `Documents/`, `Pictures/` are deliberately invisible to git. Intake material goes in `intake/<slug>/` (slug-led, no date prefix), never in `Downloads/`.
 - **Commit template:**
   ```
   Session NNNN: <short description>
