@@ -37,7 +37,8 @@ All under `~/ledgers/`:
 
 | Ledger | File(s) | When to update |
 |---|---|---|
-| **TCL — Temporal Continuity Ledger** | `TCL/NNNN-slug.md`, one per session | Every non-trivial session. Append-only. See `TCL/README.md` for the entry template. |
+| **TCL — Temporal Continuity Ledger** | `TCL/NNNN-slug.md`, one per action-unit | Every non-trivial commit-sized action. Append-only. See `TCL/README.md` for the entry template. |
+| **Sessions (diary)** | `sessions/NNNN-slug.md`, one per working period | End of a working period. Coarser than TCL — tells the arc of the whole sitting. See `sessions/README.md`. |
 | **Directory Ledger** | `directory_ledger.md` | Any new directory created → add a line same session. |
 | **Contents Ledger** | `contents_ledger.md` | Any file created / renamed / deleted → update same session. |
 | **Ratio Lattice Ledger** | `ratio_lattice.md` | When you score relationships between entries. v0 conventions only; evolve as we go. |

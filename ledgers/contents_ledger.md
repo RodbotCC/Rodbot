@@ -17,6 +17,8 @@ Update rule: any file created/renamed/deleted → update in the same session it 
 - `ledgers/TCL/0005-github-live.md` — repo under version control at RodbotCC/Rodbot; allowlist .gitignore; flags tracked-`Downloads/` divergence risk.
 - `ledgers/TCL/0006-downloads-to-intake.md` — resolves the Downloads divergence: moves intake material into `intake/` and removes `Downloads/` from the repo.
 - `ledgers/TCL/0007-claude-md-global.md` — writes global CLAUDE.md orientation manual; symlinked from ~/.claude/CLAUDE.md, tracked at repo root.
+- `ledgers/sessions/README.md` — defines the session-entry granularity (diary, one per working period) as distinct from TCL (commit log, one per action-unit).
+- `ledgers/sessions/0001-birth-and-bootstrap.md` — narrative of the full 2026-04-17/18 bootstrap session; covers TCL 0001–0007 as one arc.
 - `CLAUDE.md` — orientation manual loaded into every Claude Code session on this machine (via symlink at ~/.claude/CLAUDE.md). Canonical source of truth for operating rules on RodBot.
 - `intake/2026-04-17-bootstrap/extraction-section-*.txt` — seven per-section extracts of the business Extraction doc (visual-readability, jobs-events-detailed, overall-shape, sales-lead-mgmt, scheduling, calendar, weekly-labor).
 - `intake/2026-04-17-bootstrap/pasted-text-1.txt`, `pasted-text-2.txt` — two clipboard-sourced notes from the bootstrap upload.
