@@ -5,6 +5,7 @@
 # ...then explicitly re-include what RodBot tracks.
 !.gitignore
 !README.md
+!CLAUDE.md
 !ledgers/
 !intake/
 
