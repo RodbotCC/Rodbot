@@ -34,6 +34,12 @@ intake/screenshots/YYYY-MM/screenshot-YYYY-MM-DD-HHMM-<slug>.json
 ```
 containing `{title, summary, original_name, original_path, captured_at, vision_audited_at}`.
 
+### 2.5. Pieces exports
+
+Detection: filename matches `pieces_*.md` OR first line contains `*Shared Summary from Pieces (https://pieces.app)`.
+
+Action: move to `pieces/exports/YYYY-MM-DD/YYYY-MM-DD-HHMM-<slug>.md`, where `<slug>` is derived from the original filename (strip `pieces_rodbot_` prefix, convert `_` to `-`) and `HHMM` is the file's mtime. Then append a ledger note to `ledgers/pieces_memory_ledger.md` under the relevant date section (create one if needed). No vision audit; no parsing — raw markdown only for v0. Downstream normalization/packets/visuals are deferred per the draft-and-iterate principle.
+
 ### 3. Business source material (playbooks, SOPs, extractions, exports)
 
 Detection: `.txt`, `.md`, `.pdf`, `.csv`, `.xlsx` that (a) is clearly Comeketo / RodBot-relevant by filename or first-page content, or (b) is a data export from Close, ClickUp, Google Sheets, Slack, etc.

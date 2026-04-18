@@ -43,6 +43,8 @@ All under `~/ledgers/`:
 | **Contents Ledger** | `contents_ledger.md` | Any file created / renamed / deleted → update same session. |
 | **Ratio Lattice Ledger** | `ratio_lattice.md` | When you score relationships between entries. v0 conventions only; evolve as we go. |
 | **North Star Ledger** | `north_star.md` | When goals change, progress moves, or importance is rewritten. |
+| **Intake Ledger** | `intake_ledger.md` + `intake_events.jsonl` + `intake_state.json` | Every intake sweep. Event log is append-only JSONL; ledger is the narrative summary. See §3.5. |
+| **Pieces Memory Ledger** | `pieces_memory_ledger.md` | When Pieces exports are ingested into `pieces/exports/`. See §3.6. |
 
 **Rule:** when in doubt, update. A ledger that's a session out of date is still useful. A ledger that's two weeks out of date is a liability.
 
@@ -70,6 +72,21 @@ A `SessionStart` hook runs `scripts/audit_intake.sh` on every Claude Code boot. 
 
 ---
 
+## 3.6. Pieces memory — third-party continuity feed
+
+Pieces (https://pieces.app) runs continuously on this machine and curates cross-tool activity into structured markdown summaries. When the operator exports them, the intake watcher's rule 2.5 (`scripts/triage_protocol.md`) routes them to `pieces/exports/YYYY-MM-DD/YYYY-MM-DD-HHMM-<slug>.md`.
+
+**Directory layout:**
+```
+pieces/
+  exports/          # raw markdown (the only layer built in v0)
+```
+Downstream layers (`normalized/`, `packets/`, `visuals/`) are deliberately deferred — no consumer yet. Raw exports are grep-queryable today; build storage when something needs it.
+
+**When you ingest a new export:** log it in `ledgers/pieces_memory_ledger.md` under the date section. Pieces summaries overlap with our TCL + sessions but carry cross-tool detail (Cursor, Warp, Finder, ChatGPT, CleanShot settings, etc.) that file-based ledgers don't — so the value is in the *overlap*, not replacement.
+
+---
+
 ## 4. Operating principles (operator preferences, memorized)
 
 1. **Build one piece of functionality at a time.** Build → test → certify → log TCL → update directory + contents ledgers → commit → next. No batching. (Memory: `feedback_build_style.md`)
@@ -90,7 +107,7 @@ A `SessionStart` hook runs `scripts/audit_intake.sh` on every Claude Code boot. 
 - **Branch:** `main`. Always push after each session commit.
 - **Identity:** `user.name = RodbotCC`, `user.email = tech@comeketocatering.com` (repo-local config).
 - **Auth:** `gh` CLI, authed as `RodbotCC`.
-- **Scope:** `.gitignore` is **allowlist**-style — ignores everything in `$HOME` except `README.md`, `CLAUDE.md`, `ledgers/`, `intake/`, `scripts/`. Do not add entries to the allowlist casually; `Library/`, `Desktop/`, `Downloads/`, `Documents/`, `Pictures/` are deliberately invisible to git. Intake material goes in `intake/YYYY-MM-DD-<slug>/`, never in `Downloads/`.
+- **Scope:** `.gitignore` is **allowlist**-style — ignores everything in `$HOME` except `README.md`, `CLAUDE.md`, `ledgers/`, `intake/`, `scripts/`, `pieces/`. Do not add entries to the allowlist casually; `Library/`, `Desktop/`, `Downloads/`, `Documents/`, `Pictures/` are deliberately invisible to git. Intake material goes in `intake/YYYY-MM-DD-<slug>/`, never in `Downloads/`.
 - **Commit template:**
   ```
   Session NNNN: <short description>

@@ -50,6 +50,17 @@ Append-only log of every file that entered a watched directory (`Downloads/`, `D
 
 -->
 
+### Sweep 2026-04-18-16-55 — session 0009
+
+- **Watched:** Downloads (others still clean from last sweep)
+- **New items seen:** 10
+- **Triaged this sweep:**
+  - 10x `Downloads/pieces_rodbot_*.md` → **moved** → `pieces/exports/2026-04-18/2026-04-18-HHMM-<slug>.md` (one per file). All are Pieces-curated session summaries from 12:48–12:49 on 2026-04-18.
+- **Protocol change:** Added rule 2.5 to `scripts/triage_protocol.md` for Pieces exports (routes to `pieces/exports/YYYY-MM-DD/`, no vision audit, raw markdown for v0).
+- **New subsystem:** `pieces/` top-level directory added to `.gitignore` allowlist. New ledger `ledgers/pieces_memory_ledger.md` tracks Pieces imports as a third-party memory feed.
+- **Bug fix:** `audit_intake.sh` was crashing with `set -u` when the pending array was empty. Fixed with `${pending[@]+...}` default-empty idiom.
+- **Notes:** Downstream layers (`pieces/normalized/`, `pieces/packets/`, `pieces/visuals/`) deferred per draft-and-iterate — no consumer yet. Raw `exports/` is queryable via grep today.
+
 ### Sweep 2026-04-18-15-22 — session 0008
 
 - **Watched:** Downloads, Desktop, Documents, Pictures

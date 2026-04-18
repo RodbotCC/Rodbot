@@ -9,6 +9,7 @@
 !ledgers/
 !intake/
 !scripts/
+!pieces/
 
 # Inside tracked dirs, still exclude noisy artifacts.
 .DS_Store

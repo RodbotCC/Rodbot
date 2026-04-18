@@ -80,7 +80,7 @@ count=${#pending[@]}
 
 if [ "$MODE" = "--list" ]; then
   echo "Sweep $now_iso — $count pending items"
-  for p in "${pending[@]}"; do
+  for p in "${pending[@]+"${pending[@]}"}"; do
     sz="$(stat -f%z "$p" 2>/dev/null || echo 0)"
     mt="$(stat -f%Sm -t '%Y-%m-%dT%H:%M:%SZ' "$p" 2>/dev/null || echo '?')"
     printf '  %s  (%s bytes, mtime %s)\n' "$p" "$sz" "$mt"
@@ -94,7 +94,7 @@ if [ "$count" -eq 0 ]; then
 else
   # Build a human-readable list of pending paths, one per line
   paths_block=""
-  for p in "${pending[@]}"; do
+  for p in "${pending[@]+"${pending[@]}"}"; do
     sz="$(stat -f%z "$p" 2>/dev/null || echo 0)"
     mt="$(stat -f%Sm -t '%Y-%m-%dT%H:%M:%SZ' "$p" 2>/dev/null || echo '?')"
     paths_block="${paths_block}  - ${p} (${sz}B, mtime ${mt})\n"

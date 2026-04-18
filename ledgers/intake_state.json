@@ -7,7 +7,7 @@
     "/Users/rodbot/Pictures"
   ],
   "last_swept": {
-    "/Users/rodbot/Downloads": "2026-04-18T15:22:00Z",
+    "/Users/rodbot/Downloads": "2026-04-18T16:55:00Z",
     "/Users/rodbot/Desktop": "2026-04-18T15:22:00Z",
     "/Users/rodbot/Documents": "2026-04-18T15:22:00Z",
     "/Users/rodbot/Pictures": "2026-04-18T15:22:00Z"
@@ -15,7 +15,17 @@
   "known_handled_paths": [
     "/Users/rodbot/Downloads/⭐SALES PLAYBOOK V2.0 - Comeketo Catering.txt",
     "/Users/rodbot/Desktop/CleanShot 2026-04-18 at 10.49.00@2x.png",
-    "/Users/rodbot/Desktop/CleanShot 2026-04-18 at 10.58.43@2x.png"
+    "/Users/rodbot/Desktop/CleanShot 2026-04-18 at 10.58.43@2x.png",
+    "/Users/rodbot/Downloads/pieces_rodbot_infrastructure_setup.md",
+    "/Users/rodbot/Downloads/pieces_rodbot_project_initialization.md",
+    "/Users/rodbot/Downloads/pieces_rodbot_project_initiation.md",
+    "/Users/rodbot/Downloads/pieces_rodbot_system_setup.md",
+    "/Users/rodbot/Downloads/pieces_rodbot_ai_setup.md",
+    "/Users/rodbot/Downloads/pieces_rodbot_ai_setup_complete.md",
+    "/Users/rodbot/Downloads/pieces_rodbot_setup_ai_comm.md",
+    "/Users/rodbot/Downloads/pieces_rodbot_project_setup.md",
+    "/Users/rodbot/Downloads/pieces_rodbot_project_setup_analysis.md",
+    "/Users/rodbot/Downloads/pieces_rodbot_ledger_ai_files.md"
   ],
   "notes": "`last_swept` is ISO timestamp of the most recent sweep that completed for each dir. `known_handled_paths` is append-only list of paths we've already recorded dispositions for (used to skip files that still exist at their original location, e.g. `left-in-place` dispositions)."
 }

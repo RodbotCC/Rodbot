@@ -17,6 +17,9 @@ Update rule: any `mkdir` or new top-level folder → add an entry in the same co
 - `/Users/rodbot/intake/screenshots/` — all triaged screenshots, subfoldered by capture month.
 - `/Users/rodbot/intake/screenshots/2026-04/` — April 2026 screenshots, named `screenshot-YYYY-MM-DD-HHMM-<slug>.png` with matching `.json` sidecars.
 - `/Users/rodbot/scripts/` — operational shell scripts and protocol docs (e.g. `audit_intake.sh`, `triage_protocol.md`).
+- `/Users/rodbot/pieces/` — Pieces memory ingest subsystem; third-party activity summaries exported from the Pieces app.
+- `/Users/rodbot/pieces/exports/` — raw markdown exports from Pieces, subfoldered by capture date.
+- `/Users/rodbot/pieces/exports/2026-04-18/` — first drop: 10 bootstrap-era session summaries.
 
 ## Out-of-scope (for now)
 
