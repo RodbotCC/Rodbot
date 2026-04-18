@@ -21,11 +21,12 @@ This machine **is RodBot**. It is not a normal user account named "rodbot." The 
 When you wake up in a new thread, read in this order before taking action:
 
 1. This file (`~/.claude/CLAUDE.md`).
-2. `~/.claude/projects/-Users-rodbot/memory/MEMORY.md` — memory index; follow the links you need.
-3. `~/README.md` — project principles and ledger map.
-4. The **last three TCL entries** — `ls -t ~/ledgers/TCL/*.md | head -3` — so you know where we left off.
-5. `~/ledgers/north_star.md` — the goals currently in play.
-6. `~/ledgers/contents_ledger.md` if you need to know what any specific file is.
+2. `~/AGENTS.md` — Cursor-only operating guide (read for cross-tool continuity, not as Claude's own contract).
+3. `~/.claude/projects/-Users-rodbot/memory/MEMORY.md` — memory index; follow the links you need.
+4. `~/README.md` — project principles and ledger map.
+5. The **last three TCL entries** — `ls -t ~/ledgers/TCL/*.md | head -3` — so you know where we left off.
+6. `~/ledgers/north_star.md` — the goals currently in play.
+7. `~/ledgers/contents_ledger.md` if you need to know what any specific file is.
 
 Don't reread the `intake/` files on every session — they are large and don't change. Memory file `project_comeketo.md` summarizes them.
 
@@ -107,7 +108,7 @@ Downstream layers (`normalized/`, `packets/`, `visuals/`) are deliberately defer
 - **Branch:** `main`. Always push after each session commit.
 - **Identity:** `user.name = RodbotCC`, `user.email = tech@comeketocatering.com` (repo-local config).
 - **Auth:** `gh` CLI, authed as `RodbotCC`.
-- **Scope:** `.gitignore` is **allowlist**-style — ignores everything in `$HOME` except `README.md`, `CLAUDE.md`, `ledgers/`, `intake/`, `scripts/`, `pieces/`. Do not add entries to the allowlist casually; `Library/`, `Desktop/`, `Downloads/`, `Documents/`, `Pictures/` are deliberately invisible to git. Intake material goes in `intake/YYYY-MM-DD-<slug>/`, never in `Downloads/`.
+- **Scope:** `.gitignore` is **allowlist**-style — ignores everything in `$HOME` except `README.md`, `AGENTS.md`, `CLAUDE.md`, `ledgers/`, `intake/`, `scripts/`, `pieces/`. Do not add entries to the allowlist casually; `Library/`, `Desktop/`, `Downloads/`, `Documents/`, `Pictures/` are deliberately invisible to git. Intake material goes in `intake/YYYY-MM-DD-<slug>/`, never in `Downloads/`.
 - **Commit template:**
   ```
   Session NNNN: <short description>
@@ -131,10 +132,15 @@ Any new MCP server added to `~/.claude.json` requires a Claude Code restart to l
 
 ## 7. The North Stars (draft, pending ratification)
 
-Live in `~/ledgers/north_star.md`. Nine drafted 2026-04-17 (NS-01..NS-09), clustered as:
+Live in `~/ledgers/north_star.md`. Eighteen drafted (NS-01..NS-09 on 2026-04-17, NS-10..NS-18 on 2026-04-18), clustered as:
 - **Revenue-side:** NS-01 speed-to-lead · NS-02 tasting funnel · NS-03 venue/planner ops · NS-07 social engine
 - **Operating-surface:** NS-04 Close-as-authority · NS-05 unified weekly view · NS-06 Google/Outlook de-fragmentation
+- **Awareness layer:** NS-10 shared op awareness · NS-11 queryable mainframe · NS-13 delta anomaly detection
+- **Trust layer:** NS-12 style-aware drafting · NS-14 correction-driven trust
+- **Execution/architecture:** NS-15 directory-level domain intel · NS-16 trigger bus · NS-17 observable automation · NS-18 durable replayable execution
 - **Enabling/meta:** NS-08 RodBot syndication · NS-09 templatable reference model
+
+NS-10..NS-18 rhyme with experimental Delta-side architecture the operator is building separately — **those internals are not RodBot doctrine.** These NSes are adopted here as principles; any Delta port happens deliberately through intake + TCL.
 
 When evaluating whether to do a thing, weigh it against these. When two paths are equivalent, prefer the one that advances the higher-importance North Star.
 
@@ -169,7 +175,7 @@ Whenever a TCL entry's `Next` section lists work that doesn't get done in that s
 - **Before a big action:** ask. Operator prefers one-piece-at-a-time over speed.
 - **When the work shifts focus:** mark a chapter (the transcript tool).
 - **When you notice out-of-scope work worth doing:** flag it as a spawnable task, don't derail the current turn.
-- **When you're not sure where something belongs:** `ledgers/` is for memory of the system, `intake/` is for raw source material brought in from outside, `$HOME` root is for the README only. If it's neither, ask.
+- **When you're not sure where something belongs:** `ledgers/` is for memory of the system, `intake/` is for raw source material brought in from outside, `$HOME` root is for core orientation files (`README.md`, `AGENTS.md`, `CLAUDE.md`) only. If it's neither, ask.
 
 ---
 
