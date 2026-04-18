@@ -1,0 +1,71 @@
+## 2. Sales and lead management
+
+Sales and lead management appear to be one of the clearest and most developed parts of the business. From the conversation, it is obvious that the company does not just receive inquiries and hope for the best. It has an actual sales structure with tracking, ownership, stage awareness, source awareness, and conversion-related processes built around it. Even though that structure is spread across different tools and sheets, it is already functioning as a real system.
+
+At the most basic level, the business tracks **how many deals are being closed each week**. That alone tells us something important: the sales function is not treated casually or only reviewed at the end of the month. It is being understood in weekly terms, which means the owner is watching sales performance as part of the same weekly operational rhythm that also governs labor, scheduling, and financial expectations. Sales is therefore not separate from operations — it is one of the live weekly engines of the business.
+
+A second major component is **lead source tracking**. He mentioned multiple times that he wants to know where leads came from and how many came from each source. That tells us that acquisition channels matter structurally in the business. He is not satisfied with simply receiving leads; he wants attribution. He wants to know which sources are producing opportunities, and that likely means he also wants to know which sources are worth more attention, which are underperforming, and which are producing better business. This makes source attribution a core part of the sales system, not a vanity metric.
+
+The fact that he repeated source tracking more than once suggests that there may still be some inconsistency in how well the team captures this data. He even said they were trying to do a better job with it. That is an important business insight: source tracking matters to him enough that he notices when it is not being captured cleanly. So source attribution is not just present; it is a meaningful point of sensitivity in the current sales workflow.
+
+He also described a **lead tracker** that logs all the incoming leads and is useful not only for understanding lead volume, but also for helping predict cash flow. This is a very revealing detail. It means the company does not see sales information as isolated from the financial health of the business. The lead tracker is effectively serving as an upstream revenue signal. That implies that pipeline state, lead counts, and probably lead quality are all being used mentally to estimate how much money is likely to come in over a given period. In other words, sales activity is already functioning as a forecasting layer.
+
+The business also appears to distinguish between **leads**, **locked-in leads**, and **closed deals**, which suggests that its pipeline has meaningful internal stages even if they were not all formally named during the conversation. The distinction matters. It tells us that the company does not think of all opportunities as the same. There are incoming possibilities, there are more serious or advanced opportunities, and there are fully closed jobs. That implies a sales funnel structure, whether explicitly defined in CRM stages or distributed across multiple documents and team habits.
+
+Close CRM appears to be one of the primary sales tools, and it seems to play a meaningful role in this funnel. Based on what was described, Close is likely being used to track things like:
+
+* lead records
+* ownership
+* source
+* close state
+* possibly follow-up or activity history
+
+Even if not every detail was said explicitly, it is clear that Close is one of the system-of-record surfaces for sales. This means sales information is not just floating in conversation or inboxes; it is being entered into a structured environment.
+
+Ownership is another key part of the sales picture. He referred to **lead owners**, and later described a team structure that includes four salespeople and a remote sales manager. This tells us the business does not have an unowned pool of inquiries. Leads are being associated with individual responsibility. That means sales is not just a company-level function — it is a distributed accountability system. Somebody is expected to own the relationship, own the movement, and presumably own the follow-up.
+
+That leads to another important structural point: the company’s sales function appears to be at least partly **human-dependent in follow-through**. Even though the system has tracking and CRM surfaces, the underlying shape suggests that lead movement still depends heavily on whether the assigned human follows up appropriately and whether the business stays organized around that process. This matters because the sales system already has structure, but the owner’s interest in visibility and missed-detail reduction implies that human inconsistency is still one of the limiting factors.
+
+One of the most interesting parts of the sales process is the role of **tastings**. Tastings are not just an add-on experience or a courtesy. They seem to function as a real conversion stage in the pipeline. He described people coming to the hall a couple times a week, being given a presentation, and often closing on the spot. He also mentioned a strong conversion rate once people arrive for tastings. This means the company has a pipeline stage that is partly experiential and highly consequential. In practical terms, tastings are one of the most important structured moments in the sales process.
+
+This is very useful because it means the company already has a visible **mid-funnel or late-funnel conversion event**. Many businesses have fuzzy pipeline stages, but this one has something concrete: a person goes from being a lead to attending a tasting, and from there often moves toward a close. That makes tastings a major diagnostic surface for sales performance. It also means lead quality, lead preparation, attendance, presentation quality, and follow-up around tastings are likely all highly valuable sales variables.
+
+The tasting sheet itself appears to capture:
+
+* the person’s name
+* the lead owner
+* the event or opportunity context
+* some kind of status or related sales details
+
+This suggests that sales is being tracked not only at the high level, but also around specific conversion environments. Again, that is a sign of a real system.
+
+He also referenced **how long it takes to close**. That is a major indicator that the business is aware of sales velocity, even if it is not using that exact term. Time-to-close awareness means the company is not just interested in outcomes, but in timeline dynamics. That tells us the sales team or leadership likely notices when deals take too long, when momentum is slipping, or when there is a mismatch between lead entry and actual conversion. This becomes especially important because weekly cash expectation is tied to whether and when deals actually turn into business.
+
+It is also worth noting that the sales system does not seem to operate in isolation from the company’s **partner ecosystem**. Venues and planners appear to play a major role in where leads come from, which means that sales is not simply inbound digital acquisition. A meaningful portion of opportunity generation appears to be referral-driven, especially through venues. That means the company’s sales engine is partly relationship-fed. Lead generation and partner management are therefore connected, even if they are tracked in different documents.
+
+Commission reporting adds another layer to the sales architecture. Because commission reports exist for the sales team, we can infer that the company not only tracks opportunity flow and closes, but also uses outcomes to calculate or support compensation. That means sales data must be reliable enough to matter financially inside the company. This raises the importance of ownership, stage clarity, close clarity, and probably lead-source or rep-attribution clarity as well.
+
+The existence of commission reporting also means the company’s sales function has both **performance visibility** and **internal consequences**. This is not just a high-level “how are we doing?” sales culture. It is a system where results tie back to people in a measurable way. That suggests that clean sales records are structurally important even if the current implementation is still spread across multiple tools.
+
+Another subtle but important point is that the owner appears to think about sales in **operationally practical terms**, not just abstract pipeline terms. For him, sales is linked to:
+
+* what work is coming
+* what money should be expected
+* what staffing and prep demand will exist
+* what relationships are producing results
+* how the week is shaping up
+
+This means the sales system is not only about maximizing conversion; it is also about feeding the rest of the company the information it needs to prepare. In that sense, sales is upstream of operations, finance, and staffing.
+
+There is also an implied tension in the current sales structure: the business has enough information to be powerful, but not all of it is likely captured or surfaced consistently in one place. Source tracking may be imperfect. Ownership is present but still dependent on human follow-through. Tasting data is meaningful but may not yet be unified with all other sales records. Some data lives in Close, some in Sheets, and some in the mental model of the owner. So sales is already structured, but the structure is distributed.
+
+That makes the sales function one of the strongest examples of the company’s broader state: not broken, but manually coordinated. The owner has already built a rich sales instrumentation layer through CRM, trackers, tasting records, ownership logic, and source awareness. The issue is not absence of sales process. The issue is that the process is spread out and likely requires too much vigilance to maintain at full quality.
+
+A clean way to describe the sales and lead management system would be this:
+
+It is a **tracked, ownership-based, source-aware sales process with meaningful stage distinctions, tasting-driven conversion, weekly close visibility, and direct relevance to both financial forecasting and operational planning**.
+
+That sentence captures most of what matters.
+
+Even more simply: this business already knows how to sell. It already knows that sales has stages, owners, sources, timing, and outcomes. What it lacks is not sales intelligence in principle. It lacks a unified, continuously coherent structure that keeps all of that sales intelligence live and consistent without so much manual effort.
+

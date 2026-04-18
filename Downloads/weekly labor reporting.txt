@@ -1,0 +1,73 @@
+## 6. He has weekly labor reporting
+
+Another major piece of the business is that labor is not treated as a background cost or an after-the-fact accounting category. He has a **weekly labor report**, and the way he described it makes it clear that labor is something he actively watches as part of running the business. That means labor is one of the company’s real operating surfaces, not just something payroll deals with later.
+
+He described the labor report as showing **how much of the week they are spending on labor, person by person**. That wording matters. It tells us a few things at once. First, labor is being viewed in weekly terms, which fits the larger weekly cadence of the whole business. Second, labor is not just being tracked at the company total level; it is being broken down by individual person. Third, the purpose of that visibility is practical. It helps him understand where staffing effort is going and how much labor load is being carried across the business during a given week.
+
+This means the company’s labor system is already tied to real management questions such as:
+
+* who is being used this week
+* how labor is distributed across people
+* how much labor is being consumed
+* what the week is costing from a staffing standpoint
+* whether the team is carrying the load efficiently
+
+That is important because it shows labor is a live operational input into how the business is run, not just a historical cost line.
+
+The labor report also matters because this company is clearly **event-driven and schedule-dependent**. Labor is not static from week to week. It changes depending on:
+
+* how many jobs are happening
+* where those jobs are happening
+* what type of service is required
+* how complex the events are
+* how many people are available
+* what season the business is in
+
+That means the labor report is likely one of the owner’s main tools for understanding whether the company’s human capacity is matching the demands of the calendar.
+
+He also described his team as being **down to four or five people at the moment**, but increasing when the business gets busier. That tells us labor is not fixed. The company has a seasonal or demand-responsive labor structure. In slow periods, the team is leaner. In busier periods, more people are involved. This makes labor reporting even more important, because a variable workforce requires active visibility. The owner cannot just assume the same staffing model every week. He has to understand labor dynamically.
+
+Another important part of this is that the company can have **five or six different jobs in different places**, which means labor is not just about raw hours. It is about deployment across locations and overlapping operational demands. So the labor report likely exists in tension with the schedule. It is not only answering “how much labor are we using?” but also indirectly helping answer “how stretched are we?” and “how is our people load distributed against the actual work?”
+
+That means labor reporting in this company should be understood as part of a larger staffing and scheduling ecosystem. It likely supports or interacts with:
+
+* weekly job planning
+* who is assigned where
+* whether enough people are available for all work
+* what labor cost or effort each week is accumulating
+* how staff load corresponds to event demand
+
+In that sense, the labor report is not a standalone finance document. It is a hybrid operational-management instrument.
+
+The fact that he described it person by person is especially revealing. That means labor visibility is granular enough to preserve a sense of **individual contribution and load distribution**. The company is not just watching labor as a lump sum. It is seeing labor through human allocation. That makes the labor report useful not just for cost awareness but for:
+
+* spotting overuse
+* spotting uneven distribution
+* understanding who is carrying what load
+* linking real work patterns to staffing decisions
+
+This also suggests the company already has some internal awareness of **resource pressure**. In a service business, the question is not only whether an event is booked, but whether the right people can actually support it without creating overload or quality problems. Weekly labor reporting gives the owner one of the best windows into that issue.
+
+Another important thing about the labor report is that it reflects the company’s larger pattern of **manual self-instrumentation**. Just like he built lead trackers, venue lists, prep sheets, and other practical tools, he has also built labor visibility into the weekly management rhythm. That tells us labor is one of the areas where he has already felt the need to create extra structure, likely because the business cannot be run well by intuition alone once it reaches a certain level of complexity.
+
+There is also a financial side to labor reporting, but it appears to be a practical one. The report is probably useful not just for understanding people load but for understanding **how expensive the week is becoming in real operating terms**. In a business where staffing, travel, prep, and service complexity all vary, labor is one of the main moving cost surfaces. So the labor report likely acts as part of the owner’s ongoing balancing act between:
+
+* booked work
+* people capacity
+* service quality
+* and cost discipline
+
+That is especially important because the company already thinks forward in other areas too, like forecasting incoming money and understanding expected outgoing money. Labor reporting fits naturally into that same pattern: it is one of the pieces helping the owner read the week before it fully unfolds.
+
+Another useful point is that labor reporting probably helps connect **event complexity to staffing reality**. Since some jobs are simple and others require more logistics, setup, or special handling, the labor report gives the company a way to understand the human cost of that complexity over time. Even if that connection is not yet formalized, the ingredients are there. The business can already see what kinds of weeks or jobs consume more people effort, and that means labor reporting is part of the company’s operational learning process.
+
+This also makes labor one of the most important surfaces for understanding whether the business is scaling cleanly. If sales are rising but labor becomes chaotic, then growth is not healthy. If more events are booked but staffing becomes uneven, the business feels that immediately. Weekly labor reporting is one of the places where that strain would first become visible. So labor reporting is not just descriptive — it is diagnostic.
+
+The overall impression is that the company treats labor as a **managed weekly resource**, not just an expense category. The owner is actively trying to understand how human effort is distributed, what the week is demanding, and how staffing interacts with the flow of jobs. That makes labor reporting one of the main ways the business stays aware of its own carrying capacity.
+
+A good summary sentence would be:
+
+The weekly labor report is important because it gives the owner person-by-person visibility into how staffing effort is being used during a given week, helping him understand labor load, workforce distribution, operational strain, and the real human cost of executing the company’s scheduled work.
+
+Even more simply: labor is one of the main ways this business feels its own reality week by week.
+

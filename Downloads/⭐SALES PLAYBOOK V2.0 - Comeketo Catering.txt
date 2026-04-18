@@ -1,0 +1,2150 @@
+﻿COMEKETO CATERING
+BUSINESS TO CONSUMER
+SALES PLAYBOOK
+
+🎥 WATCH ME FIRST (overview)
+  
+
+Watch Playbook Education Video
+
+
+________________
+
+
+
+
+📄 00. TABLE OF CONTENTS
+
+
+What this document is for:
+This document outlines the Comeketo Catering Inbound Sales PLAYBOOK V2.0, designed to handle inbound leads from Facebook, our website, and Wedding Expo visits. The primary goal of the SDR (Sales Development Representative: Senior or Junior Sales Reps) is to book a call with a Closer, which includes both Event Planners and Catering Managers. These Closers are pivotal in converting leads into successful sales by guiding prospects through tastings and quote closings.
+A. 🚀 THE MINDSET SHIFT
+It's time to transform your approach.
+Whatever you believe about sales needs to be redefined. You are no longer just a "sales rep"; you are now a problem identifier and solver. Here are some key concepts to embrace:
+🍽️ Adopt a New Mindset:
+* Rather than sounding overly enthusiastic, aim to be impartial, composed, and assured.
+* Instead of making a sales pitch, concentrate on assisting our catering prospects in uncovering their true catering and event challenges.
+* Rather than hurrying to schedule a tasting, listen attentively and ask deeper questions to help them revisit and understand their pain points.
+🔑 Core Principles:
+* Move away from being skilled at pitching. This is no longer the most effective way to sell unless you enjoy a numbers game with high volume and low conversion.
+* The proposal to book a tasting or appointment should constitute only about 10% of your entire sales conversation.
+By embracing this fresh perspective, you establish yourself as a trusted catering advisor.
+
+
+🗝️ Key Components:
+Click the link to go to section
+01. 📈 SALES PROCESS 
+      * Efficient handling of inbound leads.
+      * Coordination of activities to ensure quotes are generated, deposits are collected, and opportunities are closed seamlessly.
+      * Lead Ownership
+         1. Clarification of roles: Lead Owners, Task Owners, and Opportunity Owners.
+         2. Accountability and responsibility principles.
+      * Organizational Roles:
+         1. Executive Director: 
+Oversees overall profitability and strategic leadership.
+         2. Catering Director: 
+Manages catering opportunities from tastings to execution.
+         3. Sales and Marketing Director: 
+Drives revenue, reduces cost per lead, and develops marketing  & sales strategies.
+         4. Sales Coach: 
+Shapes sales SOPs, conducts training, and mentors sales teams.
+         5. Sales Manager: 
+Holds SDRs accountable for KPIs, alignment to playbook, and ensures lead nurturing.
+         6. Senior and Junior Sales Reps: 
+Manage and qualify inbound leads, book appointments, and follow up with prospects.
+02. 🎙️ CALL CONTROL
+   * Maintaining conversation control through open-ended questions, mirroring, and tactical empathy.
+   * Three essential rules for effective call control.
+03. 📝 CLOSE.COM ADMINISTRATION
+   * How to update Close.com CRM records, assign tasks, and provide the right info to the right people
+   * Managing opportunities from lead to deposit collection.
+04. 📞 MAIN INBOUND SCRIPT
+   * Step-by-step instructions for converting inbound leads into appointments or tastings.
+   * Techniques for handling objections and transitioning to booking.
+   * Plus 5-Day Follow Up Cadences & Ninja Recovery Scripts
+05. 🗣️ TONALITY & PACING
+   * Guidelines for using appropriate tone and pace during calls to enhance communication and engagement.
+06. ⚠️ OBJECTIONS
+   * Effective responses to common objections such as needing to think about it, discussing with a partner, or concerns about cost.
+        07. 🔄 RESPONSES & ACTIONS
+   * General structure on how to deal with any customer request or response
+   * Tasting Showup and Jotform Fill out
+   * Handling co-worker lead-owner reassignment
+   * Handling Quotes
+08. 📞 SUPPORTING CALL SCRIPTS
+   * Scripts for various scenarios, including follow-ups, handling objections, and appointment setting.
+09. ❌ AVOID THIS, ✅ DO THAT
+
+
+By following this sales script, the team can maintain control of conversations, address objections in real-time, and deeply engage with prospects to uncover their needs and pain points. This approach is far superior to traditional selling methods, focusing on understanding the customer's vision and providing tailored solutions to ensure successful conversions.
+
+
+________________
+01. 📈 SALES PROCESS 
+________________
+
+
+
+
+We are sales. We set the gold standard. We respond to every customer and seize every inbound opportunity within 5 minutes. This is our uncompromising standard.
+
+
+  The SDR Sales Process Defined
+This process is designed to handle inbound leads from Facebook, 3rd Party Websites, our own website, and Wedding Expo visits. The SDR (Senior or Junior Sales Representative) has one primary goal: to book a call with a Closer. Our Closers consist of an "Event Planner" and a "Catering Manager," both pivotal in converting leads into sales. Once a Closer is involved, the Senior Sales Rep coordinates any necessary activities to ensure quotes are generated, deposits are collected, and opportunities are closed out, allowing for a seamless transition into operations for a successful catered event. This guide is a living document, providing an up-to-date walkthrough of our current sales process.
+
+A. 🆕 CHANGE LOG
+Date
+	Task
+	Who
+	6/29/24
+	Added in example script for MAIN Inbound Script
+	DOMENIC
+	6/29/24
+	Created booking fee collection Script V1.0
+	DOMENIC
+	7/2/24
+	Added "Watch Me First Video"[a]
+	DOMENIC
+	7/2/24
+	Wrote Quote Followup & Internal Quoting SOP
+	DOMENIC
+	7/2/24
+	Defined Objection Handling: "My Wedding isn't until next year"[b]
+	DOMENIC
+	7/2/24
+	Added Tasting Status SOP[c]
+	DOMENIC
+	7/2/24
+	Uploaded New Pre-Recorded voice drops to be sent via SMS for NINJA Lead Recovery
+	DOMENIC
+	7/2/24
+	Added emails to the 5 day cadence[d]
+	DOMENIC
+	7/2/24
+	Wrote the Mindset Shift from Sales-Reps to Catering Advisors[e]
+	DOMENIC
+	7/2/24
+	Implemented SMS For Tasting / Appointment No Show[f]
+	DOMENIC
+	7/3/24
+	Crafted 3 Day Cadence for Tasting/Appointment Cancellation[g]
+	DOMENIC
+	7/3/24
+	Changed call quantity for new leads. If a new lead is inbound, you triple tap attempt to call. [h]
+	DOMENIC
+	7/8/24
+	Added After Tasting Phone Script & Followup Cadence[i][j]
+	HAL
+	7/9/24
+	v. 🔄 3 DAY CADENCE CANCELLATION RECOVERY
+	DOMENIC
+	7/27/24
+	Added "After You Win" SOP [k]
+	DOMENIC
+	7/28/24
+	Wrote the New Sales Notes 2.0 Custom Activity Usage for Close [l]
+	DOMENIC
+	7/28/24
+	Implemented new Tasting 2.0 Notes Custom Activity Usage for Close[m]
+	DOMENIC
+	7/29/24
+	Added "Lead Assignment SOP" for the procedure of assigning leads in a fair and balanced way, still hitting our speed-to-lead times[n]
+	DOMENIC
+	8/2/24
+	Ammended added catering events to calendar to block off bibi/rodrigo
+	DOMENIC
+	
+
+________________
+B. 🏷️ LEAD OWNERSHIP
+  OWNERSHIP PRINCIPLES CLARIFICATION
+
+
+What this Ownership Thing Is:
+The organizational structure for Comeketo Catering’s ownership principles emphasizes accountability and responsibility across three roles: Lead Owners, Task Owners, and Opportunity Owners, typically managed by the lead owner. Lead owners are accountable for the lead's success, ensuring timely closure and addressing any issues directly without deflecting blame. Task owners ensure tasks are completed on time and to standard, while opportunity owners see opportunities through to successful completion. Additionally, Account Managers handle B2B account success, and Account Executives guide these managers to align with the company’s goals. Closers, including Event Planners and Catering Coordinators, play a crucial role in converting leads into sales, ensuring booking fees are secured and quotes finalized.
+To clarify the heavy and serious responsibility of lead owners, we have established these three ownership principles.
+   * Lead Owners
+   * Task Owners
+   * Opportunity Owners
+(usually all 3 of these are the responsibility of the lead owner)
+In the sales process:
+Lead owners usually own all three roles (Lead, Task, and Opportunity). However, there will be times when a lead owner might need someone else to do some work (task owner) or when the opportunity needs to transition into the operations department for event execution & management (changing the opportunity over to Bibi for execution, for example).
+Accountability and Responsibility
+As a lead owner, you are the primary person responsible for that lead's success. When approached for accountability, the wrong answer is:
+"[Point the Finger at Someone Else] [Because of] - example: This lead has been stuck in the quoting phase for 30 days because Bibi hasn't given us a quote."
+Not valid. You are the lead owner. You use any means necessary to ensure the timely and successful closure of your lead's opportunities.
+Roles and Responsibilities
+💡 1. Lead owners:
+   * Are the primary person responsible for that lead's success.
+📋 2. Task owners:
+   * Guarantee that the work will be done on time, and per our quality.
+🚀 3. Opportunity owners:
+   * Promise that they will see the opportunity to its successful completion, closure, and cater.
+Additional Roles
+Account Managers:
+   * Are the primary person in charge of an account's success. An account is typically B2B like venues, event planners, and corporate contacts.
+Account Executives:
+   * Are in charge of the direction and strategy for Account Managers. Ensuring their account success stays in strategic alignment with Comeketo's Goals, Values, and Mission - by ensuring their managers are Visible, Credible, and Profitable throughout the engagement of their accounts.
+        Closers: 
+   * Comprising both Event Planners and Catering Coordinators, Closers are the pivotal elements of the sales team, responsible for converting qualified leads into successful sales. Event Planners focus on guiding qualified inbound leads through the tasting experience, leveraging their expertise to secure booking fees and close quotes either over the phone or via Zoom. Catering Coordinators, who are highly trained, coached, and mentored by both the Catering Director and Sales Leadership, ensure a booking fee is collected before the potential customer leaves the tasting. They also collaborate closely with other closers to create quotes once the booking fee has been received.
+________________
+C. 👔 ORGANIZATIONAL CHART
+  
+
+
+
+
+
+Understanding our team
+
+The organizational structure of Comeketo Catering comprises an Executive Director, Operations Team, and Sales & Marketing Team, each with distinct yet interconnected roles. The Executive Director ensures the alignment and success of the catering program by providing strategic leadership and overseeing culinary developments, recruitment, and team standards. The Operations Team, led by the Catering Director and supported by the Catering Coordinator, focuses on managing catering opportunities, conducting tastings, and ensuring seamless event execution. The Sales & Marketing Team, driven by the Sales and Marketing Director, Sales Coach, and Sales Manager, aims to drive revenue through strategic marketing campaigns, effective sales processes, and meticulous lead management, supported by roles such as Closers, Senior Sales Reps, and Junior Sales Reps who handle inbound leads, tastings, and quote closings to ensure high conversion rates and overall sales success.
+
+
+
+
+EXECUTIVE DIRECTOR
+
+
+Sales Roles: Account Executive, Closer, Tastings
+
+
+The Executive Director is responsible for the overall profitability and success of the catering program, ensuring that both the Sales & Marketing Director and Catering Director are aligned with the organization’s goals. This role involves strategic leadership, defining director and account executive responsibilities, culinary developments, recruiting, hiring, 
+and setting a standard for the entire team.
+
+
+
+
+________________
+
+
+
+
+OPERATIONS TEAM
+CATERING DIRECTOR
+Sales Roles: Closer, Tastings
+
+
+The Catering Director holds the ultimate responsibility for the triumph of our catering opportunities, commencing with tastings and booking fees, and working seamlessly with lead owners and account managers to ensure each opportunity is successfully closed and flawlessly executed. This pivotal role involves mentoring other catering leaders to be the indispensable 'boots on the ground' for tastings and catered events. The Catering Director collaborates closely with the Executive Director to refine and elevate culinary capacity and works in close partnership with the Sales and Marketing Director to ensure precise information capture and the delivery of an extraordinary experience for every catering prospect from start to finish, encompassing review and referral.
+
+
+CATERING LEAD/COORDINATOR
+
+
+Sales Roles: Tastings
+                
+The Catering Coordinator manages deposited catering opportunities, orchestrating every aspect from shopping and planning to preparation and serving, acting as the point person on the day of the event. Reporting to the Catering Director, this role also involves conducting tastings and securing booking fees on the spot, thanks to mentorship from both the Sales Coach and the Sales and Marketing Director. This ensures a seamless and professional experience from initial consultation to event execution.
+
+
+
+
+________________
+
+
+
+
+
+
+SALES & MARKETING TEAM
+SALES AND MARKETING DIRECTOR
+Sales Roles: Account Manager, Closer, Tastings
+The Sales and Marketing Director, reporting to the Executive Director, is responsible for constantly driving revenue by reducing the cost per lead, improving lead quality, and developing effective automations. This role encompasses creating marketing campaigns, managing paid ad campaigns, optimizing sales funnels, and overseeing websites and social media strategies. The Director is instrumental in crafting sales scripts, defining sales SOPs, and shaping the sales culture. As a closer, the Director leads meetings, mentors sales members during office hours, maintains an open-door policy, and is committed to continuous education and mentoring. Additionally, the Director is the primary Account Manager for B2B leads. Collaborating closely with the Sales Coach to refine processes, the Director also directs the Paid Ads Manager, creatively guides web design strategy, and coaches for better conversion, while leading the Social Media Manager to enhance engagement and reach of campaigns.
+SALES COACH
+Sales Roles: Mentor, Account Manager, Emergency Closer, BDR
+The Sales Coach, reporting to the Sales and Marketing Director, is pivotal in shaping the company's core Sales Standard Operating Procedures (SOPs). This role involves defining and regularly updating "emergency room" sales scripts, conducting near-daily sales huddles for accountability and coaching, and leading weekly training sessions and call reviews. Additionally, the Sales Coach may serve as an Account Manager and an Emergency Closer, ensuring the sales team is consistently performing at its best and meeting organizational goals.
+
+SALES MANAGER
+Sales Roles: Management
+The Sales Manager, reporting to the Sales and Marketing Director, holds the entire SDR unit and the Event Planners accountable for the three essential KPIs: Speed to Lead, Cadences, and Call Quality & Scripting. Supremely responsible for the nurturing of every lead the Sales Manager ensures that no lead is left behind, constantly nurturing every lead in the pipeline from prospect to closed, driving towards opportunity success. This role involves a keen awareness of lead owners' lead loads, expertise in emergency room scripts, and standard SOPs. Additionally, the Sales Manager reports the "Best & Worst Lead" during Sales Huddles, creating a culture of continuous improvement within the Sales Team team.
+
+CLOSER
+Sales Roles: Quotes and/or Tastings
+Domenic is the Temporary Closer.
+The Event Planner, our code name for Closer, is a critical element of the sales team. These Sales Reps specialize in converting qualified inbound leads through tastings or leveraging their high-level training and experience to close quotes over the phone or via Zoom. Acting as the special forces of the Sales Team, they are not primarily responsible for the overall success of the leads or opportunities but play a pivotal role when appointments are booked for tastings or quote closings. Their KPIs include tasting show-up rate and quote closure rate, ensuring high conversion and success in the sales process. They move in unison with Sr. Sales Reps to dynamically script on-the-fly strategies and techniques for closing opportunities.
+
+
+SR. SALES REP
+Sales Roles: SDR
+Senior Sales Representatives are primarily responsible for managing inbound leads, qualifying them, and ensuring they meet specific criteria before setting an appointment with a Closer or scheduling a Tasting. Engaged in the early stages of the sales process, their goal is to keep potential customers moving through the sales funnel. Senior Sales Reps set up appointments and follow up with leads, working closely with a Closer or Catering Lead who has conducted a tasting to send quotes. They focus on recovering quotes that have not been accepted and avoid discussing pricing in-depth, instead booking calls with a Closer or Catering Leader. Their key performance indicators (KPIs) include the number of appointments booked and appointment show-up rates.
+Having moved out of their 90-day probationary period, Senior Sales Reps are now heavily monitored for their KPIs, particularly the rate of booked appointments that show up. Additionally, as Senior Sales Reps, they are responsible for responding to Junior Sales Reps' questions about CRM usage, ClickUp help, and strategies to book appointments.
+
+
+JR. SALES REP
+Sales Roles: SDR
+Junior Sales Representatives are in their 90-day probationary period and are keenly monitored for their ability to stick to the script, seek advice from sales leaders, and constantly ask for call reviews and strategies to bring their owned leads into a booked appointment with a Closer or for a Tasting. While they are far removed from the quoting process, they work hand-in-hand with Closers and the operations team to get quotes out in a timely manner.
+
+
+In addition to their probationary responsibilities, Junior Sales Reps are expected to learn and adopt some of the Senior Sales Rep responsibilities. These include managing inbound leads, qualifying them, and ensuring they meet specific criteria before setting an appointment. Junior Sales Reps should focus on moving potential customers through the sales funnel, setting up appointments, and following up with leads. They must also avoid discussing pricing in-depth, instead booking calls with a        Closer or Catering Leader. Their progress is tracked through key performance indicators (KPIs) such as the number of appointments booked and appointment show-up rates.
+
+
+Additionally, Junior Sales Reps are encouraged to seek guidance from Senior Sales Reps regarding CRM usage, ClickUp help, and strategies to improve appointment bookings. This mentorship ensures that Junior Sales Reps are well-prepared to transition into their roles as Senior Sales Representatives after the probationary period.
+
+
+________________
+02. 🎙️ CALL CONTROL
+In sales conversations, maintaining control is crucial. Using open-ended questions steers the conversation effectively, as "questions steer the conversation, statements kill it." If a yes/no question is necessary, have an open-ended follow-up ready to keep the dialogue flowing. Remember to emphasize techniques like mirroring and tactical empathy, with statements like "It sounds like," to build rapport and trust. By focusing on moving the prospect to the next step and avoiding choice paralysis, salespeople can guide the conversation smoothly and increase the likelihood of closing the deal.
+
+
+A. 📜 THE THREE RULES
+
+
+   * Rule #1. Never allow the control of the conversation to deviate from outside of your open ended questions (IF FOR SOME REASON IT DOES GOTO 02. HOW TO MAINTAIN CONTROL)
+   * Rule #2. If you have ask a yes/no question always have the next open ended question ready to be asked
+   * Rule #3. Be focused on moving your customers to the next step only, gain 1 action, avoid choice paralysis.
+________________
+B. 🔒 HOW TO MAINTAIN CALL CONTROL
+The importance of these sales SDR techniques lies in their ability to enhance communication, build rapport, and gather valuable information so that you may tailor and custom-craft your solutions.
+
+A. Mirror
+B. "Sounds Like"
+C. Start next open-ended question
+A. MIRROR
+Why we do this:
+Sales mirroring on phone calls, 'Chris Voss', involves repeating the last four words or key phrases your counterpart says to demonstrate active listening and build rapport. This subtle technique encourages the other person to expand on their thoughts, providing more valuable information. By mirroring effectively, salespeople can create a connection, reduce resistance, and guide the conversation toward a favorable outcome.
+B. "SOUNDS LIKE" (Tactical Empathy)
+Why we do this:
+The "Sounds Like" active listening skill involves paraphrasing or summarizing what the other person has said, starting with phrases like "It sounds like," to show understanding and empathy. This technique helps clarify the speaker's message, confirms your comprehension, and encourages them to elaborate further. By using "Sounds Like," salespeople can create a deeper connection with their counterpart, address underlying concerns, and guide the conversation more effectively.
+03. "TRANSITION TO NEXT QUESTION"
+Why we do this:
+Can I make a suggestion?
+In sales, using open-ended questions provides significant power and control over the conversation. These questions, which cannot be answered with a simple "yes" or "no," encourage the prospect to share more detailed information about their needs, preferences, and pain points. This deeper insight allows the salesperson to tailor their approach and solutions more precisely. By creating a more engaging and informative dialogue, open-ended questions build trust and rapport, positioning the salesperson as a trusted advisor rather than just a vendor, ultimately increasing the likelihood of closing the deal.
+________________
+
+
+03. 📝 CLOSE.COM ADMINISTRATION
+Effective CRM administration, in our case we use Close.com, is critical for driving sales success. Updating and summarizing each call with 3-5 sentences immediately after ensures that you invest in accurate, actionable data. By always assigning the next task for each opportunity, you maintain momentum and prevent leads from slipping through the cracks. Additionally, regularly updating the CRM with the latest qualification details allows for a systematic approach, where the lead owner manages the opportunity until a deposit is collected and then hands it off to Bibi while retaining the lead, ensures continuity and accountability, enhancing the overall sales strategy and effectiveness.
+
+
+A. LEAD ASSIGNMENT SOP
+To ensure that leads are assigned efficiently and effectively, maintaining a clear process to avoid any potential delays in follow-up and engagement - also - ensuring that leads are distributed fairly and everyone has the chance to succeed here.
+Responsibilities:
+   * Primary Responsible Person: Camila
+   * Backup: Domenic
+Availability:
+   * Lead Assignment Window: 7 days a week, from 8:00 AM to 8:00 PM
+   * Off-Hours Leads: Leads coming in between 8:01 PM and 7:59 AM are considered next-day leads, unless they have replied to the automation.
+Procedure:
+A. Lead Assignment Process:
+Primary Responsibility:
+   * Camila Cides is primarily responsible for assigning leads.
+   * If Camila Cides is not available, Domenic Dawson will take over the responsibility.
+   * If a lead comes in during the assignment window and neither Camila Cides nor Domenic Dawson has assigned the lead using both a Slack emoji and a Close.com lead owner assignment within 10 minutes, sales reps must escalate the issue by starting a group chat with Camila Cides and Domenic Dawson. Unless the lead has responded to the automation, then follow "Sales Rep Self-Assignment" process.
+Escalation Measures:
+   * Sales reps must wait 10 minutes during the assignment window before escalating the assignment. Here's the steps if an inbound lead is unassigned:
+   * Slack Message: Send a group message to Camila and Domenic and wait for 10 minutes.
+   * Slack Huddle: Initiate a group huddle and wait for 10 minutes.
+   * If no reply to the escalation, then go into sales rep self-assignment.
+Sales Rep Self-Assignment:
+   * Sales reps are not authorized to assign themselves as lead owners unless the following conditions are met:
+   * Escalation Measures: They have attempted to contact Camila and Domenic using the escalation process.
+   * Lead Response: And/or the lead has responded to an automation, necessitating immediate action.
+   * Documentation: The sales rep must provide notes on the lead explaining why they took the lead, the reason behind it, and their attempts to contact a manager for ownership.
+Extended Unavailability:
+   * If both Camila and Domenic are unavailable for an extended period (e.g., not online all day, unresponsive all day, vacation, emergency), sales reps should collaborate with each other, being aware of who is online, and follow the assignment procedures outlined in B. Leads Assignment.
+B. Leads Assignment:
+Daily Assignment:
+   * The first website lead each day goes to Andre. Facebook leads are split 50/50 according to who is online during working hours.
+   * The second lead and each subsequent lead will be assigned based on the availability of Eufy, Rhonna, or Nina.
+   * Check the green online indicator next to their names to determine who is available.
+Handling Off-Hours Leads:
+   * On the next day, starting at 8:00 AM, assign off-hours leads as follows:
+   * Is Andre online? If yes, follow the standard rules.
+   * Are others online? If yes, assign based on their availability.
+C. Automated Response Follow-Up:
+   * If a lead responds to an automation outside of working hours and you are online, this takes priority. Take ownership of the conversation, engage the lead, and take ownership.
+
+
+
+
+________________
+
+
+The 'Must Dos' as an SDR
+   1. Work hard to keep the close.com custom activity "Sales Notes 2.0" as updated as possible
+   2. Always include 3-5 sentence call summaries after each call on the call itself
+   3. If there is an opportunity, always make sure there is a next task assigned
+   4. After your call, keep the CRM record constantly updated with the latest qualification details (opportunity status, lead status, catering job notes)
+   5. Understand the flow for opportunities 
+   1. Lead owner ➡️ Owns Opportunity ➡️ Until ➡️ Deposit is Collected ➡️ Then Opportunity ➡️ Is owed by Catering Director ➡️ They are Notified, Strongly ➡️ and ➡️ Lead Owner ➡️ 
+Stays You
+      6. Follow this Lead Qualification Guide for SDRs
+      1.   
+
+      2.            7. As an SDR you are required to constantly maintain Lead Scoring
+  
+            1. If you have any questions about how to score your lead, please ask your manager
+________________
+
+
+04. 📞 MAIN INBOUND SCRIPT
+________________
+
+
+Goals of this Script
+This call script is designed to efficiently convert inbound leads into appointments or tastings by leveraging an intensely curious tone and strategic questioning techniques. It ensures that the salesperson maintains control of the conversation, addresses objections in real time, and deeply engages with prospects to uncover their needs and pain points. This approach is far superior to the old style of selling because it focuses on understanding the customer's vision and concerns, building a genuine connection, and providing tailored solutions, rather than relying on generic sales pitches.
+
+
+👁️👁️ READ ME FIRST
+Before using the script, here's a quick overview
+How to Use the Call Script: Step-by-Step Instructions
+            1. Initial Contact:
+            * Begin the call with an intensely curious tone.
+            * Use the appropriate opening line based on the lead source (Facebook, website, expo, general).
+            1. Or, if you're feeling bold. Try the experimental "Alternate Opener"
+            2. Handle Early Objections:
+            * If the prospect says they are busy, use mirroring and "sounds like" techniques.
+            * Respond with, "I understand, it sounds like you're really busy at the moment. Can you tell me a little more about what's occupying your time right now?"
+            * If they mention a busy schedule, respond with, "Back-to-back meetings, would it be a horrible idea to give me 90 seconds? You can hang up anytime."
+            3. Connection Questions:
+            * If the prospect doesn’t say "No," proceed with connection questions.
+            * Ask, "I’m curious, what inspired you to plan this [event]?" (if unique)
+            * or Ask, "What's the vision for your [event]?"
+            * Use event-specific questions if they came in on the form to understand their vision.
+            4. Situation Questions:
+            * Use mirroring and "sounds like" techniques before asking situation questions.
+            * Ask about their preferences for food, drinks, and themes.
+            5. Pain Points Questions:
+            * Determine if they have worked with caterers before.
+            * If yes, inquire about their past experiences and why they reached out to you.
+            * If no, empathize and reassure them of your experience.
+            6. Offer Solutions Questions:
+            * Use gathered information to tailor your questions.
+            * Ask how providing certain benefits or solving problems would enhance their event.
+            7. Highlight Consequences Questions:
+            * Address the potential negative impacts of not finding the right caterer.
+            * Ask about the effects of unsatisfactory service or food on their event.
+            8. Close:
+            * Transition smoothly to booking a call or a tasting.
+            * Use mirroring and highlight the benefits discussed.
+            * Ask, "Would it be a terrible idea to see how we can do that by scheduling a call with our event planner?" or "How about we book a tasting session?"
+
+
+________________
+
+
+
+
+👇 THE ACTUAL SCRIPT IS HERE 👇
+
+
+FOR: 00. PROSPECT &  01. QUALIFIED
+👉 START HERE: 👇 YOUR FIRST CALL
+            * YOUR TONE IS: 🗣 02. INTENSELY CURIOUS  
+            * 👉 If you like, you can try the "Alternate Opener"
+
+
+👇 SCRIPT HERE 👇
+FOR NEW LEADS, YOU 
+            * 📞📞📞 TRIPLE TAP (CALL 3 TIMES) WHEN THEY COME IN
+
+👉 RING RING SAY: 👇
+Hi {first name}, this is {YOUR first name} from Comeketo catering. 
+👇
+👁️👁️ [DO NOT PAUSE] 👇
+👇CONTINUE TO QUESTION
+A. Facebook Leads
+I noticed you recently filled out a form on our 
+Facebook ad about catering for your EVENT. 
+Is now a bad time? 
+
+
+
+B. Website Leads
+I noticed you recently filled out a form on our 
+website about catering for your EVENT. 
+Is now a bad time? 
+
+
+C. Expo Leads - From Sheet
+I noticed you recently filled out a form at a wedding
+expo we we're recently at together. Is now a bad time?
+
+
+
+D. General Use - For nearly any purpose
+
+
+Your name just came across my desk (rustle papers near mic) 
+sounds like you have an {event name} coming up. Is now a bad time?
+👇
+(when they answer go immediately go into connecting questions, no pause)
+👇
+________________
+
+
+👇 but they might throw up an early objection, so start here if they do
+________________
+
+
+⚠️ FIRST OBJECTION: " I'M BUSY RIGHT NOW" / "CALL ME LATER"
+
+You may encounter someone who IS BUSY and says "Can you call me back later" - You are a salesperson, you control the sales process. Remember that.
+
+Mirror what they said and/or use the phrase "Sounds Like": Then go to Question (Objection Overcoming)
+               * "I understand, it sounds like you're really busy at the moment. Can you tell me a little more about what's occupying your time right now?"
+               * Customer: "I have back-to-back meetings today."
+               * -> Mirror: "Back-to-back meetings, would it be a horrible idea to give me 30 90 seconds? Just to see if I can even help you? - You can hang up anytime."
+
+
+________________
+
+
+A. 👇 CONNECTION
+
+IF THEY SAID ANYTHING OTHER THAN "NO" 
+
+Wedding: First off I wanted to congratulate you on getting married. CONGRATS
+-> This event sounds [xyz]
+               * "I’m curious, what inspired you to plan this backyard family get-together?"
+               * use this opener for unique events
+               * "Can you tell me a little about the vision for your {insert event type here}?"
+               * use this opener for almost every event
+
+
+________________
+
+
+B. 👇 SITUATION
+
+Mirror what they said and/or use the phrase "Sounds Like": Then go to Question (Situation Question)
+               * "Can you tell me more about the type of food and drinks you're imagining for your [event type]?"
+               * ….. "If you really thought about it"
+               * So how are 
+________________
+
+
+C. 👇 PAIN POINTS
+
+
+Mirror what they said and/or use the phrase "Sounds Like": Then go to Question (Pain Points Question)
+"Have you worked with caterers in the past or are we your first?"
+Yes, have in the Past:
+               * Negative: Mirror what they say - then say Sounds Like - and Transition to 04. OFFER SOLUTION QUESTION
+               * Positive: "If your experience with {the other caterer} was good, then what made you reach out to us?"
+No, we are the First: 
+"Where you're first? Sounds like this process can be a little intimidating, am I wrong?"
+Then: Mirror what they said - then say Sounds like - "No worries, we've done over 500 of these in the past 15 years." Transition to the next Question 04. OFFER SOLUTION QUESTION
+________________
+
+
+D. 👇 OFFER SOLUTION
+
+
+Mirror what they said and/or use the phrase "Sounds Like": Then go to Question (Offer Solutions Question)
+               * "If a caterer could (PROVIDE BENEFIT A and/or AVOID,SOLVE PROBLEM B), how would that enhance [o]your event?"
+               * "What would it mean for you to (PROVIDE BENEFIT A and/or AVOID, SOLVE PROBLEM B) for your event?"
+The word track for the gray text is a variable text, meaning the information you gathered from steps 01-03 is utilized here
+
+
+________________
+
+
+E. 👇 HIGHLIGHT CONSEQUENCES
+
+
+Mirror what they said and/or use the phrase "Sounds Like": Then go to Question (Highlight Consequences Question)
+               * "What if you don’t find the right caterer in time? How would that effect your {Event Type}?"
+               * "What would happen if your guests were not satisfied with the food and or the service of your caterer?"
+________________
+
+
+F. 👇 CLOSE
+Into booked call with Event Planner
+or Into Tasing
+Mirror + Sounds Like: Then go to Question (Transition to Booking Question)
+"Based on what you’ve shared (FROM 'OFFER SOLUTIONS AND HIGHLIGHT CONSEQUENCES'), it sounds like BENEFIT 1 & BENEFIT 2 is really important to you. Would it be a terrible idea to see how we can do that by scheduling a call with our event planner?"
+Tasting
+"Given the importance of your event based on (FROM 'OFFER SOLUTIONS AND HIGHLIGHT CONSEQUENCES'), how about we book a tasting session… When are you guys eating dinner next?
+               * When are you guys eating dinner next? or
+               * Would it be a terrible idea for you to come try our food?"
+
+               * EASY WAY TO OVERCOME RESISTANCE:
+               *  If you hate the food, no price we offer makes sense, 
+
+
+
+✅ {TRANSITION INTO APPOINTMENT SETTING SCRIPT }
+
+
+CALL COMPLETE
+________________
+
+
+👇 EXAMPLE SALES CALL SCRIPT 👇
+                [with tonality hints]
+📞  EXAMPLE SCRIPT FOR WEDDING ON CAPE COD
+FOR: 00. PROSPECT & 01. QUALIFIED
+YOUR TONE IS: 🗣 02. INTENSELY CURIOUS
+Domenic:
+[Imagine a friend you haven't spoken to in a while, said  s l o w l y]
+"Hi Glaci, this is Domenic from Comeketo Catering. I noticed you recently filled out a form on our Facebook ad about catering for your wedding on Cape Cod. Is now a bad time?"
+Glaci: "No, this is a good time."
+Domenic: "Great! Can you tell me a little about the vision for your wedding?"
+[Varying pitch: Use an enthusiastic tone with rising and falling intonations to show genuine interest]
+Glaci: "We're envisioning an elegant yet relaxed beachside wedding. We want the ceremony to be right on the beach, with a beautiful archway decorated with flowers and draped with soft fabrics. After that, we plan to have a reception in a nearby venue with large windows overlooking the ocean, so our guests can enjoy the beautiful view while they dine. We want a mix of Brazilian BBQ and some traditional dishes to reflect our diverse tastes and to make sure all our guests have something they enjoy. We’re aiming for a fun, memorable evening with a live band, lots of dancing, and, of course, amazing food that leaves a lasting impression on everyone."
+Domenic: 
+[Mirror]
+"So, you’re thinking of an elegant yet relaxed beachside wedding with a beautiful archway and an ocean-view reception. It sounds like a perfect combination. Can you tell me more about the type of food and drinks you're imagining for your wedding?"
+[Intensely curious tone with a slight rise in pitch]
+Glaci: "We're thinking of a mix of Brazilian BBQ and some traditional American dishes. We want it to be elegant but also relaxed and enjoyable for everyone. For drinks, we're considering a variety of options including some classic cocktails, a selection of fine wines, and maybe even a signature drink to add a personal touch. We want the food to be not only delicious but also beautifully presented to fit the elegant theme of our wedding."
+Domenic: 
+[Sounds like]
+"Looks like [p][q]you have a great vision for the wedding with a mix of Brazilian BBQ and traditional dishes, along with a variety of drinks. Have you worked with caterers in the past or are we your first?"
+[Gentle, sincere tone]
+Glaci: "No, this is our first time."
+Domenic: 
+[Mirror]
+"So this is your first time? [Slight pause] Sounds like this process can be a little intimidating, am I wrong?" [Rising inflection to convey question]
+Glaci: "Yes, it's a bit overwhelming. We've never planned something this big before, and we want to make sure everything is perfect. There's just so much to think about, from the food and drinks to the decorations and entertainment. It’s a lot to handle, and we want to make sure we choose the right caterer who can help make everything come together smoothly."
+Domenic: 
+[Mirror]
+"You're feeling a bit overwhelmed… [Slight pause] Sounds like it's dealing with the entire scale of planning everything perfectly… [Softened tone] That's a lot, I hear you Glaci… Rest assured - we've done over 500 of these in the past 15 years. Imagine having a caterer who can bring your beachside vision to life, ensuring everyone is enjoying their Brazilian BBQ, smiling, looking at the ocean, and the reception is perfectly set up. We handle all the details from setup to cleanup. How would that make you feel about your wedding day?"
+[Gentle but confident tone]
+Glaci: "It would definitely make things less stressful and allow us to enjoy the day more. Knowing that all the details are taken care of by professionals would give us peace of mind, so we can focus on celebrating with our friends and family. It would be amazing to just relax and soak in the special moments without worrying about the logistics."
+Domenic: 
+[Sounds like]
+"Sounds like having all the details handled professionally would make your wedding day much more enjoyable and stress-free. Given that your biggest concern is ensuring everything goes smoothly without the stress of managing setup and cleanup, would it be a terrible idea to see how we can make this a reality by scheduling a call with our event planner?"
+[Steady and firm tone]
+Glaci: "That sounds good. I'd love to get more details and make sure we’re on the right track with everything. Talking to the event planner would really help us understand what’s possible and how to make our wedding day as perfect as we envision."
+👇 GO 👇GO 👇GO
+Then go into the appointment setting script
+👇 APPOINTMENT SETTING SCRIPT EXAMPLE👇
+Domenic: "Fantastic! Let's schedule the tasting for tomorrow or Monday. We want to ensure you're confident in your choice and that everything is perfect for your wedding."
+[Upbeat and engaging tone]
+Glaci: "Let me check my schedule. [Pause] Okay, tomorrow works."
+Domenic: "Great! Would the afternoon or evening work better for you?"
+[Quickening pace to show eagerness]
+Glaci: "The afternoon would be better."
+Domenic: "The afternoon, perfect. [Mirror] Is 3 PM or 4:30 PM better?"
+[Controlled and calm tone]
+Glaci: "3 PM works."
+Domenic: "Thanks, Glaci. Just to confirm, your email is glaci@example.com[r]. And can you confirm your cell phone number[s] again?" [REMEMBER TO REPEAT BACK EMAIL and ASK for phone number again] 
+[Steady and clear tone]
+Glaci: "Yes, my email is glaci@example.com and my phone number is 123-456-7890."
+Domenic: "Thank you, Glaci. There's a refundable $25 per person tasting fee, which will be refunded if you book your catering with us. Is that a deal breaker?"
+[Softened, reassuring tone]
+Glaci: "That's fine."
+Domenic: "Okay let me pencil you in {flip paper near the mic briefly}, ….and how many people will be accompanying you? "
+[Engaging and upbeat tone]
+Glaci: "Just me and My Husband."
+Domenic: "2 People, You and your Husband, Got it. You'll receive the invite shortly. If you have any questions before then, feel free to reach out. We're excited to help make your wedding day perfect. See you tomorrow at 3 PM!"
+[Confident and enthusiastic tone]
+Glaci: "Thank you, Domenic. I look forward to it!"
+Domenic: "Thank you, Glaci. Have a great day!"
+[Friendly and warm tone]
+
+
+________________
+
+
+📞  ALTERNATE OPENER
+Can also overcome the objection "I was just looking for info"
+❌ REPLACES THIS: Domenic:
+[Imagine a friend you haven't spoken to in a while, said  s l o w l y]
+"Hi Glaci, this is Domenic from Comeketo Catering. I noticed you recently filled out a form on our Facebook ad about catering for your wedding on Cape Cod. Is now a bad time?"
+
+
+✅ WITH THIS: 
+Domenic:
+[Upbeat and engaging tone, with a friendly pitch]
+"Hi Glaci, It's Domenic from Comeketo Catering! Saw you reach out to us from Facebook, …[slow down] Are you just kind of looking around for information today?" [rising inflection on the question]
+Glaci:
+"Yes, I'm just looking."
+Domenic:
+[Slowing down, expressing genuine curiosity]
+Absolutely, that's perfectly fine. When you're looking around, besides price[t], is there something specific you're possibly hoping to find or get more information about?"
+Glaci:
+"Well, I'm not sure yet. Just exploring options."
+Domenic:
+[Softened tone, showing understanding]
+"Totally understandable. Exploring options is a great way to start. Is there anything in particular about us that's caught your eye or something else that you’re curious to learn more about?"
+Glaci:
+"Not really, just getting ideas for now."
+Domenic:
+[Sincere questioning, slightly puzzled tone]
+"I see. I'm a bit curious... What inspired you to start exploring catering options for your wedding? There must be something important you’re hoping to achieve."
+Glaci:
+"Well, we want to make sure we have the best catering for our wedding."
+Domenic:
+[Enthusiastic and confident tone]
+"That makes a lot of sense, Glaci! Ensuring the best catering can really elevate the entire experience. How about we discuss some ideas and see if we can find something that fits your vision perfectly?"
+Glaci:
+"Okay, that sounds good."
+Domenic:
+"Great, let's get started!" 
+Domenic: " Can you tell me a little about the vision for your wedding?" 
+[Varying pitch: Use an enthusiastic tone with rising and falling intonations to show genuine interest]
+then begin situation questions
+
+
+________________
+
+
+
+
+B. 5 DAY FOLLOW-UP CADENCE FOR INBOUND LEADS
+(1️⃣). DAY #1:
+📞 CALL [3 TIMES]
+If there is no answer, don’t leave a voicemail. Call Immediately, then Call Immediately then leave 
+
+🔊 VOICE MAIL
+Hey (Name)! (Name) here with Comeketo Catering. It looks like you’re planning a (type of event) on (date). Congratulations! I’m excited to share a few ideas on how we can make this event extra special. Anyway, sorry I missed you. I’ll try back (day/time).
+📲 TEXT
+Hey (Name)! (Name) from (Company Name). I just left you a voicemail but thought a text might be easier to reach you. There are a few ideas that I’d like to share with you on how we can make your (type of event) extra special. What’s a good time today for a quick 10-minute chat?
+✉️ DAY 1: EMAIL 1 - SPARK CURIOSITY
+Subject: Curious About Your [Event Type] 
+Email Body: Hi [Name],
+I noticed you recently reached out to us about catering for your [event type] on [date].
+
+What’s the most important detail you’re focusing on right now?
+Looking forward to your thoughts.
+
+
+________________
+
+
+(2️⃣) . DAY #2: 
+📞 CALL
+If there is no answer, leave a voicemail.
+🔊 VOICE MAIL
+Hey (Name). (Name) again. Sorry I missed you again but wanted to make sure I kept my promise to call you back. I’m really excited to learn about your vision for your (type of event) and share a few of my own with you on how we create an incredible menu for you. I’m going to shoot you another text right now.
+📲 TEXT
+Hey (Name). (Name) again. Ugh, I missed you again but did leave a voicemail. I’m really looking forward to brainstorming a few ideas for your (type of event). I'll try you again on (day/time).
+✉️ DAY 2: EMAIL 2 - UNIQUE CATERING IDEAS
+Subject: [First Name of Contact]
+Email Body: Hi [Name],
+It's [Your Name] again from Comeketo Catering. 
+
+I was thinking about your [event type] and I am just so curious about 
+[XYZ THING YOU'RE CURIOUS ABOUT] and am super excited to create a custom menu for you
+When would be a good time for a quick chat to discuss these ideas?
+
+
+________________
+
+
+(3️⃣). DAY #3:
+Nothing
+________________
+
+
+(4️⃣). DAY #4:
+📞 CALL
+If there is no answer, leave a voicemail.
+🔊 VOICE MAIL
+Hi (Name)! (Name) here calling because I promised to reach out today at (time). Sorry, I missed you. I noticed that you've been difficult to reach and I'm wondering if that is because you're swamped with life or work or you’re just not interested in catering your (type of event) anymore or maybe I've been wrong at guessing the times you might be available. Either is okay, but If you wouldn't mind letting me know, that would be great. My number is (phone number).
+✉️ DAY 4: EMAIL 3 - UNCOMMON QUESTIONS
+Subject: RE: [Event Type]
+Email Body: 
+Quick question about your [event type]: 
+
+What’s one thing you’ve always dreamed of including in 
+your event but weren’t sure how to pull off?
+________________
+
+
+(5️⃣). DAY #5:
+📲 TEXT
+Have you given up on catering your (type of event)?
+
+
+________________
+
+
+(6️⃣). 🥷 NINJA LEAD RECOVERY
+The lead recovery techniques are also accompanied by the daily "triple tap"
+
+06A. ✉️ BONUS EMAIL SCRIPT
+
+Email Bonus #1
+
+Subject: What If Your [Event Type] Could Be Perfect?
+Email Body: 
+I’ve been thinking about your [event type] and how we can make it perfect.
+What would make your event stand out?
+idk, just been thinking alot about what was wrong with my other emails that I haven't heard back.
+I’d love to discuss some ideas with you. Let me know when you’re free for a quick call.
+
+Email Bonus #2
+Tips for Your [Event Type]
+Email Body: Hi [Name],
+Before we wrap up, I wanted to share some tips for making your [event type] extraordinary. 
+
+These are insights my event planner learned from years of catering huge events, and little ones too.
+Would you be interested in a quick call with her to go over these tips?
+
+
+
+
+________________
+
+
+
+
+06B. 📲 BONUS SMS SCRIPT
+                  * 📲 Still interested in catering? 
+                  * 📲 Can we discuss your catering plans tomorrow? Free now?
+                  * 📲 What’s holding you back? 
+                  * 📲 Need catering details?
+                  * 📲 Oops… did you get my text?
+
+
+06C. 🔊 BONUS VOICE DROPS 
+You can use voice drops, sent as an attachment via SMS to rengage the potential customer. I got you started with 1 premade below, and gave you instructions on how to send 2 of your own.
+
+
+PREMADES
+                  * ⬇️ 01. Which 2 things matter most? (1.5 mins)
+
+
+  
+
+How to use:
+                  1. Click SMS on the Close Record
+                  2. Click the Attachment Button
+                  3. Upload the downloaded MP3 From Above
+
+
+
+
+HOW TO MAKE YOUR OWN AUDIO CLIP
+
+
+
+
+Download Audacity, Record a voice clip 
+  
+  
+
+1. Click Record
+2. Once done Recording File>Export>Mp3
+
+
+Try Recording your own clips!
+Scripts: 
+
+🔊 01. Hey {First Name} You came across my desk a few days ago for catering, try reaching you, haven't heard back, where do we go from here?
+
+
+🔊 02. Hey {First name} Looks like you're all set with catering, i'm going to go ahead and cancel the connection - reach back out any time
+
+
+________________
+
+
+
+
+
+
+
+
+05. 🗣️ TONALITY & PACING
+
+
+________________
+
+
+
+
+01. CONVEY CONFUSION 
+
+
+As to Why They Haven't Accepted a Quote or Don't Want to Move Forward
+
+How to:
+                  1. Rising Inflection at the End of Sentences:
+                  1. Use a slight rise in pitch at the end of your sentences to convey a question or doubt.
+                  2. 🗣️ Example: "I'm just wondering, why hasn't the quote been accepted yet?"
+                  2. Pausing Before Key Points:
+                  1. Pause briefly before mentioning the quote or the decision to emphasize its importance and create a sense of puzzlement.
+                  2. 🗣️ Example: "I noticed you haven’t... accepted the quote yet. Can you help me understand why?"
+                  3. Softened Tone:
+                  1. Use a softer, more gentle tone to show that you’re not being confrontational but genuinely curious and confused.
+                  2. 🗣️ Example: "I'm a bit puzzled as to why you haven't moved forward. Can you share more about that?"
+                  4. Expressive Speech:
+                  1. Vary your tone to show genuine confusion, such as slightly elongating words or adding a touch of uncertainty in your voice.
+                  2. 🗣️ Example: "It’s just that I thought everything was clear, but maybe I missed something?"
+                  5. Sincere Questioning:
+                  1. Use a sincere and earnest tone when asking questions to show that you genuinely want to understand their perspective.
+                  2. 🗣️ Example: "Can you help me understand what’s holding you back?"
+________________
+
+
+02. SEEM INTENSELY CURIOUS  
+Great tones to use in the initial conversation
+Remember to feel the vibe and energy of the call, and do your best to:
+                  * 01. Talk like a friend
+                  * 02. Listen like a psychologist
+                  * 03. Ask questions like a teacher
+                  * 04. Focus on selecting the proper tone for the context of the call
+                  1. Upbeat and Engaging Tone:
+                  1. Use an enthusiastic and energetic tone to show genuine interest and curiosity.
+                  2. 🗣️ Example: "Wow, that sounds fascinating! Can you tell me more about that?"
+                  2. Varying Pitch:  
+                  1. Use varying pitch to keep the conversation dynamic and show that you are actively engaged and interested.
+                  2. 🗣️ Example: "I’d love to know, what inspired this idea?"
+                  3. Leaning Forward:
+                  1. Even though it’s a phone call, act as if you’re physically leaning forward. This can subconsciously come through in your tone, making you sound more engaged.
+                  2. 🗣️ Example: "What’s the most exciting part of this project for you?"
+                  4. Quickening Pace:
+                  1. Slightly increase your speaking pace to match your heightened interest and curiosity.
+                  2. 🗣️ Example: "And then what happened? I’m really curious to know!"
+                  5. Mirroring Enthusiasm: 
+                  1. Match and mirror the client’s enthusiasm to show that you are equally interested in what they are saying.
+                  2. 🗣️ Example: "That’s amazing! How did you come up with that?"
+________________
+03. SEEM CONFIDENT 
+
+In Question Responses
+How to
+                  1. Steady and Firm Tone:
+                  1. Maintain a steady and firm tone to convey confidence in your responses.
+                  2. 🗣️ Example: "Absolutely, we can handle that for you."
+                  2. Controlled Pace:
+                  1. Speak at a moderate and controlled pace to show that you are calm and in control.
+                  2. 🗣️ Example: "Yes, we have extensive experience with that."
+                  3. Clear and Articulate Speech:
+                  1. Enunciate your words clearly and avoid filler words to project confidence.
+                  2. 🗣️ Example: "Our team is highly skilled in delivering top-notch service."
+                  4. Positive Affirmations:
+                  1. Use positive affirmations to reinforce your confidence in your abilities.
+                  2. 🗣️ Example: "I’m confident we can exceed your expectations."
+
+
+________________
+
+
+04. PACE OF CONVERSATIONS
+                  1. Adjusting to the Client’s Speed:
+                  * Match the pace of your speech to that of your client. If they speak quickly, pick up your pace slightly; if they speak slowly, slow down to match them.
+                  2. Using Pauses Effectively:
+                  * Use strategic pauses to give the client time to process information and to emphasize key points.
+                  * Example: "This feature will... really enhance your event experience."
+                  3. Moderate Pace for Clarity:
+                  * Maintain a moderate pace to ensure clarity and understanding, especially when discussing complex topics.
+                  * Example: "Let’s go over the details carefully to ensure we’re on the same page."
+                  4. Slowing Down for Important Information:
+                  * Slow down when discussing crucial information or making important points to ensure the client understands.
+                  * Example: "It’s important to note that this service includes... all the additional features you requested."
+                  5. Speeding Up for Engagement:
+                  * Slightly increase your pace when discussing exciting or engaging topics to convey enthusiasm and keep the client’s interest.
+                  * Example: "And the best part is, we can start immediately!"
+By effectively using tonality and pacing in your conversations, you can enhance your communication, build rapport, and increase your chances of moving forward with the client.
+________________
+06. ⚠️ OBJECTIONS
+01: "I NEED TO THINK ABOUT IT."
+Response:
+                  * Mirror: "I understand, it sounds like you need a bit more time to consider."
+                  * Diffuse: "Just to make sure you have all the information you need to make an informed decision, would it be helpful if I answered any specific questions or concerns right now?"
+                  * Transition to Booking Question: "Since ensuring everything is perfect is really important to you, would it be a terrible idea to schedule a call with our event planner to address any details you might be thinking about?"
+________________
+
+
+02: "I NEED TO TALK TO MY PARTNER/SPOUSE."
+Response:
+                  * Mirror: "I completely understand that you need to discuss this with your partner/spouse/wife/husband."
+                  * Diffuse: "How about we schedule a tasting session for both of you? This way, you can both experience our offerings and make a decision together."
+                  * Transition to Booking Question: "Would it be a terrible idea to come together and try our food? If you both love it, we can move forward from there."
+                  * "And regarding your husband/wife, is this something you 2 talked about before, or are we on a secret mission here?" {ha, ha} (playful)
+
+
+________________
+
+
+03: "I’M NOT SURE IF I CAN COMMIT TO A TIME RIGHT NOW."
+Response:
+                  * Mirror: "It sounds like your schedule is pretty busy at the moment."
+                  * Diffuse: "To make this easier, we can be flexible with the timing. How about we pencil in a tentative time, and if anything changes, you can let me know?"
+                  * Transition to Booking Question: "Given the importance of your event, would it be a terrible idea to tentatively book a tasting session? This way, we can ensure you get to try our food without any pressure."
+________________
+
+
+04: "I’M WORRIED ABOUT THE COST."
+Response:
+                  * Mirror: "I understand, it sounds like the cost is a concern for you."
+                  * Diffuse: "To make sure we're the right fit for your budget, why not try our food first? If you love it, we can then discuss pricing options that work for you."
+                  * Transition to Booking Question: "Would it be a terrible idea to come in for a tasting session? This way, you can see if our quality justifies the cost before making any decisions."
+________________
+
+
+05: "I ALREADY HAVE A CATERER IN MIND."
+Response:
+                  * Mirror: "It sounds like you've already considered other options."
+                  * Diffuse: "That's great to hear. How about giving us a chance to show you what we can offer? A tasting session can help you compare and make the best choice for your event."
+                  * Transition to Booking Question: "Would it be a terrible idea to schedule a tasting session with us? If you find that our offerings don't meet your expectations, you'll still have your other option."
+________________
+
+
+06: "NOT INTERESTED YET, BUT MIGHT BE INTERESTED IN THE FUTURE"
+Overcoming the Objection: "Not interested yet, but might be interested in the future"
+Mirror: "I understand, it sounds like the timing isn’t quite right for you at the moment."
+Diffuse: "Just so I understand better, what would need to change for you to be interested in moving forward now?"
+Transition to Immediate Engagement: "How about we set up a quick call with our event planner today or tomorrow to address any concerns and see if we can help you with those future needs right now? Would that be a terrible idea?"
+
+
+________________
+
+
+07. "I HAVE EVERYTHING I NEED" 
+Response:
+
+
+Mirror: "It sounds like you’ve already covered all your bases."
+
+
+Diffuse: "Just so I can better understand, what specifically were you hoping to achieve when you initially reached out to us?"
+
+
+Transition to Question: "I’m curious, is there something that made you think our services could enhance your event even further?"
+
+
+________________
+
+
+08. T: "MY WEDDING ISN'T UNTIL NEXT YEAR."  / TASTING
+Domenic:
+"Hi [Client’s Name], this is Domenic from Comeketo Catering. I noticed you recently expressed interest in our catering services for your wedding. Is now a bad time to talk?"
+Client:
+"No, this is fine."
+Domenic:
+"Great! I understand your wedding isn't until next year, and that might make you hesitant to commit to a tasting right now. Can you share a bit about what concerns you might have about scheduling a tasting this early?"
+Client:
+"I just think it's too soon to make any decisions."
+Domenic:
+"I completely understand, it sounds like you want to ensure everything is perfect and have time to consider all your options. Many of our clients feel the same way at first. However, think of the tasting as an opportunity to explore your options without any commitment. It allows you to experience firsthand what we can offer and gives you ample time to make any adjustments well before your big day. How would it feel to get a taste of the service you’ll be providing to your guests, and start envisioning the perfect menu early on?"
+Client:
+"That makes sense, but I’m still not sure."
+Domenic:
+"I hear you. Imagine having the peace of mind knowing you've selected a caterer who understands your vision and can deliver exactly what you want. We are booking out almost 2 years in advance, and securing your tasting now ensures we have enough time to perfect everything to your liking. How about we schedule a tentative tasting and if anything changes, we can adjust as needed. Would that be a terrible idea?"
+
+
+OR TRY QUESTIONS
+Domenic:
+[Upbeat and engaging tone]
+"Hi [Client’s Name], this is Domenic from Comeketo Catering. I noticed you recently expressed interest in our catering services for your wedding. Is now a bad time to talk?"
+Client:
+"No, this is fine."
+Domenic:
+[Warm and friendly tone]
+"Great! How are the wedding plans going so far?"
+Client:
+"Going great, we have been talking to all the vendors and creating our invitation ideas."
+Domenic:
+[Mirror + Enthusiastic tone + Varying pitch]
+"Talking to all the vendors and creating your invitation ideas, that sounds wonderful! You mentioned your wedding isn't until next year. What concerns do you have about scheduling a tasting this early?"
+Client:
+"I just think it's too soon to make any decisions."
+Domenic:
+[Mirror + Gentle tone + Softened tone]
+"Too soon to make any decisions. I completely understand, it sounds like you want to ensure everything is perfect and have time to consider all your options. Can you share more about what you’re hoping to achieve with your catering?"
+Client:
+"We want the food to be memorable and enjoyable for all our guests."
+Domenic:
+[Mirror + Confident tone + Clear and articulate speech]
+"Memorable and enjoyable for all your guests. That makes perfect sense. How important is it for you to feel confident in your choice of caterer well before your wedding day?"
+Client:
+"Very important, we want everything to go smoothly."
+Domenic:
+[Mirror + Reassuring tone + Leaning forward]
+"Want everything to go smoothly. Exactly, many of our clients feel the same way. What would it mean for you to have a clear idea of the menu and service style early on, so you have one less thing to worry about as your wedding approaches?"
+Client:
+"It would be reassuring, but I’m still not sure."
+Domenic:
+[Mirror + Empathetic tone + Sincere questioning]
+"Still not sure. I hear you. Imagine having the peace of mind knowing you've selected a caterer who understands your vision and can deliver exactly what you want. We are booking out almost 2 years in advance, and securing your tasting now ensures we have enough time to perfect everything to your liking. How would it impact your wedding planning if you knew this important detail was already taken care of?"
+Client:
+"That would definitely help."
+Domenic:
+[Mirror + Enthusiastic tone + Quickening pace]
+"That would definitely help. Great! How about we schedule a tentative tasting? If anything changes, we can adjust as needed. Does that sound like a reasonable plan?"
+
+
+
+
+
+
+
+
+________________
+
+
+09. Q: "MY WEDDING ISN'T UNTIL NEXT YEAR."  / QUOTE
+Domenic:
+"Hi [Client’s Name], this is Domenic from Comeketo Catering. I noticed you recently requested a quote about catering for your wedding. Is now a bad time to talk?"
+Client:
+"No, it's fine."
+Domenic:
+"Wonderful! I understand that your wedding is not until next year, and you might feel it's too early to commit to a quote. Can you tell me more about why you're hesitant to move forward with a quote at this stage?"
+Client:
+"I just think it’s too soon to make any commitments."
+Domenic:
+"I get that, it sounds like you want to keep your options open and take your time to make the best decision. That's completely understandable. However, getting a quote now does not lock you into any commitment. It provides a clear picture of what we can offer and allows you to start planning your budget and other details well in advance. How would it benefit you to have an early quote that you can adjust as needed, giving you one less thing to worry about closer to the wedding?"
+Client:
+"That might be helpful, but I’m still unsure."
+Domenic:
+"I understand. Think of the quote as a flexible plan that can evolve as your wedding plans take shape. By starting early, we can ensure that every detail is perfect and there are no last-minute surprises. Plus, securing a quote now can help you lock in current pricing, protecting you from any potential price increases. Does that sound like something that might put your mind at ease as you continue to plan your big day?"
+Client:
+"Yes, I guess that makes sense."
+Domenic:
+"Great! How about we go ahead and put together a preliminary quote for you? This way, we can start the conversation and make any necessary adjustments as your plans evolve. Would that work for you?"
+
+
+
+
+07. 🔄 RESPONSES & ACTIONS
+01. GENERAL STRUCTURE
+Structure to Any Question
+                  1. Immediate Positive Response question
+                  * Mirror + Sounds Like = Transition
+                  2. Engage Further with a question
+                  * Mirror + Sounds Like = Transition
+                  3. Offer a Solution (optional) question
+                  * Mirror + Sounds Like = Transition
+                  4. Transition to action 
+________________
+
+
+
+
+
+
+02. "DO YOU HAVE KID FRIENDLY CATERING?"
+Immediate Positive Response: "Absolutely, we can definitely accommodate kid-friendly options! Can you tell me a bit more about what types of food or activities you're thinking of for the kids?"
+Engage Further: "I want to make sure we create something that the kids will really enjoy. Do they have any favorite foods or themes that we should incorporate?"
+Offer Solutions: "We have a variety of kid-friendly menu options, such as mini sliders, mac and cheese, and fun dessert stations. We can also provide activities like a DIY sundae bar or a popcorn machine to keep them entertained. Would that be something you’re interested in?"
+Transition to Action: "How about we schedule a quick call with our event planner to go over all the details and make sure we include everything that will make the kids’ experience special?"
+
+
+________________
+
+
+
+
+A. 📅 APPOINTMENT SETTING SCRIPT
+
+
+Open the calendly's of Bibi or any other closer/event planner and be ready to know the available times on the calendar. If there are no openings for today/tomorrow - contact the closer
+                  1. Have the main calendly open
+                  2. {Try to Mirror} [slow down just a little bit] "I get it"
+                  3. Would  This day or That day work a better { for you to pop in for a tasting}?    (you can open with #2 or #3)
+                  4. Does [afternoon] or [evening] work better?
+                  5. Does [Time1] or [Time2] work better?
+                  6. Confirm the email of caller (and spouse if involved)
+                  7. Ask for the mobile phone number
+                  8. Confirm the number of attendees
+                  9. Confirm they have received the invite
+                  10. Inform them of the refundable $25/per/person tasting fee (gets refunded if they book with us)
+                  11. Fill out the catering job notes custom activity on close
+                  1. When you book appointments, use Calendly, and also invite yourself so it syncs to your calendar and close.com account
+                  1.   A. TASTING CONFIRMATION & JOTFORM
+                     * The process is:
+                     * A. First confirm attendance 
+                     * B. Once attendance is confirmed, then get Jotform filled out
+                     * C. Be unafraid to cancel if you do not get confirmation back the day before
+i. FIRST: CONFIRM TASTING
+a. IMMEDIATELY AFTER BOOKING
+Email:
+Subject: [✅ CONFIRMED] Your Tasting Appointment
+Dear [Customer Name],
+
+Here's Your Tasting Details:
+                     * Location: [Address]
+                     * Date: [Date]
+                     * Time: [Time]
+
+Your tasting will feature a handpicked selection of our finest and preferred dishes, crafted to give you a taste of what you can expect for your upcoming event.
+
+Get ready to sample appetizers, main courses, and desserts. 
+
+Our catering manager, Bibi, will be on hand to guide you through each dish and help you craft the perfect menu.
+
+If you have any questions or need to 
+make changes to your appointment, 
+please contact us at 
+[Phone Number] or [Email Address].
+
+See you soon!
+[Your Name] 
+
+
+Text:
+Hi [Customer Name], this is [Your Name] from Comeketo Catering. Your tasting appointment is confirmed for [Date] at [Time]. Please check your email for additional details. Thanks!
+________________
+b. ONE WEEK BEFORE THE EVENT
+Email:
+Subject: 📅 Your Tasting Appointment is Next Week!
+Hey [Customer Name],
+Your tasting appointment at Comeketo Catering is one week away.
+
+Details:
+                        * Location: [Address]
+                        * Date: [Date]
+                        * Time: [Time]
+Your tasting will feature a variety of our finest dishes hand-selected from your preferences and alongside our catering manager, Bibi.
+
+See you then,
+[Your Name] 
+
+
+Text:
+Hi [Customer Name], We’re excited to host you at Comeketo Catering next week for your tasting on [Date] at [Time]. See you soon!
+________________
+c. THREE DAYS BEFORE THE EVENT
+Engage the WorkFlow Weapon 01. Confirmation
+This will send out a request for confirmation, and then it will automatically prompt you to cancel it.
+
+
+If the event is within 48 hours, then use similar language and approach to aggressively confirm attendance and be willing to cancel the event should you lack to receive a customer confirmation
+
+
+d. TRIGGERING THE 3 DAY WORKFLOW
+
+
+  
+
+How to trigger the workflow
+
+
+  
+
+What the workflow does
+
+
+Important: Close.com workflows stop sending automations the moment the customer replies/calls/sms/emails back
+
+
+ii. THEN: JOTFORM
+Once attendance is confirmed, then get Jotform filled out
+
+
+Step 1. Trigger the WorkFlow
+Weapon: 02. Jotform
+  
+
+When the lead replies then this workflow automatically stops
+
+Step 2. Monitor Workflow Automation
+What the workflow does
+  
+
+
+
+iii. UPDATING TASTING STATUS
+As your opportunities show up to tastings, or do not show up to tastings, keep the opportunity record updated here:
+  
+
+iv. 📲 SMS FOR NO SHOW
+📲 Hey {First Name}, I missed you at the {tasting or appointment} today. I sure hope everything is ok. Give me a call so we can see when we might be able to get you rescheduled
+
+
+📲 Hey {First Name}, I missed you at the {tasting or appointment} today. Have you given up on catering?
+
+
+CANCELLATION RECOVERY
+(1️⃣) DAY 1
+1. 📞 Phone Call
+Script:
+
+Hi {first name}, it's {Your Name}, from Comeketo Catering. I noticed you had to cancel your tasting appointment. I wanted to check in and see what we can do to accommodate your schedule? (move into appointment setting script)
+2. 📲 SMS
+
+
+Is there a better time for us to chat about your event? Just want to make sure we're on the same page. 😊
+
+
+3. ✉️ Email
+                        * Subject: 💔 Missed You.
+I noticed you had to cancel your tasting appointment with us. Is there a better time time to see if we can still help you?
+
+
+(2️⃣)  DAY 2
+
+1. 🔊 Audio Clip via SMS (read how to make one here)
+
+
+Script:
+
+
+Hey It's {your name} from Comeketo Catering. I understand things can come up. Just wanted to and see how we can still assist you with your catering and event planning. Looking forward to hearing from you!
+
+
+2. ✉️ Email
+                        * Subject: ❤️ Let’s Make It Work
+                        * Just a quick follow-up to see if there’s anything we can do to help reschedule your tasting or address any concerns you might have. 
+(3️⃣): final attempt
+1. 📞 Voicemail
+                        * Script: [THIS IS NOT A PHONE SCRIPT, ITS FOR VOICEMAIL ONLY]
+Hey {Client first name} I understand schedules can be tight, but I wanted to make sure we’re available to assist with any questions or rescheduling needs you might have. This will probably the last time I followup, Call me back: xyz
+2. 📲 SMS
+Just wanted to make sure everything is okay and you still need catering, last text. 
+
+
+3. ✉️ Email 
+Subject: 
+💔 Still Here to Help
+
+
+Hi [Client’s Name],
+
+
+I wanted to reach out one last time to see if there’s anything we can do to help with your catering and event planning. We’re here to support you and make the process as easy as possible.
+
+
+Let us know how we can assist or if there’s a better time to connect.
+
+
+
+
+
+
+
+
+________________
+
+
+B. 👥 CO-WORKER TAKEOVER/LEAD-OWNER CHANGE
+
+Introduction for Handing Over from Co-Worker
+"Hi {First Name}, this is {Your_name} from Comeketo Catering. I understand you were talking to my co-worker {Old Owner Name}, but {He's/She's} no longer handling this. Can you tell me more about the vision you have for your wedding?." - Then move to 02.SITUATION QUESTION
+
+
+
+
+________________
+
+
+C. 📝 QUOTING
+For phone and sms scripts TO THE CUSTOMER please visit ".08.05 / QUOTE PHASE, GET LEAD UNSTUCK"
+
+
+Addressing Failed Quotes and Improving Follow-Up Communication
+Objective:
+Ensure lead owners follow up with internal team members to get quotes done in a timely manner, preventing delays and enhancing client satisfaction.
+SOP Overview
+                           1. Daily Follow-Up Routine
+                           2. Internal Communication Protocol
+                           3. Escalation Process
+                           4. Tracking and Accountability
+                           5. Feedback and Continuous Improvement
+
+
+________________
+
+
+05. QUOTING
+1. Daily Follow-Up Routine
+Purpose:
+To establish a consistent routine for lead owners to follow up on pending quotes with internal team members, ensuring timely completion.
+Steps:
+                           * Morning Review (Sales Manager[u] & Lead Owner):
+                           * Start each day by reviewing the status of all pending quotes.
+                           * Identify which quotes need follow-up action.
+                           * Daily Check-In (Lead Owner):
+                           * Send a daily check-in message to the responsible team members for each pending quote.
+Use the following template for the check-in message:
+Hi [Team Member’s Name],
+Just checking in on the status of the quote for [Client Name/Event]. Could you please provide an update on its progress and any anticipated completion time?
+                           * Afternoon Follow-Up (Lead Owner):
+                           * Follow up again in the afternoon if no response is received by noon.
+                           * Use a slightly more urgent tone to emphasize the importance of the task.
+
+
+________________
+
+
+05. QUOTING
+2. Internal Communication Protocol
+
+
+Purpose:
+
+
+To ensure clear and effective communication between lead owners and internal team members, minimizing misunderstandings and delays.
+
+
+Steps:
+                           * Preferred Communication Channels:
+                           * Use designated communication platforms (Close and SLACK) for follow-ups.
+                           * Avoid using personal messaging apps to maintain professionalism and traceability.
+                           * Clear Assignment:
+                           * Clearly assign tasks to specific team members
+                           * Use the task management features in Close.com to assign and track tasks.
+                           * Document Everything:
+                           * Document all communications regarding quote follow-ups in Close.com.
+                           * Ensure each follow-up message and response is logged for future reference.
+________________
+
+
+05. QUOTING
+3. Escalation Process
+Purpose:
+To provide a structured process for escalating issues when quotes are not completed in a timely manner.
+Steps:
+                           1. Initial Escalation:
+                           * If no response is received within 24 hours of the initial follow-up, escalate to the team member’s immediate supervisor.
+Use the following template for the escalation message:
+
+Hi [Supervisor’s Name],
+I’ve been following up on the quote for [Client Name/Event] with [Team Member’s Name], but haven’t received an update. Could you please assist in ensuring this quote is completed as soon as possible?
+                           2. Secondary Escalation:
+                           * If the issue is not resolved within 48 hours of escalation to the supervisor, escalate to the Sales Director or Catering Director.
+                           * Document the escalation steps taken in Close.com.
+________________
+
+
+05. QUOTING
+4. Tracking and Accountability
+Purpose:
+To maintain accountability and ensure transparency in the quote follow-up process.
+Steps:
+                           1. Weekly Status Meetings (Sales Manager):
+                           * Hold weekly status meetings with the sales and catering teams to review the progress of all pending quotes.
+                           * Discuss any delays and identify potential bottlenecks.
+                           2. Quote Progress Smart View:
+                           * Use Close.com to create a dashboard that tracks the status of all quotes.
+                           3. Accountability Reports:
+                           * Generate weekly reports on the status of quotes, including follow-up actions taken and any escalations.
+                           * Share these reports with the Sales Director and Catering Director.
+________________
+
+
+05. QUOTING
+5. Feedback and Continuous Improvement
+Purpose:
+To continuously improve the quote follow-up process based on feedback and lessons learned.
+Steps:
+                           1. Post-Quote Feedback:
+                           * After a quote is completed, gather feedback from the team member on any challenges faced during the process.
+Use the following template for feedback collection:
+
+Hi [Team Member’s Name],
+Thank you for completing the quote for [Client Name/Event]. Could you please share any challenges you faced during this process and any suggestions for improvement?
+Thank you,
+[Your Name]
+
+
+________________
+
+
+
+
+08. 📞 SUPPORTING CALL SCRIPTS
+A. ATTENDED TASTING 
+(1️⃣) DAY 1: PHONE SCRIPT+
+Phone Call Script: 
+Hi [Customer's Name],
+This is [Your Name] from Comeketo Catering. I’m excited to hear about your tasting yesterday. How did you like the food and our service?
+[Pause for response]
+I'm glad to hear that! What do feel would be a good next step? 
+[Pause for response]
+That sounds great. We'd love to be a part of you [name of event]. When would you like to secure the catering service?
+[Pause for response]
+Fantastic. Let’s set up a time to go over the final details and secure your booking. How does [suggest a time] work for you?
+Thank you again, [Customer's Name]. Looking forward to working with you to make your event a success!
+________________
+(a) ADDRESSING THE QUOTE AND BENEFITS
+You: I wanted to make sure everything in the quote meets your expectations. Are there any questions about the details we provided?
+Prospect: [Shares feedback or asks questions]
+You: I’m glad you brought that up. [Address any questions or concerns directly]. Our goal is to ensure your event is exactly how you envision it. We’ve included [mention any unique offerings or special touches] to make your event special. How does that sound to you?
+
+
+________________
+
+
+
+
+(b) REINFORCING VALUE AND URGENCY
+
+You: One of the things our clients love about our service is [mention a key selling point, such as exceptional customer service, unique menu options, or attention to detail]. We’re delivering that same level of excellence for your [name of event].
+
+You: I also wanted to mention that we have limited availability around your event date, and I’d hate for you to miss out on securing your spot. By confirming today, we can ensure everything is perfectly planned for your special day.
+
+
+________________
+
+
+
+
+(c) CLOSING THE DEAL
+
+
+You: Based on everything we’ve discussed, and the quote provided, would it be a bad idea to lock in Comeketo Catering for your event?
+Prospect: [Responds]
+You: That’s wonderful to hear! I’ll go ahead and get everything set up. To finalize, we’ll need [mention any necessary next steps, such as a deposit or contract signature]. Can we take care of that now?
+
+
+
+
+________________
+
+
+
+
+(d) HANDLING OBJECTIONS
+
+
+Prospect: [Shares any final objections]
+You: I completely understand. [Address the objection]. We’re here to make this as smooth and stress-free as possible for you. What can I do to help you feel confident in moving forward today?
+
+
+________________
+
+
+(e) FINALIZING
+
+
+You: Excellent! I’ll send over the necessary details right away. You’ll receive [mention any documents or next steps]. If you have any questions in the meantime, feel free to reach out to me directly.
+You: Thank you so much, (Name). We’re excited to be a part of your [name of event] and make it a beautiful experience. Have a great day!
+________________
+
+
+(f) CALL AND THEY DON’T ANSWER
+                           * Don’t leave a voicemail. Hang up and call back in 5 minutes.
+VOICEMAIL 
+                           * Hey [Customer's Name]! [Your Name] here with Comeketo Catering. I heard your tasting went well yesterday. I’m excited to hear your feedback as well and share a few ideas on how we can make this event extra special. Anyway, sorry I missed you. I’ll try back [day/time].
+TEXT 
+                           * Hey [Customer's Name]! [Your Name] from Comeketo Catering. I just left you a voicemail but thought a text might be easier to reach you. I’m excited to hear about your tasting yesterday. There are a few ideas that I’d like to share with you on how we can make your [type of event] extra special. What’s a good time today for a quick 10-minute chat?
+________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DAY 1: ALTERNATE PHONE SCRIPT OPENER
+Script for People Who Have Attended a Tasting but Haven't Booked a Deposit or Received a Quote
+Introduction: "Hi {first name}, this is {your name} from Comeketo Catering. I hope you're doing well. Is now a bad time to talk? I noticed you recently attended one of our tastings, and I wanted to follow up to see how you enjoyed the experience."
+Engage and Connect:
+                           * "What did you think of the food and the overall tasting experience?"
+                           * "Which dishes stood out to you as favorites?"
+Explore Their Needs:
+                           * "How far along are you in the planning process for your event?"
+Identify Pain Points:
+                           * "What challenges have you encountered in deciding on the catering for your event?"
+                           * "What specific concerns or additional information do you need?"
+Solution Awareness Questions:
+                           * "In what ways do you feel your guests will enjoy what you tasted at Comeketo?
+                           * Given the importance of your event, how crucial is it to have a catering partner who understands your vision and executes it flawlessly with the food you tasted?
+Highlight Consequences:
+                           * "How might your overall planning be impacted if you don’t finalize the catering soon?"
+                           * "What would the impact be on your peace of mind if the catering arrangements weren’t secured well in advance?"
+Urgency for Booking:
+                           * "Given that your event is approaching, how important is it for you to have all the catering details confirmed soon?"
+                           * "What benefits do you see in securing your catering services now to ensure everything is perfectly planned?"
+Transition to Action:
+                           * "Based on what you’ve shared and your positive experience at the tasting, scheduling a quick call with our event planner to discuss the next steps and finalize the arrangements could be beneficial. How do you feel about that?"
+                           * "To make sure everything goes smoothly and we have ample time to prepare, setting up a call with our event planner to go over the details and secure your booking seems like a good next step. What are your thoughts?"
+________________
+
+
+(2️⃣) DAY 2: PHONE SCRIPT+
+
+
+CALL
+                           * If there is no answer, leave a voicemail.
+VOICEMAIL 
+Hey [Customer's Name]. [Your Name] again. Sorry I missed you again but wanted to make sure I kept my promise to call you back. I’m really excited to learn about the food you choose for your [type of event] and share a few of my own ideas with you on how we can create an incredible menu for you. I’m going to send you another text right now.
+TEXT 
+Hey [Customer's Name]. [Your Name] again. Ugh, I missed you again, but did leave a voicemail. I’m really looking forward to brainstorming a few ideas for your [type of event]. Specifically, some special menu items that can make your event unique. I'll try you again on [day/time].
+
+
+________________
+
+
+
+
+(3️⃣) DAY 3: NOTHING
+
+
+________________
+
+
+
+
+(4️⃣) DAY 4: PHONE SCRIPT+
+CALL
+                           * If there is no answer, leave a voicemail.
+VOICEMAIL 
+Hi [Customer's Name]! [Your Name] here calling because I promised to reach out today at [time]. Sorry I missed you. I noticed that you've been difficult to reach. and I'm wondering if that is because you're swamped with life and work or you’re just not interested in us catering your [type of event] anymore, or maybe I've been wrong at guessing the times you might be available. Either is okay, but if you wouldn't mind letting me know, that would be great. My number is [phone number].
+
+
+
+
+________________
+
+
+
+
+(5️⃣) DAY 5: FINISHER
+TEXT 
+Have you given up on us catering for your [type of event]?
+
+
+
+
+
+
+B. QUOTE PHASE (GET LEAD UNSTUCK)
+
+
+Line of Questioning for Urgency with People Who Have Quotes but Haven't Accepted Them Yet
+Introduction: "Hi {First name}, this is {your name} from Comeketo Catering. I noticed you received a quote from us for your event but haven't accepted it yet. I wanted to follow up and see what the hang-up is. IMMEDIATELY BEGIN CONNECTING QUESTIONS, NO PAUSE.
+Connecting Questions:
+                           * "Can you tell me what questions you have about our quote?"
+                           * "Were there any specific details in the quote that stood out to you?"
+Problem Awareness Questions:
+                           * "Are there any concerns or questions you have about our quote that we haven’t addressed yet?"
+                           * "What aspects of our service are you still unsure about?"
+Solution Awareness Questions:
+                           * "What enhancement were you hoping to gain from having us be a caterer?"
+Consequence Questions:
+                           * "What if you don’t finalize the catering soon? How might that impact your event plans?"
+Urgency Questions:
+                           * "Given that your event is approaching, how important is it for you to have all the catering details confirmed soon?"
+                           * "What would be the impact if you had to scramble for catering options at the last minute?"
+Transition to Action:
+                           * "Based on what you’ve shared, it sounds like ensuring everything is perfect for your event is really important to you. Would it be a terrible idea to finalize the catering arrangements now so you can have peace of mind?"
+                           * "To make sure everything goes smoothly and we have ample time to prepare, how about we move forward with the quote and lock in the date today?"
+✉️ EMAILS
+Objective: Get a reply, and get on a call
+✉️ Email 1
+Subj: {First name}
+Please let me know if there's anything specific holding you back from moving forward, or if you need any adjustments to the quote.
+Looking forward to your response.
+✉️ Email 2
+Subj: Quote
+{First name},
+I get it, this catering stuff can be tough, and I wanted to see what questions you have.
+When's the best time to call?
+✉️ Email 3
+Subj: Stressed?
+Securing your catering early helps avoid last-minute stress.
+Still need catering?
+________________
+
+
+📲 SMS SCRIPT
+Objective: Get a reply, and get on a call
+📲 SMS 1
+Can we revisit the quote for your event?
+📲 SMS 2
+What's holding you back from deciding on catering?
+📲 SMS 3
+Can we discuss the catering quote tomorrow?
+📲 SMS 4
+Would you like to adjust the catering quote?
+
+
+________________
+09. ❌ AVOID THIS, ✅ DO THAT
+
+01. COLD CALLS
+❌ Hey John, This is Domenic calling from Comeketo Catering, the reason why I called you today was
+✅ Hey John… it's just Domenic -, I was wondering if you could possibly help me out for a moment…
+
+
+02. INBOUND CALLS
+❌ Hey Sally, how are you doing? How's the weather over there in Worcester?
+✅ Hey Sally, it looks like you've booked on the calendar to for possible help for an upcoming wedding - a tasting?
+
+
+03. EMAILS
+❌ Hey Jim, I'm just following up about our call last week. Do you have any more questions about your Quote? We'd really love to work with you. Please email me back
+✅ Hey Jim, tried to reach you a few times but never heard back …. Where should we go from here?
+
+
+04. NETWORKING EVENTS
+❌ Oh hey, we do catering for weddings and corporate events
+✅ Yeah our catering helps your wedding be remembered forever 
+✅ Yeah our catering helps you be the star of the office and loved by your boss again.
+
+
+
+
+
+
+10. CLOSER SCRIPTS (DRAFT)
+
+
+
+
+Introduction:
+Domenic: Hi Marilou, this is Domenic from Comeketo Catering. Is now a bad time?
+Marilou: I'm good, thank you.
+Domenic: Great to hear! I understand you’re planning a backyard wedding with a Brazilian concept, and this is your first time doing a catering service. Is that wrong?
+Addressing Initial Concerns:
+Domenic: I know you mentioned that you're concerned about the distance from our restaurant and the possibility of doing a food tasting. Let's talk about that for a moment. Have you thought about what specific elements of the Brazilian concept you’d like to include in your menu?
+Marilou: Yes, we want authentic Brazilian dishes, but we’re really worried about the price and if it’s worth it.
+Domenic: I completely understand your concern about the price. It sounds like you want to make sure everything is perfect and fits within your budget.
+Transitioning to Tasting:
+Domenic: Here’s the thing, Marilou. Before we dive into pricing, which can vary widely depending on the specifics, Imagine wasting your time and money into something you haven’t had the opportunity to fully experience. We don’t even know yet if we can meet your expectations. What if you don’t like our food, does price matter then?
+Marilou Answers
+Reciprocation: Domenic: Many of our clients initially feel the same way. Think of the tasting as an opportunity to explore your options without any commitment. We want to give you a chance to experience firsthand what we can offer.
+Social Proof: Domenic: In fact, many of our clients who were initially hesitant found that the tasting session helped them make a confident decision. Wouldn't it be great to have that peace of mind?
+Marilou: That makes sense, but I’m still not sure.
+Domenic: I hear you. Imagine having the peace of mind knowing you've selected a caterer who understands your vision and can deliver exactly what you want. We are booking out almost 2 years in advance, and securing your tasting now ensures we have enough time to perfect everything to your liking. How about we schedule a tentative tasting and if anything changes, we can adjust as needed. Does that sound like a reasonable plan?
+
+
+	
+
+Build steps
+There like 37 steps it takes to do catering good for a wedding.
+
+
+Tasting
+Catering Consultation with Our Catering Director
+
+Food Selection
+
+
+Creating your Catering Experience
+(Utensils, Tables, Pickup, Dropoff, Special Ingredients, Cooking Style, Equipment, Supplies)
+
+Setting up Timelines
+(Break down, clean up)
+
+If you're event isn't next year, most of our customers who are a year away usually seek us for connecting to our large wedding event planning vetted network
+
+Event planning for the Day of
+
+Shopping, Safe Storage of the Food
+
+Then the actually caterin itself
+	Script II - If the Conversation Goes to Pricing
+Handling Pricing Questions:
+Marilou: We really need to know the pricing before we commit to anything.
+Domenic: I understand, Marilou. Price is an important factor, and it’s crucial to make sure it fits within your budget. Typically, our packages range from $30 to $50 per person, depending on the specifics of the menu and the services you choose.
+Establishing Value:
+Domenic: Before we quote, we like to make sure our clients are committed to locking in their date. This way, we can ensure that we have enough time to plan and deliver exactly what you want. Would it be a terrible idea to put down a booking fee to reserve your date? This will give us the opportunity to work closely with you to tailor the menu and service to your exact needs.
+Addressing Concerns:
+Marilou: What if we don’t end up liking the food or the service?
+Domenic:That’s a valid concern. The booking fee is fully refundable if you’re not satisfied after the tasting. Our goal is to ensure your complete satisfaction. We’ve successfully catered over 500 events in the past 15 years, and our clients have consistently praised our ability to meet their expectations.
+Closing:
+Domenic: Great! Let’s go ahead and schedule the tasting. If anything changes, we can adjust as needed. This way, we can ensure you get the best possible experience. Does that sound good to you?
+
+
+
+
+	
+
+	
+
+________________
+
+
+
+
+11. KEEPING PROPPER SALES NOTES 
+(POST-CALL NOTES)
+  
+
+PURPOSE:
+To ensure all relevant details and client requests are accurately recorded after sales calls, using the custom activities system, for better coordination and service delivery. This SOP is essential for maintaining high service standards and ensuring eligibility for tasting bonuses.
+PROCEDURE:
+A. Accessing the Sales Notes:
+                           * Navigate to the custom activities section in our CRM.
+                           * Select "Sales Notes 2.0" to open the appropriate form.
+B. Timing for Note-Taking:
+                           * Fill out the Sales Notes after completing your cals / qualifying the customerl.
+                           * Note: Ensure the call has followed an NEPQ/VOSS/DIRECT LINE sales script before taking notes. Do not fill this out live during the call.
+C. Requirement for Tastings:
+                           * Ensure that the Sales Notes are completed before scheduling a tasting.
+                           * ⚠️ Note: Tasting bonuses are contingent on this form being thoroughly filled out.
+D. Single Sales Note Policy:
+                           * Only one Sales Note should be created per event. If a lead has multiple events, create separate notes for each event.
+                           * For updates or additional information, edit the existing Sales Note to keep it current and comprehensive.
+E. Must-Have Information in Sales Notes:
+                           1. 🍽️ Catering Services Needed:
+                           * Describe the types of catering services required, such as specific dishes and types of meals.
+                           2. 📝 Catering Service Type:
+                           * Indicate whether the service is dropoff, pickup, or full-service catering.
+                           3. 🌟 Unique Customer Wants:
+                           * Note any special requests or unique aspects the customer wants that are not typically offered in our standard packages.
+                           4. 🏆 How We Can Win This Deal:
+                           * Outline strategies for securing the deal, such as tactics from Hal and Dom, pricing strategies, custom tasting experiences, etc.
+                           5. 📅 Event Date & Time:
+                           * Specify the exact date and time of the event.
+                           6. ⚠️ Potential Problems:
+                           * Identify any potential issues or concerns that might arise, such as logistical challenges or client uncertainties.
+                           7. 🥗 Dietary Restrictions:
+                           * List any known dietary restrictions or allergies among the guests.
+                           8. 👥 Number of Guests:
+                           * Provide an estimated or confirmed number of guests expected at the event.
+                           9. 🎉 Type of Event:
+                           * Describe the nature and type of the event (e.g., wedding, corporate event).
+                           10. 📜 Potential Menu:
+                           * Suggest a potential menu for the tasting, including appetizers, main courses, drinks, and any special items requested by the client.
+                           11. ✅ Quote Approved?:
+                           * Indicate whether the quote has been approved by the client.
+                           12. 📍 Full Address:
+                           * Provide the full address of the event venue, including city, state, zip, and street address.
+  
+
+Example Sales Notes filled out (see example)
+
+
+________________
+
+
+12. ENTERING & UPDATING TASTING INFORMATION
+  
+PURPOSE
+To ensure all relevant details and client preferences are accurately recorded before and after tastings, using the custom activities system, for better coordination and service delivery.
+
+
+PROCEDURE:
+Section 1: What is Done Automatically by Calendly (After 7/27/24)
+                           1. Tasting Note Creation:
+                           * Calendly automatically creates a new tasting note for each booking.
+                           2. Update on Cancellation:
+                           * If a customer cancels, Calendly updates the tasting note to indicate the cancellation.
+                           3. Cancel/Reschedule Tasting:
+                           * Fields for "Cancel Tasting" and "Reschedule Tasting" provide one-click access for the sales rep to manage these actions.
+
+
+________________
+
+
+
+
+Section 2: The Tasting Host's Responsibilities
+A. Checking Existing Tasting Notes:
+                           * First, check if tasting notes exist by going to "all activities" in the CRM and selecting "custom."
+                           * If there are no existing tasting notes, the tasting host is responsible for creating these after after the tasting. Remembering to use the Custom activity "Tasting Notes 2.0".
+                           * Tasting notes are unique to each tasting. 1 Event may have several tastings. That is okay. However, Each tasting should have only 1 tasting 2.0 note. Make sure to use the {edit} button to modify tasting notes
+B. Reviewing Sales Notes:
+                           * The tasting host will also check if there are "📝 Sales Notes 2.0" available to guide the tasting. This is also found under "custom activities."
+                           *   C. Filling Out Tasting Notes:
+                              1. ✅ Tasting Status
+                              * Description: Select the current status of the tasting if the customer attended 
+                              2. 🗣️📝 Tasting: Notes
+                              * Description: Include detailed notes about the tasting, such as customer feedback, preferences, and any issues/opportunities that arose.
+                              3. ⛑️📝 Tasting: Menu Interest or Selection
+                              * Description: Document the menu items that the customer showed interest in or selected during the tasting.
+                              4. 📅 Tasting Date
+                              * Description: Enter the date when the tasting took place. (if empty)
+                              5. 🛎️ Host 
+                              * Description: Name of the person who hosted the tasting. (if empty/incorrect)
+                              6. 👥 Attendees
+                              * Description: Number of people who attended the tasting. (if empty/incorrect)
+See the Tasting's 2.0 example here
+________________
+Section 3: The Sales Rep's Responsibilities
+A. Sales Rep-Specific Fields:
+                              1. 🎉 Event Type
+                              * Description: Specify the type of event being planned 
+(e.g., wedding, corporate event). - this is done on calendly for tastings after 7/24/28
+                                 2. 🏟️ Event Size (head count)
+                                 * Description: Provide an estimated or confirmed number of guests expected at the event.  - this is done on calendly for tastings after 7/24/28
+                                 3. 🪖 Lead Owner
+                                 * Description: Name of the sales representative responsible for the lead.  - this is done on calendly for tastings after 7/24/28
+                                 4. ⛑️ Tasting Appointment Setter
+                                 * Description: Name of the person who set the tasting appointment.  - this is done on calendly for tastings after 7/24/28
+                                 * 
+
+                                 * Description: Indicate if the tasting was canceled.
+🔄 Reschedule Tasting
+                                 * Description: Indicate if the tasting was rescheduled.
+
+
+B. Utilizing the Tasting Notes to Close a Deal:
+                                 1. ✅📝 Tasting: Plan To Close
+                                 * Description: Outline the steps to close the deal, such as follow-up actions, sending additional information, or setting up further meetings.
+                                 * Note: The sales rep will look at this, especially after the tasting, to bring their opportunities to a successful win.
+                                 * Tasting Host's Guidance: Document a potential way you, as the tasting host, can see this opportunity being won.
+                                 2. 🗣️📝 Tasting: Notes
+                                 * Description: Include detailed notes about the tasting, such as customer feedback, preferences, and any issues that arose.
+                                 * Note: The sales rep will be looking at this to bring up specific talking points in re-engagement calls to bring the deal to a successful closing.
+                                 3. ⛑️📝 Tasting: Menu Interest or Selection
+                                 * Description: Document the menu items that the customer showed interest in or selected during the tasting.
+                                 * Note: This will help the sales rep generate a quote.
+
+
+________________
+13. AFTER YOU WIN A DEAL
+
+
+
+
+01. ADD THE EVENT CALENDAR
+View instructional video here
+  
+
+1. Fill out the full address
+2. Confirm the menu and get it finalized
+3. Add the address, close.com link, persons name to the calendar event "Catering Events"
+4. After adding the event to the calendar, invite the person who is running the catering to the event. Right now it's either bibi or rodrigo. You must do this to ensure that the catering tasting availability is changed. Do not invite both bibi & rodrigo to the catering event, but after you put the event on the calendar follow up with them to figure out who is going to be hosting the catering.
+
+
+02. UPDATE THE OPPORTUNITY VALUE
+  
+
+The opportunity value must reflect what the quote says
+
+
+
+
+
+
+03. CC SENDING THE QUOTE
+  
+
+
+
+14. TRAINING CENTER
+
+
+
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+—------------------------
+The Sandbox
+
+
+Situation Questions
+- That makes sense, so then if we wer eto come in…. like we do with our weddings we do every week, and set it up where we do {all the grilling, all the catering, drop it off pick it up in time etc{ …. make it really easy for you to enjoy your event…. and most of all …. {prevent you from having to do all the cooking} like you said…. was pretty important, how would that be different for you using our catering, versus what your planning now?
+
+
+- Can you give me an idea of how many different places you are thinking of trying? 
+
+
+"Well, If you really thought about it" 
+"How long have they been making you do it this way"
+
+
+"So when you were first looking…. did something happen or…. originally …. what had you looking for ….. catering?"
+
+
+"I mean… what is making you look at getting catering instead of just… making it yourself"
+
+
+
+
+
+
+Problem Awareness Questions
+
+
+
+
+
+
+
+
+NEPQ Identity Frame
+We do see that a lot, he/she is lucky to have a wife/husband likk you. Its a selfless enough tot ake the burder off them, so they don't have to go through all that stress to figuire all that out unexpectedly
+
+
+I talk to a lot of people and … *sigh* ya know… some people really don't mind putting all the stress of planning catering on their partner… Ya know waht I mean?
+
+Can I ask … how come this is so important to… you
+
+
+Clarifyng/propbing Questions
+Have you seen that before or where does that come from?
+How long ago was that?
+What sort of effect/impact did that have on you/the/family/etc
+did that have an impact you?
+What did that do to you?
+In what way?
+
+"I dont want you to sleep on the couch tonight"
+
+
+Rationale
+Just so i can see the rationale, besides ________ (repoeat back what they already said) what's the main reason why you might be looking for someone else to cater your event rather than just, (insert silly solution for their problem?) doing a potluck or cooking all the food yourself and then hoping and praying everything is done right?
+
+
+Anchor
+So the (money) that you needed. Let's say i go back to my team and tell them you need (money they said they needed) and let's say they give me a number lower that. I like I don't know,m they can only die like ($xxx, xxx or xx,xx) should I just tell them to kick rocks or how would you go about (repeat back problem to solve) (Example: getting a better deal somewhere else, cooking the food themselves, asking my wife etc)
+
+
+
+
+
+
+Consequence Questions
+
+
+(NO CATERING) So what if you don't do anything about this and you end up passting away many years before you thought you would, How would Cindy end up paying for the house and all the other expenses at that point? (challenging concerned to)
+
+
+If needed
+- Are you willing to settle for that? (curious tone)
+Okay but whos choice is it if you settle or not? ^
+(GOTO Qualifying)
+
+
+Or
+
+
+Do you want Cindy to have to pay for all that … if you didnt have to?
+
+
+
+
+
+
+Consequence Questions
+  
+
+
+Commitment Questions
+  
+
+
+
+
+"You don't sound so sure… is there something you're unsure about"
+"You sound a bit hesitant… what's going on there"
+
+
+  
+
+  
+  
+
+
+
++
+
+
+  
+
+
+
+
+
+[a]@hello@comeketocatering.com 
+@office@comeketocatering.com
+
+
+Added "Watch Me First Video"
+[b]Added additional Objection handling Script "Objection Handling: "My Wedding isn't until next year""
+
+
+@a_catering_group-aaaalbqjyqacoaatxh7utyyko4@comeketocatering.slack.com 
+@office@comeketocatering.com @admin@virtualkitchenhall.com @hello@comeketocatering.com
+_Assigned to a_catering_group-aaaalbqjyqacoaatxh7utyyko4@comeketocatering.slack.com_
+[c]Added a new SOP for Tasting Status' in the opportunity area
+
+
+https://docs.google.com/document/d/17bDT1woXwjtc0hrxG9YHlQHYczZYHhEKnTWojDmJrb8/edit#heading=h.lyoa102tyzvw
+
+
+
+
+@hello@comeketocatering.com 
+@admin@virtualkitchenhall.com 
+@office@comeketocatering.com 
+@contact@comeketocatering.com
+_Assigned to hello@comeketocatering.com_
+[d]5 Day cadences now have emails.
+
+
+@hello@comeketocatering.com 
+@admin@virtualkitchenhall.com 
+@a_catering_group-aaaalbqjyqacoaatxh7utyyko4@comeketocatering.slack.com 
+@catering@comeketo.com
+[e]Wrote the Mindset Shift from Sales-Reps to Catering Advisors
+
+
+@a_catering_group-aaaalbqjyqacoaatxh7utyyko4@comeketocatering.slack.com
+[f]Implemented SMS For Tasting / Appointment No Show
+
+
+@a_catering_group-aaaalbqjyqacoaatxh7utyyko4@comeketocatering.slack.com
+[g]Crafted 3 Day Cadence for Tasting/Appointment Cancellation
+
+
+@a_catering_group-aaaalbqjyqacoaatxh7utyyko4@comeketocatering.slack.com
+[h]Changed call quantity for new leads. If a new lead is inbound, you triple tap attempt to call. 
+
+
+@a_catering_group-aaaalbqjyqacoaatxh7utyyko4@comeketocatering.slack.com
+_Assigned to a_catering_group-aaaalbqjyqacoaatxh7utyyko4@comeketocatering.slack.com_
+[i]Added After Tasting Phone Script & Followup 
+
+
+@a_catering_group-aaaalbqjyqacoaatxh7utyyko4@comeketocatering.slack.com
+[j]Added After Tasting Phone Script & Followup
+[k]Added "AFTER YOU WIN A DEAL" Sop to the Playbook
+
+
+@a_catering_group-aaaalbqjyqacoaatxh7utyyko4@comeketocatering.slack.com
+_Assigned to a_catering_group-aaaalbqjyqacoaatxh7utyyko4@comeketocatering.slack.com_
+[l]Wrote the New Sales Notes 2.0 Custom Activity Usage for Close 
+
+
+@a_catering_group-aaaalbqjyqacoaatxh7utyyko4@comeketocatering.slack.com
+_Assigned to a_catering_group-aaaalbqjyqacoaatxh7utyyko4@comeketocatering.slack.com_
+[m]@a_catering_group-aaaalbqjyqacoaatxh7utyyko4@comeketocatering.slack.com
+_Assigned to a_catering_group-aaaalbqjyqacoaatxh7utyyko4@comeketocatering.slack.com_
+[n]Added "Lead Assignment SOP" for the procedure of assigning leads in a fair and balanced way, still hitting our speed-to-lead times
+
+
+@a_catering_group-aaaalbqjyqacoaatxh7utyyko4@comeketocatering.slack.com
+_Assigned to a_catering_group-aaaalbqjyqacoaatxh7utyyko4@comeketocatering.slack.com_
+[o]This is a generic, vague word. Try to think of more contextually relevant words besides enhance.
+[p]When the customer has shared vision, it's okay to use "Looks Like" one time, but always deeply consider using "Sounds Like"
+[q]*Mainly and solely use Sounds Like.
+[r]REMEMBER TO REPEAT BACK EMAIL
+[s]ASK for phone number again
+[t]Only mention price if they mention price
+[u]@admin@virtualkitchenhall.com 
+Do you see this new morning review?
+_Assigned to _

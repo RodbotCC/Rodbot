@@ -1,0 +1,153 @@
+86. What is a tasting at Comeketo, structurally?
+
+A tasting is not just food sampling. It is a staged, immersive sales-and-trust experience designed to help the client envision their event, understand the value of the company, meet the team, and move closer to booking with confidence.
+
+87. Why is the physical setup of the tasting important?
+
+Because Comeketo wants the client to see and feel their future event, not just evaluate menu items. The beautifully set dining area is part of the sales experience. It helps clients imagine what their wedding day or celebration could look like, which means aesthetics are being used as part of emotional and practical persuasion.
+
+88. What does the tasting reveal about how Comeketo wants to be different?
+
+It shows that Comeketo does not want to be seen as “a company that sells a menu.” It wants to be seen as a company that delivers a full experience: food, service, atmosphere, hospitality, customization, and confidence in the people who will serve the event.
+
+89. Why does the tasting include so many stages of food?
+
+Because the tasting is trying to demonstrate range, abundance, and seriousness. The flow from cheese board to appetizers to salad bar to hot sides to Brazilian rodízio to desserts makes the client feel the richness of the offering and the completeness of the event experience. It is not just “try one dish.” It is “understand the whole world we can create.”
+
+90. Why is Brazilian rodízio especially important in the tasting?
+
+Because it is both a food feature and a memorable live-service spectacle. Table-side carving by Brazilian gauchos is described as fun, memorable, and part of what makes the event feel special. That means rodízio is not only culinary — it is experiential differentiation.
+
+91. What does the tasting say about Comeketo’s sales philosophy?
+
+It says the company believes clients should experience trust before they make the decision. The tasting is not framed as pressure. It is framed as an environment where clients can taste, ask questions, see the setup, understand the company’s difference, and then take time to think before moving forward.
+
+92. Why is the presentation during the tasting important?
+
+Because Comeketo knows that food alone is not enough. The presentation exists to explain exactly why the company is different and to answer client questions. That means the tasting is both sensory and interpretive: clients are not just fed, they are educated into confidence.
+
+93. What does the tasting reveal about the role of narrative in sales?
+
+It shows that narrative is central. The client is guided through a story:
+
+imagine your day
+see beauty
+taste variety
+meet the people
+understand the difference
+picture the event
+take time to decide
+
+That is a narrative arc, not just a product demonstration.
+
+94. Why is meeting the staff an important part of the tasting?
+
+Because Comeketo understands that clients are not only hiring food. They are trusting people with an important day. Meeting the staff reduces uncertainty and increases comfort with the actual humans who may serve loved ones at the event.
+
+95. What does Rodrigo’s language suggest about his leadership style in sales?
+
+He speaks in a direct, reassuring, personal way. He emphasizes ease, comfort, customization, and being “100% on your side.” That suggests he wants the company to feel supportive, human, and confidence-building rather than slick or high-pressure.
+
+96. Why is customization emphasized so much?
+
+Because Comeketo wants clients to feel that the menu and package will be shaped around their needs, preferences, and budget rather than forced into a rigid template. Customization is part of the trust offer.
+
+97. What does “we are 100% on your side” reveal doctrinally?
+
+It reveals that Comeketo wants to position itself as an ally in planning, not just a vendor extracting money. This is very important because it suggests the company’s identity includes guidance, accommodation, and emotional reassurance, especially in the context of expensive and stressful events.
+
+98. Why does Rodrigo mention budget so explicitly?
+
+Because he knows clients are financially stressed by big events, and he wants to reduce fear. Acknowledging money directly makes the company feel more grounded and less tone-deaf. It says: we understand this is a big investment, and we are trying to make it work for you.
+
+99. What does the tasting reveal about Comeketo’s competitive edge?
+
+The competitive edge is not just the food. It is:
+
+immersive setup
+abundance and variety
+live Brazilian service
+staff visibility
+customization
+presentation of difference
+relationship-building
+supporting vendor presence
+
+That is a much richer offering than a standard caterer pitch.
+
+100. Why are other professionals invited to larger tastings?
+
+Because Comeketo understands that event planning is an ecosystem. Bringing photographers, planners, decorators, DJs, and others into the tasting environment makes the tasting more useful, more networked, and more like a planning hub instead of a narrow vendor meeting.
+
+101. What does that ecosystem move suggest about the company?
+
+It suggests the company wants to become a center of gravity in the event-planning process, not just one provider among many. By bringing in other professionals, it becomes more useful, more connected, and more embedded in the broader planning experience.
+
+102. Why is “take a day or two” an interesting instruction?
+
+Because it shows confidence without desperation. Comeketo is not saying “decide right now or lose the chance.” It is saying: experience this, think about it, and then we’ll follow up. That makes the process feel respectful and controlled rather than pushy.
+
+103. What role do the catering consultants play after the tasting?
+
+They appear to function as the bridge from experience to decision. After the tasting, the consultant reconnects with the client, helps put together the right menu or package, and moves the client toward a more tailored booking decision.
+
+104. Why is the tasting a doctrine object and not just a sales event?
+
+Because it encodes multiple business beliefs at once:
+
+clients need to feel the experience
+beauty matters
+food variety matters
+service theater matters
+trust in staff matters
+explanation matters
+customization matters
+relationship follow-up matters
+
+That makes the tasting a condensed expression of Comeketo’s identity.
+
+105. What does the tasting reveal about how Comeketo thinks clients decide?
+
+It suggests the company believes clients decide through a mix of:
+
+emotional imagination
+sensory proof
+personal comfort
+clear explanation
+budget reassurance
+and follow-up reflection
+
+That is a much more human model of decision-making than simply comparing price sheets.
+
+106. Why is the tasting especially valuable for weddings and big celebrations?
+
+Because those events are emotionally loaded, socially visible, and expensive. Clients do not just want competent food; they want to feel safe, excited, and proud of the experience they are creating. The tasting gives Comeketo a chance to create that feeling before the booking is finalized.
+
+107. What does this tell us about Comeketo’s real product?
+
+The real product is not simply catering.
+It is:
+a memorable, confidence-building celebration experience that combines Brazilian hospitality, abundance, customization, and visible care.
+
+108. Why should the future system treat tastings as high-signal moments?
+
+Because tastings are one of the clearest points where abstract lead quality turns into concrete buying behavior. They are likely one of the strongest places to measure seriousness, conversion potential, consultant effectiveness, and the strength of Comeketo’s differentiation.
+
+109. What would a doctrine-aware Oracle eventually need to know about tastings?
+
+It would need to know:
+
+who was invited
+who attended
+what was served
+whether special requests were handled
+what questions came up
+what consultant owns the follow-up
+what package/menu was discussed
+whether the tasting increased or decreased close probability
+
+Because tastings are not just appointments — they are decision-shaping environments.
+
+110. What is the cleanest one-sentence doctrine statement for tastings?
+
+A Comeketo tasting is a staged trust-and-differentiation experience that helps clients imagine their event, experience the company’s hospitality and service model firsthand, and move toward booking with greater confidence.
