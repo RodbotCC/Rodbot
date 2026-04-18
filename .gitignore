@@ -1,0 +1,15 @@
+# Allowlist approach: $HOME is the repo, but almost nothing in $HOME belongs in git.
+# Ignore everything by default...
+/*
+
+# ...then explicitly re-include what RodBot tracks.
+!.gitignore
+!README.md
+!ledgers/
+!intake/
+
+# Inside tracked dirs, still exclude noisy artifacts.
+.DS_Store
+*.swp
+*.swo
+Thumbs.db
