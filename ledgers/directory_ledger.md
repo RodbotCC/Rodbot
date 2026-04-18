@@ -17,4 +17,4 @@ Update rule: any `mkdir` or new top-level folder → add an entry in the same co
 
 ## Out-of-scope (for now)
 
-- `/Users/rodbot/Desktop`, `Documents`, `Downloads`, `Movies`, `Music`, `Pictures`, `Public`, `Library` — default macOS folders, empty or system-managed. Will be inventoried when work touches them.
+- `/Users/rodbot/Desktop`, `Documents`, `Downloads`, `Movies`, `Music`, `Pictures`, `Public`, `Library` — default macOS folders, gitignored via the `.gitignore` allowlist. `Downloads/` in particular is never tracked; intake material belongs in `intake/YYYY-MM-DD-<slug>/`, not in `Downloads/`.

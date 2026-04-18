@@ -15,6 +15,10 @@ Update rule: any file created/renamed/deleted → update in the same session it 
 - `ledgers/TCL/0003-north-star-draft.md` — drafts NS-01..NS-09 from Comeketo source material; pending operator ratification.
 - `ledgers/TCL/0004-flatten-root.md` — flattens the redundant `RodBot/` nesting up into `$HOME`; the machine *is* RodBot.
 - `ledgers/TCL/0005-github-live.md` — repo under version control at RodbotCC/Rodbot; allowlist .gitignore; flags tracked-`Downloads/` divergence risk.
+- `ledgers/TCL/0006-downloads-to-intake.md` — resolves the Downloads divergence: moves intake material into `intake/` and removes `Downloads/` from the repo.
+- `intake/2026-04-17-bootstrap/extraction-section-*.txt` — seven per-section extracts of the business Extraction doc (visual-readability, jobs-events-detailed, overall-shape, sales-lead-mgmt, scheduling, calendar, weekly-labor).
+- `intake/2026-04-17-bootstrap/pasted-text-1.txt`, `pasted-text-2.txt` — two clipboard-sourced notes from the bootstrap upload.
+- `intake/2026-04-17-bootstrap/raw-ai-mission-control.html` — "RAW AI Mission Control" dashboard concept from prior iterations; informs any future unified-weekly-view design.
 - `.gitignore` — allowlist config; ignores everything in `$HOME` except `README.md`, `ledgers/`, `intake/`.
 - `intake/2026-04-17-bootstrap/⭐SALES PLAYBOOK V2.0 - Comeketo Catering.txt` — Comeketo's inbound sales playbook V2.0 (SDR/Closer roles, 5-min speed-to-lead, tasting pipeline, Close CRM SOPs).
 - `intake/2026-04-17-bootstrap/Tasting.txt` — Rodrigo's narrated walkthrough of the Comeketo tasting experience.
