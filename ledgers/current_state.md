@@ -1,79 +1,37 @@
 # Current State Snapshot
 
-Last updated: 2026-04-19
+Last updated: 2026-04-19 (post-wipe)
 
 ## Where we are now
 
-- RodBot runs as a staged filesystem pipeline with deterministic plumbing in bash and judgment stages delegated to Cursor.
-- Phase ownership is clarified:
-  - Claude Code: orchestrator/spec/checkpointing.
-  - Cursor (Auto preset): file inspection, classification, receipt generation, mover implementation work.
-  - Codex: expensive CRM sweeps (separate track).
+**Clean slate.** The 5-phase filesystem-trigger pipeline built across sessions 0012–0017 was wiped in session 0018. All bash daemons, LaunchAgents, inbox/receipts/index workspace, and the legacy `audit_intake.sh` SessionStart hook are gone. The TCL entries documenting what was built and what we learned remain as history.
 
-## Moves pipeline status
+## What's still standing
 
-### Phase 1 — Detector
+- **Ledger discipline** — TCL, sessions, directory ledger, contents ledger, ratio lattice, north stars, pieces memory ledger. All intact.
+- **North Stars** — NS-01..NS-18 drafted, pending ratification. Unchanged by the wipe.
+- **Pieces memory ingest** — `pieces/exports/` subsystem still works as the third-party continuity feed. Operator exports Pieces summaries into dated subfolders.
+- **Intake folder** — `intake/` still exists as the destination for curated material. `intake/2026-04-17-bootstrap/` (legacy date-folder, grandfathered) and `intake/screenshots/2026-04/` are preserved.
+- **Git repo + GitHub remote** — `RodbotCC/Rodbot` public, main branch, unchanged.
+- **Claude Code connectors** — ClickUp, Close, Google Calendar, Slack, Pieces, etc. all still present.
+- **MCP servers** — Pieces at `http://localhost:39300/...` and managed-plugin MCPs untouched.
 
-- Status: live.
-- Component: `scripts/moves_phase1_detector.sh`
-- LaunchAgent: `com.rodbot.moves.phase1-detector`
-- Output: `ledgers/moves/events.log`
-- Notes: watcher scope is intentionally limited to `Desktop`, `Downloads`, and
-  `Documents`; pipeline kill switch is `ledgers/moves/PAUSED`.
+## What's gone
 
-### Phase 2 — Debouncer/filter
+- All five phases of the old moves pipeline (detector, debouncer, inbox writer, Cursor-auditor spec, mover).
+- All moves-pipeline LaunchAgents and their plists (both repo templates and live versions under `~/Library/LaunchAgents/`).
+- The `ledgers/moves/` workspace (events.log, settled.log, inbox/, receipts/, index.jsonl, all runtime artifacts).
+- `ledgers/intake_ledger.md`, `intake_events.jsonl`, `intake_state.json` (legacy intake-watcher state).
+- `scripts/audit_intake.sh`, `scripts/triage_protocol.md` (legacy rules and ingress script).
+- `~/.claude/settings.local.json` SessionStart hook removed.
 
-- Status: live.
-- Component: `scripts/moves_phase2_debouncer.sh`
-- LaunchAgent: `com.rodbot.moves.phase2-debouncer`
-- Output: `ledgers/moves/settled.log`
-- Notes: Bash-3.2 timeout issue was fixed; stream emits settled JSON lines.
+## Next architectural direction (not yet designed)
 
-### Phase 3 — Inbox writer
+- The new triage/intake approach will be a **Claude Code Routine** — scheduled, hourly batch sweep, single agent with full toolchain (filesystem + connectors). Not always-on, not event-driven. Explicit batching is a feature: files stay put while the operator is working, then get swept to their destinations during scheduled windows.
+- Claude Code Routines allow 15 scheduled runs per day — enough for hourly coverage during working hours.
+- Design work (cadence, folder topology, routine prompt, deletion authority, sweep-log format) is the next action-unit. Design first, then build. No code should be written until the design lands in a TCL.
 
-- Status: live.
-- Component: `scripts/moves_phase3_inbox_writer.sh`
-- LaunchAgent: `com.rodbot.moves.phase3-inbox-writer`
-- Output: `ledgers/moves/inbox/<id>.json`, `duplicates.log`, `vanished.log`
-- Notes: IDs are SHA-256-derived (first 12 chars); dedup and sensitivity heuristic are active.
+## Active risks / watchpoints
 
-### Phase 4 — Auditor
-
-- Status: delegated to Cursor (not a bash daemon).
-- Runtime policy:
-  - Use Cursor model preset `Auto` for this loop.
-  - Avoid `Premium` unless operator explicitly asks for escalation.
-- Spec: `scripts/moves_phase4_cursor_spec.md`
-- Output contract: `ledgers/moves/receipts/<id>.md` per `ledgers/moves/receipts/README.md`
-
-### Phase 5 — Mover
-
-- Status: built, not certified/live yet.
-- Implementation: `scripts/moves_phase5_mover.sh`
-- Launchd artifacts: `scripts/launchd/com.rodbot.moves.phase5-mover.plist`,
-  `scripts/setup_moves_phase5_launchagent.sh`
-- Handoff/spec: `scripts/moves_phase5_handoff.md`
-- Goal: execute receipt dispositions, update `phase5_status`, append to
-  `ledgers/moves/index.jsonl`.
-- Current validation: one controlled synthetic `moved` receipt executed
-  successfully in `--once` mode (file moved, receipt updated, index appended).
-
-## Key architecture decisions locked
-
-- No date-prefixed folder naming for new intake destinations; use slug-led naming.
-- Move-not-copy is the default intake behavior.
-- Phase 4 remains Cursor-owned to preserve the low-cost Auto-mode workflow.
-- Phase 5 remains Cursor-build from the established receipt contract.
-
-## Immediate next sequence
-
-1. Keep phases 1-3 soaking live.
-2. Run phase 4 in Cursor Auto mode against inbox jobs.
-3. Dry-run phase 5 mover, then run smoke matrix.
-4. Certify full chain with smoke matrix.
-5. Retire legacy `audit_intake.sh` hook only after clean 24h phase-5 soak.
-
-## Open risks / watchpoints
-
-- After Homebrew upgrades, re-check Full Disk Access for `/opt/homebrew/bin/bash` if launchd behavior regresses.
-- Avoid architecture drift: keep phase-4 logic in Cursor spec/session, not in new bash daemons.
+- `AGENTS.md` may still reference the now-wiped pipeline. Operator will rewrite when ready.
+- Homebrew `bash` is still installed (`/opt/homebrew/bin/bash`). Harmless; may or may not be useful for the next architecture. Do not uninstall unilaterally.

@@ -44,8 +44,7 @@ All under `~/ledgers/`:
 | **Contents Ledger** | `contents_ledger.md` | Any file created / renamed / deleted → update same session. |
 | **Ratio Lattice Ledger** | `ratio_lattice.md` | When you score relationships between entries. v0 conventions only; evolve as we go. |
 | **North Star Ledger** | `north_star.md` | When goals change, progress moves, or importance is rewritten. |
-| **Intake Ledger** | `intake_ledger.md` + `intake_events.jsonl` + `intake_state.json` | Every intake sweep. Event log is append-only JSONL; ledger is the narrative summary. See §3.5. |
-| **Pieces Memory Ledger** | `pieces_memory_ledger.md` | When Pieces exports are ingested into `pieces/exports/`. See §3.6. |
+| **Pieces Memory Ledger** | `pieces_memory_ledger.md` | When Pieces exports are ingested into `pieces/exports/`. See §3.5. |
 
 **Rule:** when in doubt, update. A ledger that's a session out of date is still useful. A ledger that's two weeks out of date is a liability.
 
@@ -53,29 +52,9 @@ TCL entries must include: `date`, `operator`, `assistants`, `status`, and the se
 
 ---
 
-## 3.5. The intake watcher — nothing lands on this machine without being seen
+## 3.5. Pieces memory — third-party continuity feed
 
-A `SessionStart` hook runs `scripts/audit_intake.sh` on every Claude Code boot. It scans `Downloads/`, `Desktop/`, `Documents/`, `Pictures/` for files not yet recorded in `ledgers/intake_state.json`, and injects the pending list into session context.
-
-**Your job when the queue is non-empty:**
-
-1. Read `scripts/triage_protocol.md` (it may have been updated since your last session).
-2. For each pending file, apply the rules in order (first match wins). Move, rename, or defer per the rules.
-3. **Screenshots require a vision audit.** Read the image. Produce a `{title, summary, slug_hint, contains_sensitive, tags}` JSON. Rename to `intake/screenshots/YYYY-MM/<slug>.png` and write a matching `.json` sidecar. No `screenshot-` prefix or date in the filename — the month folder + file mtime carry that. On slug collision, append `-2`, `-3`, etc.
-4. Append one line per file to `ledgers/intake_events.jsonl` following the schema in `ledgers/intake_ledger.md`.
-5. Add a sweep summary to `ledgers/intake_ledger.md` under "## Sweeps".
-6. Update `ledgers/intake_state.json`: set `last_swept[dir]` to the sweep timestamp, and append handled paths to `known_handled_paths`.
-7. Log the whole triage as a TCL entry if anything non-trivial happened (new rule added, deferred items needing follow-up, surprise file types).
-
-**When a file's type doesn't match any rule:** disposition = `deferred`, log it, surface it to the operator. Do not invent new rules silently — accumulate evidence first, then update `scripts/triage_protocol.md` explicitly in a TCL entry.
-
-**Sensitive screenshots** (passwords, tokens, private DMs, identifying info not already public): move locally but gitignore; note reason in sidecar. Never push a sensitive image to the public repo.
-
----
-
-## 3.6. Pieces memory — third-party continuity feed
-
-Pieces (https://pieces.app) runs continuously on this machine and curates cross-tool activity into structured markdown summaries. When the operator exports them, the intake watcher's rule 2.5 (`scripts/triage_protocol.md`) routes them to `pieces/exports/YYYY-MM-DD/YYYY-MM-DD-HHMM-<slug>.md`.
+Pieces (https://pieces.app) runs continuously on this machine and curates cross-tool activity into structured markdown summaries. Operator exports them into `pieces/exports/YYYY-MM-DD/<HHMM>-<slug>.md`.
 
 **Directory layout:**
 ```
@@ -167,9 +146,7 @@ Whenever a TCL entry's `Next` section lists work that doesn't get done in that s
 - [ ] **Diff the `extraction-section-*` files against the master `Extraction.txt`** to see whether any carry unique content. Low priority.
 - [ ] **Skim `intake/2026-04-17-bootstrap/raw-ai-mission-control.html`** — prior dashboard concept; will inform NS-05 design.
 - [ ] **Ratio Lattice v0.1** — design the first real comparator schema once we have ≥3 scoreable pairs worth recording.
-- [ ] **Moves phase 4 (Cursor-owned)** — run phase 4 through Cursor Auto mode per `scripts/moves_phase4_cursor_spec.md` (inspect inbox jobs, write receipts, delete consumed jobs). No phase-4 bash daemon in this architecture.
-- [ ] **Moves phase 5 certify+soak** — implementation files exist (`scripts/moves_phase5_mover.sh`, launchd plist/setup helper). Run dry-run, execute smoke matrix, then start live soak and certify in next TCL.
-- [ ] **Retire `audit_intake.sh` SessionStart hook** — once phase 5 soaks clean for ≥24h. Separate TCL, not bundled with the phase-5 landing commit.
+- [ ] **Design the intake/triage system from clean slate** — the 5-phase bash pipeline was wiped in session 0018. New approach (TBD) is Claude Code Routines-based, hourly batch sweep, not real-time. See TCL 0018 for context and reasoning. No code exists yet; design before build.
 
 ---
 

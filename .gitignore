@@ -17,21 +17,3 @@
 *.swp
 *.swo
 Thumbs.db
-
-# Runtime artifacts for filesystem trigger pipeline.
-ledgers/moves/events.log
-ledgers/moves/phase1-detector.stdout.log
-ledgers/moves/phase1-detector.stderr.log
-ledgers/moves/settled.log
-ledgers/moves/phase2-debouncer.stdout.log
-ledgers/moves/phase2-debouncer.stderr.log
-ledgers/moves/inbox/
-ledgers/moves/.phase2-pending/
-ledgers/moves/duplicates.log
-ledgers/moves/vanished.log
-ledgers/moves/.phase3-cursor
-ledgers/moves/phase3-inbox-writer.stdout.log
-ledgers/moves/phase3-inbox-writer.stderr.log
-ledgers/moves/phase5-mover.stdout.log
-ledgers/moves/phase5-mover.stderr.log
-ledgers/moves/mover-events.jsonl
