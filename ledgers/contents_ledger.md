@@ -31,6 +31,7 @@ Update rule: any file created/renamed/deleted → update in the same session it 
 - `ledgers/TCL/0016-phase5-mover-implementation.md` — HISTORICAL. Phase 5 mover built by Cursor. Pipeline wiped in session 0018.
 - `ledgers/TCL/0017-phase1-watch-scope-three-folders.md` — HISTORICAL. Phase 1 watch scope narrowed. Pipeline wiped in session 0018.
 - `ledgers/TCL/0018-wipe-moves-pipeline.md` — wipes the entire 5-phase filesystem-trigger pipeline + legacy `audit_intake.sh` hook to reset with clean eyes; next triage architecture will be a Claude Code Routine (scheduled, hourly, single-agent), to be designed in a later session.
+- `ledgers/TCL/0019-cowork-code-mission-control-architecture.md` — captures operator's full-stack architecture vision: Cowork sweeps Close/Slack/ClickUp/GWorkspace with a one-time seeded sweep + hourly residuals; Claude Code Routines score residuals against ledgers (North Stars, Sales Daily/Weekly, Temporal Continuity, Ratio Lattice, Open Problems); Mission Control is local→GitHub→Render presentation layer. Log-only session; no code, no new ledgers yet.
 - `ledgers/sessions/README.md` — defines the session-entry granularity (diary, one per working period) as distinct from TCL (commit log, one per action-unit).
 - `ledgers/sessions/0001-birth-and-bootstrap.md` — narrative of the full 2026-04-17/18 bootstrap session; covers TCL 0001–0007 as one arc.
 - `ledgers/directory_ledger.md` — this system's map of directories.

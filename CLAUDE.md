@@ -146,7 +146,8 @@ Whenever a TCL entry's `Next` section lists work that doesn't get done in that s
 - [ ] **Diff the `extraction-section-*` files against the master `Extraction.txt`** to see whether any carry unique content. Low priority.
 - [ ] **Skim `intake/2026-04-17-bootstrap/raw-ai-mission-control.html`** — prior dashboard concept; will inform NS-05 design.
 - [ ] **Ratio Lattice v0.1** — design the first real comparator schema once we have ≥3 scoreable pairs worth recording.
-- [ ] **Design the intake/triage system from clean slate** — the 5-phase bash pipeline was wiped in session 0018. New approach (TBD) is Claude Code Routines-based, hourly batch sweep, not real-time. See TCL 0018 for context and reasoning. No code exists yet; design before build.
+- [ ] **Design the Cowork + Code + Mission Control architecture** — full-stack vision captured in TCL 0019 (2026-04-19). Three tiers: Cowork sweeps (Close/Slack/ClickUp/GWorkspace), Code Routines score residuals against ledgers, Mission Control presents from GitHub→Render. Subsumes the prior "design intake/triage from clean slate" item. Open questions on Mission Control's Anthropic key and Cowork/Code vocabulary logged at the bottom of TCL 0019 for operator confirmation.
+- [ ] **Stand up two new scoring ledgers** (from TCL 0019): `ledgers/sales/` (daily + weekly goals, blocked on operator interviewing the sales team) and `ledgers/open_problems.md`. Intent only — do not create until design lands.
 
 ---
 

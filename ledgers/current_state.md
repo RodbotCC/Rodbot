@@ -25,11 +25,15 @@ Last updated: 2026-04-19 (post-wipe)
 - `scripts/audit_intake.sh`, `scripts/triage_protocol.md` (legacy rules and ingress script).
 - `~/.claude/settings.local.json` SessionStart hook removed.
 
-## Next architectural direction (not yet designed)
+## Next architectural direction (captured, not yet built — see TCL 0019)
 
-- The new triage/intake approach will be a **Claude Code Routine** — scheduled, hourly batch sweep, single agent with full toolchain (filesystem + connectors). Not always-on, not event-driven. Explicit batching is a feature: files stay put while the operator is working, then get swept to their destinations during scheduled windows.
-- Claude Code Routines allow 15 scheduled runs per day — enough for hourly coverage during working hours.
-- Design work (cadence, folder topology, routine prompt, deletion authority, sweep-log format) is the next action-unit. Design first, then build. No code should be written until the design lands in a TCL.
+Full-stack vision dropped by operator on 2026-04-19 (TCL 0019). Three tiers:
+
+- **Claude Cowork (sweep)** — connector-driven sweeps over Close CRM (leads/opps/automations), Slack (team comms → style profiling + present-state temporal continuity), ClickUp + Google Workspace (operational accounting). One heavyweight **seeded sweep** (semi-manual, operator overwatches), then **hourly residual sweeps** on workdays that only surface what's new since the prior state.
+- **Claude Code (score)** — Routines, 15/day. Takes residuals and scores them against the ledgers. Starter scoring set: North Stars, **Sales Daily + Weekly (new — requires sales-team interviews)**, Temporal Continuity, Ratio Lattice, **Open Problems (new)**.
+- **Mission Control (present)** — local filesystem → GitHub → Render. Possibly runs its own Anthropic/Opus API key for live reasoning, but open question is whether Code+Routines can precompute enough that Mission Control is presentation-only and keyless. See TCL 0019 §"Open architectural questions" for Claude's current read.
+
+Design-first still holds. No code until pieces of TCL 0019 get their own design TCLs.
 
 ## Active risks / watchpoints
 
