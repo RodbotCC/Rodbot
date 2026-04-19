@@ -32,3 +32,6 @@ ledgers/moves/vanished.log
 ledgers/moves/.phase3-cursor
 ledgers/moves/phase3-inbox-writer.stdout.log
 ledgers/moves/phase3-inbox-writer.stderr.log
+ledgers/moves/phase5-mover.stdout.log
+ledgers/moves/phase5-mover.stderr.log
+ledgers/moves/mover-events.jsonl

@@ -13,10 +13,6 @@ WATCH_DIRS=(
   "$HOME_DIR/Downloads"
   "$HOME_DIR/Desktop"
   "$HOME_DIR/Documents"
-  "$HOME_DIR/Pictures"
-  "$HOME_DIR/Movies"
-  "$HOME_DIR/Music"
-  "$HOME_DIR/Public"
 )
 
 FSWATCH_BIN="$(command -v fswatch || true)"

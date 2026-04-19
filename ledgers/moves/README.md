@@ -18,7 +18,9 @@ Filesystem-trigger pipeline workspace.
   - `inbox/<id>.json` = one content-hash job per unique settled file.
   - `duplicates.log` / `vanished.log` = phase-3 skip accounting.
   - `receipts/<id>.md` = phase-4 Cursor-auditor output (markdown + YAML frontmatter). Operator-editable. See `receipts/README.md`.
-- Not active yet: mover (phase 5) — spec in `scripts/moves_phase5_handoff.md`.
+- Not active yet: mover (phase 5) runtime under launchd. Implementation is in
+  `scripts/moves_phase5_mover.sh` with install helper
+  `scripts/setup_moves_phase5_launchagent.sh`; run dry-run first.
 
 ## Kill switch
 
@@ -29,6 +31,7 @@ Filesystem-trigger pipeline workspace.
 
 - `events.log` — raw detector output (runtime artifact).
 - `phase1-detector.stdout.log` / `phase1-detector.stderr.log` — launchd runtime logs.
+- Phase-1 watch scope: `Desktop`, `Downloads`, `Documents` only.
 - `settled.log` — one JSON line per settled file event (runtime artifact).
 - `phase2-debouncer.stdout.log` / `phase2-debouncer.stderr.log` — launchd runtime logs.
 - `inbox/` — pending phase-4/phase-5 work items; each file is one atomic JSON job.
@@ -37,6 +40,8 @@ Filesystem-trigger pipeline workspace.
 - `vanished.log` — append-only records for files gone before job emission.
 - `phase3-inbox-writer.stdout.log` / `phase3-inbox-writer.stderr.log` — launchd runtime logs.
 - `receipts/` — phase-4 Cursor output. Tracked (these are the operator-editable interlock that gates phase 5).
+- `phase5-mover.stdout.log` / `phase5-mover.stderr.log` — launchd runtime logs for phase 5.
+- `mover-events.jsonl` — phase-5 execution event stream (runtime artifact, gitignored).
 
 ## Permissions note (macOS TCC)
 

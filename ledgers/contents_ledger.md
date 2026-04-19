@@ -60,6 +60,11 @@ Update rule: any file created/renamed/deleted → update in the same session it 
 - `ledgers/TCL/0013-moves-phases-1-2-live.md` — Cursor brought phases 1 and 2 live under launchd (with `brew install fswatch` + Bash-3.2 `read -t` fix); phase 3 diagnosed as broken under launchd but working manually. Claude Code cold-returned to certify + log.
 - `ledgers/TCL/0014-phase3-tcc-fix-and-phase4-auditor.md` — Claude Code diagnoses phase 3 SIGPIPE + TCC root causes, patches phase 3, then builds phase 4 (LLM auditor) with dry-run mode; operator resolved TCC via `brew install bash` + Full Disk Access grant.
 - `ledgers/TCL/0015-phase4-rescoped-to-cursor.md` — retires the phase-4 bash daemon and re-centers phase 4 as Cursor-owned work via a dedicated spec.
+- `ledgers/TCL/0016-phase5-mover-implementation.md` — implements phase 5 mover handlers and safety checks; marks phase 5 as built pending dry-run/smoke certification.
+- `ledgers/TCL/0017-phase1-watch-scope-three-folders.md` — narrows phase-1 detector watch list to Desktop/Downloads/Documents and closes the Photos Library filter queue item.
 - `scripts/moves_phase4_cursor_spec.md` — Cursor-owned phase-4 run spec (continuous inbox inspection -> receipt writing -> inbox consumption), replacing the prior bash-daemon approach.
 - `scripts/moves_phase5_handoff.md` — spec doc for Cursor to build phase 5 (mover) from. Disposition contracts, failure paths, test matrix, open design questions.
+- `scripts/moves_phase5_mover.sh` — phase-5 mover implementation; consumes pending receipts, executes disposition handlers, updates receipt status, and appends index lines.
+- `scripts/launchd/com.rodbot.moves.phase5-mover.plist` — launchd LaunchAgent definition for phase-5 mover runtime.
+- `scripts/setup_moves_phase5_launchagent.sh` — helper to install/reload phase-5 LaunchAgent after dry-run verification.
 - `ledgers/moves/receipts/README.md` — phase-4 receipt frontmatter schema for Cursor-generated receipts; phase-5 consumption contract; disposition semantics; failure modes.

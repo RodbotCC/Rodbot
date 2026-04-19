@@ -1,23 +1,7 @@
 #!/usr/bin/env bash
 # moves_phase5_mover.sh
-# Phase 5: consume ledgers/moves/receipts/<id>.md, execute the move per
-# disposition, update receipt frontmatter, append to index.jsonl.
-#
-# Phase 5 is the first phase that mutates the filesystem outside
-# ledgers/moves/. Be conservative. Fail loudly. Never delete silently.
-#
-# Usage:
-#   moves_phase5_mover.sh            # daemon mode (tick forever)
-#   moves_phase5_mover.sh --once     # process up to one pending receipt then exit
-#   moves_phase5_mover.sh --dry-run  # parse + validate + plan; do NOT mv; do NOT edit
-#                                    # receipts; do NOT append to index. Emits planned
-#                                    # actions to stdout. Use to sanity-check the queue.
-#
-# Contract, full spec: scripts/moves_phase5_handoff.md
-# Receipt schema:      ledgers/moves/receipts/README.md
-#
-# Dependencies (all present on stock macOS + Homebrew bash):
-#   jq, sed, awk, stat, file, date, mv, mkdir, git (check-ignore)
+# Phase 5: consume ledgers/moves/receipts/<id>.md, execute moves per
+# disposition, update receipt status, append index lines.
 
 set -euo pipefail
 
@@ -31,9 +15,6 @@ PAUSED_FILE="$MOVES_DIR/PAUSED"
 
 POLL_SECONDS=5
 
-# Destination deny-list. Any proposed_destination starting with one of these
-# prefixes (relative to $HOME_DIR) fails the sanity check in step 3.1.2 of
-# the handoff spec. Keep in sync with that list.
 DEST_DENY_PREFIXES=(
   "Library/"
   "Applications/"
@@ -48,247 +29,482 @@ DEST_DENY_PREFIXES=(
   "pieces/visuals/"
 )
 
-# ─── arg parsing ──────────────────────────────────────────────────────────────
-# Same shape as phase 4 (auditor) — --once and --dry-run can combine.
 MODE="daemon"
-SEEN_ONCE=0 SEEN_DRY=0
+SEEN_ONCE=0
+SEEN_DRY=0
 for arg in "$@"; do
   case "$arg" in
-    --once)    SEEN_ONCE=1 ;;
+    --once) SEEN_ONCE=1 ;;
     --dry-run) SEEN_DRY=1 ;;
     -h|--help) grep '^#' "$0" | head -40; exit 0 ;;
-    "")        ;;
     *) echo "usage: $0 [--once] [--dry-run]" >&2; exit 2 ;;
   esac
 done
-if   [ "$SEEN_ONCE" = 1 ] && [ "$SEEN_DRY" = 1 ]; then MODE="dry-run-once"
+if [ "$SEEN_ONCE" = 1 ] && [ "$SEEN_DRY" = 1 ]; then MODE="dry-run-once"
 elif [ "$SEEN_ONCE" = 1 ]; then MODE="once"
 elif [ "$SEEN_DRY" = 1 ]; then MODE="dry-run"
 fi
 
 mkdir -p "$MOVES_DIR" "$RECEIPTS_DIR"
-touch "$EVENTS_LOG"
-
-# ─── helpers ──────────────────────────────────────────────────────────────────
+touch "$EVENTS_LOG" "$INDEX_FILE"
 
 log_event() {
-  # Append a structured event to mover-events.jsonl. Never fatal.
-  local kind="$1"; shift
-  local payload="${1:-{\}}"
-  local ts; ts="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+  local kind="$1"
+  local payload="${2:-{\}}"
+  local ts
+  ts="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
   jq -cn --arg ts "$ts" --arg kind "$kind" --argjson payload "$payload" \
     '{ts:$ts, kind:$kind, payload:$payload}' >>"$EVENTS_LOG" 2>/dev/null || true
 }
 
+trim() {
+  printf '%s' "$1" | sed -E 's/^[[:space:]]+//; s/[[:space:]]+$//'
+}
+
 oldest_pending_receipt() {
-  # Emit the oldest receipts/<id>.md whose frontmatter has
-  # `phase5_status: pending`. Empty string if none.
-  #
-  # TODO(cursor): see handoff spec §6 for the cheap race-mitigation (require
-  # frontmatter line `phase5_status: pending` to exist exactly as a whole
-  # line — grep for that before parsing). Also handoff spec §2 for the "only
-  # act on pending" rule.
-  local f candidate= candidate_mtime=
+  local f candidate="" candidate_mtime=""
   for f in "$RECEIPTS_DIR"/*.md; do
     [ -f "$f" ] || continue
-    # Skip anything not tagged pending — this is the state-machine gate.
     grep -qE '^phase5_status: pending[[:space:]]*$' "$f" || continue
-    local m; m="$(stat -f%m "$f" 2>/dev/null || echo 0)"
+    local m
+    m="$(stat -f%m "$f" 2>/dev/null || echo 0)"
     if [ -z "$candidate_mtime" ] || [ "$m" -lt "$candidate_mtime" ]; then
-      candidate="$f"; candidate_mtime="$m"
+      candidate="$f"
+      candidate_mtime="$m"
     fi
   done
   [ -n "$candidate" ] && printf '%s' "$candidate"
 }
 
-# parse_receipt_frontmatter RECEIPT_FILE → emits JSON to stdout, rc=1 on
-# malformed. Extracts every frontmatter key:value into a JSON object so
-# downstream handlers can `jq -r '.disposition'` etc.
-#
-# TODO(cursor): implement. Only the YAML between the first `---` and the next
-# `---` matters. Handle quoted strings, booleans, numbers, null. Failure mode:
-# print the parse error on stderr and return 1 — caller flips the receipt to
-# phase5_status: failed per handoff spec §4.
+extract_frontmatter() {
+  local receipt_file="$1"
+  awk '
+    BEGIN {d=0}
+    /^---[[:space:]]*$/ { d++; next }
+    d==1 { print; next }
+    d>=2 { exit }
+  ' "$receipt_file"
+}
+
+extract_body() {
+  local receipt_file="$1"
+  awk '
+    BEGIN {d=0}
+    /^---[[:space:]]*$/ { d++; next }
+    d>=2 { print }
+  ' "$receipt_file"
+}
+
 parse_receipt_frontmatter() {
   local receipt_file="$1"
-  # STUB — Cursor fills this. Suggested shape: awk between the two `---`
-  # markers, emit `{key: val, ...}` with jq --arg-style building. OR use
-  # python3 -c "import yaml,sys,json; print(json.dumps(yaml.safe_load(...)))"
-  # if yaml is acceptable — but stdlib-bash is preferred for consistency
-  # with the rest of the pipeline.
-  echo "parse_receipt_frontmatter: not yet implemented for $receipt_file" >&2
-  return 1
+  local delimiters
+  delimiters="$(awk '/^---[[:space:]]*$/ {c++} END {print c+0}' "$receipt_file")"
+  [ "$delimiters" -ge 2 ] || {
+    echo "missing frontmatter delimiters" >&2
+    return 1
+  }
+
+  local obj='{}'
+  local line key raw val
+  while IFS= read -r line; do
+    [ -n "$(trim "$line")" ] || continue
+    case "$line" in
+      *:*) ;;
+      *) echo "bad frontmatter line: $line" >&2; return 1 ;;
+    esac
+    key="$(trim "${line%%:*}")"
+    raw="${line#*:}"
+    val="$(trim "$raw")"
+    [ -n "$key" ] || {
+      echo "empty key in frontmatter" >&2
+      return 1
+    }
+
+    if [ -z "$val" ] || [ "$val" = "null" ]; then
+      obj="$(printf '%s' "$obj" | jq --arg k "$key" '. + {($k): null}')" || return 1
+    elif [ "$val" = "true" ] || [ "$val" = "false" ]; then
+      obj="$(printf '%s' "$obj" | jq --arg k "$key" --argjson v "$val" '. + {($k): $v}')" || return 1
+    elif [[ "$val" =~ ^-?[0-9]+$ ]]; then
+      obj="$(printf '%s' "$obj" | jq --arg k "$key" --argjson v "$val" '. + {($k): $v}')" || return 1
+    elif [[ "$val" =~ ^\".*\"$ ]]; then
+      val="${val#\"}"
+      val="${val%\"}"
+      val="${val//\\\"/\"}"
+      val="${val//\\\\/\\}"
+      obj="$(printf '%s' "$obj" | jq --arg k "$key" --arg v "$val" '. + {($k): $v}')" || return 1
+    else
+      obj="$(printf '%s' "$obj" | jq --arg k "$key" --arg v "$val" '. + {($k): $v}')" || return 1
+    fi
+  done < <(extract_frontmatter "$receipt_file")
+
+  printf '%s' "$obj"
 }
 
-# update_receipt_status RECEIPT_FILE NEW_STATUS [EXTRA_KEY EXTRA_VALUE]...
-# Atomically rewrites the receipt with phase5_status set to NEW_STATUS and
-# any additional frontmatter keys appended (e.g. moved_at, moved_to,
-# left_in_place_at, deferred_at).
-#
-# TODO(cursor): implement. Atomic: write to a .tmp sibling, then mv. Must
-# preserve the markdown body below the closing `---` untouched. See handoff
-# spec §3.1.6, §3.2.2, §3.3.1, §3.4.2.
+yaml_scalar_from_json() {
+  local json="$1"
+  local key="$2"
+  local t
+  t="$(printf '%s' "$json" | jq -r --arg k "$key" '.[$k] | type')"
+  case "$t" in
+    null) printf 'null' ;;
+    boolean|number) printf '%s' "$(printf '%s' "$json" | jq -r --arg k "$key" '.[$k]')" ;;
+    string)
+      local s
+      s="$(printf '%s' "$json" | jq -r --arg k "$key" '.[$k]')"
+      s="${s//\\/\\\\}"
+      s="${s//\"/\\\"}"
+      printf '"%s"' "$s"
+      ;;
+    *)
+      printf '"%s"' "$(printf '%s' "$json" | jq -c --arg k "$key" '.[$k]')"
+      ;;
+  esac
+}
+
 update_receipt_status() {
-  local receipt_file="$1" new_status="$2"; shift 2
-  # $@ = pairs of (key, value) to append to frontmatter
-  echo "update_receipt_status: not yet implemented ($receipt_file → $new_status)" >&2
-  return 1
+  local receipt_file="$1"
+  local new_status="$2"
+  shift 2
+
+  local fm_json
+  fm_json="$(parse_receipt_frontmatter "$receipt_file")" || return 1
+  fm_json="$(printf '%s' "$fm_json" | jq --arg s "$new_status" '.phase5_status = $s')" || return 1
+
+  while [ "$#" -ge 2 ]; do
+    local k="$1"
+    local v="$2"
+    shift 2
+    if [ "$v" = "__NULL__" ]; then
+      fm_json="$(printf '%s' "$fm_json" | jq --arg k "$k" '. + {($k): null}')" || return 1
+    elif [ "$v" = "true" ] || [ "$v" = "false" ]; then
+      fm_json="$(printf '%s' "$fm_json" | jq --arg k "$k" --argjson v "$v" '. + {($k): $v}')" || return 1
+    elif [[ "$v" =~ ^-?[0-9]+$ ]]; then
+      fm_json="$(printf '%s' "$fm_json" | jq --arg k "$k" --argjson v "$v" '. + {($k): $v}')" || return 1
+    else
+      fm_json="$(printf '%s' "$fm_json" | jq --arg k "$k" --arg v "$v" '. + {($k): $v}')" || return 1
+    fi
+  done
+
+  local body_tmp out_tmp
+  body_tmp="$(mktemp)"
+  out_tmp="$(mktemp)"
+  extract_body "$receipt_file" >"$body_tmp"
+
+  {
+    echo "---"
+    while IFS= read -r key; do
+      printf '%s: %s\n' "$key" "$(yaml_scalar_from_json "$fm_json" "$key")"
+    done < <(printf '%s' "$fm_json" | jq -r 'keys[]')
+    echo "---"
+    cat "$body_tmp"
+  } >"$out_tmp"
+
+  mv "$out_tmp" "$receipt_file"
+  rm -f "$body_tmp"
 }
 
-# write_index_line FIELDS…
-# Append one JSON line to index.jsonl. Never fatal.
-#
-# TODO(cursor): build the object per handoff spec §3.1.7 shape and
-# variants for §3.2 / §3.3 / §3.4. Accept a mix of --arg pairs or take a
-# pre-built JSON string — your call.
+fallback_mark_parse_failed() {
+  local receipt_file="$1"
+  local tmp
+  tmp="$(mktemp)"
+  awk '
+    BEGIN {done=0}
+    {
+      if (!done && $0 ~ /^phase5_status: pending[[:space:]]*$/) {
+        print "phase5_status: failed"
+        done=1
+      } else {
+        print
+      }
+    }
+  ' "$receipt_file" >"$tmp"
+  mv "$tmp" "$receipt_file"
+}
+
+write_phase5_log() {
+  local receipt_file="$1"
+  local reason="$2"
+  local log_file="${receipt_file%.md}.phase5.log"
+  {
+    echo "ts: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+    echo "reason: $reason"
+  } >"$log_file"
+}
+
 write_index_line() {
-  echo "write_index_line: not yet implemented" >&2
-  return 1
+  local json_line="$1"
+  printf '%s\n' "$json_line" >>"$INDEX_FILE"
 }
 
-# Is the receipt's proposed_destination safe? Emits a reason to stderr and
-# returns 1 if not. See handoff spec §3.1.2 and the DEST_DENY_PREFIXES list.
 check_destination_safety() {
   local dest="$1"
-  # TODO(cursor): implement all of §3.1.2:
-  #   - must begin with /Users/rodbot/
-  #   - must not already exist (refuse to overwrite)
-  #   - must not be inside any DEST_DENY_PREFIXES entry
-  #   - must not be identical to original_path (no-op move)
-  echo "check_destination_safety: not yet implemented for $dest" >&2
-  return 1
+  local original_path="$2"
+
+  [[ "$dest" == "$HOME_DIR/"* ]] || {
+    echo "destination must be under $HOME_DIR" >&2
+    return 1
+  }
+  [ "$dest" != "$original_path" ] || {
+    echo "destination equals source path" >&2
+    return 1
+  }
+  [ ! -e "$dest" ] || {
+    echo "destination already exists: $dest" >&2
+    return 1
+  }
+
+  local rel="${dest#"$HOME_DIR"/}"
+  local prefix
+  for prefix in "${DEST_DENY_PREFIXES[@]}"; do
+    if [[ "$rel" == "$prefix"* ]]; then
+      echo "destination denied by prefix: $prefix" >&2
+      return 1
+    fi
+  done
 }
 
-# Verify original is unchanged since audit (sha256 + size match receipt).
-# See handoff spec §3.1.1.
 verify_source_unchanged() {
-  local original_path="$1" expected_sha256="$2" expected_size="$3"
-  # TODO(cursor): implement. On any mismatch, return 1 with a reason on
-  # stderr — handler flips receipt to failed, source stays put.
-  echo "verify_source_unchanged: not yet implemented" >&2
-  return 1
+  local original_path="$1"
+  local expected_sha256="$2"
+  local expected_size="$3"
+
+  [ -f "$original_path" ] || {
+    echo "source missing: $original_path" >&2
+    return 1
+  }
+
+  local size
+  size="$(stat -f%z "$original_path" 2>/dev/null || echo -1)"
+  [ "$size" = "$expected_size" ] || {
+    echo "source size mismatch: expected=$expected_size got=$size" >&2
+    return 1
+  }
+
+  local sha256
+  sha256="$(shasum -a 256 "$original_path" | awk '{print $1}')"
+  [ "$sha256" = "$expected_sha256" ] || {
+    echo "source sha256 mismatch: expected=$expected_sha256 got=$sha256" >&2
+    return 1
+  }
 }
 
-# Ensure a relative path is present in .gitignore (append with comment if
-# not). See handoff spec §3.1.3. Used only when contains_sensitive=true.
 ensure_gitignored() {
-  local relative_path="$1" receipt_id="$2" reason="$3"
-  # TODO(cursor): implement.
-  # - git -C "$HOME_DIR" check-ignore "$relative_path" → already ignored, noop
-  # - else: append to .gitignore with a comment like:
-  #     # receipt <id> — sensitive: <reason>
-  #     <relative_path>
-  # - do NOT git add / commit from this script — commit policy is open
-  #   (handoff spec §6.1); leave it staged for the operator's chosen cadence.
-  echo "ensure_gitignored: not yet implemented ($relative_path)" >&2
-  return 1
+  local relative_path="$1"
+  local receipt_id="$2"
+  local reason="$3"
+  local gitignore_file="$HOME_DIR/.gitignore"
+
+  if git -C "$HOME_DIR" check-ignore -q -- "$relative_path"; then
+    return 0
+  fi
+
+  if grep -Fxq "$relative_path" "$gitignore_file"; then
+    return 0
+  fi
+
+  {
+    echo
+    echo "# receipt $receipt_id — sensitive: $reason"
+    echo "$relative_path"
+  } >>"$gitignore_file"
 }
 
-# ─── disposition handlers ─────────────────────────────────────────────────────
+mark_failed() {
+  local receipt_file="$1"
+  local id="$2"
+  local reason="$3"
+  local original_path="$4"
 
-# Each handler takes the parsed frontmatter JSON as its only argument. On
-# success, updates the receipt and returns 0. On failure, writes a sibling
-# <id>.phase5.log explaining why, flips receipt to phase5_status: failed, and
-# returns 0 (failure-to-act is still a handled outcome — no retry loops).
+  write_phase5_log "$receipt_file" "$reason"
+  update_receipt_status "$receipt_file" "failed" "phase5_error" "$reason" || true
+  write_index_line "$(jq -cn \
+    --arg ts "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+    --arg id "$id" \
+    --arg disposition "failed" \
+    --arg reason "$reason" \
+    --arg from "$original_path" \
+    --arg receipt "ledgers/moves/receipts/$id.md" \
+    '{ts:$ts,id:$id,disposition:$disposition,reason:$reason,from:$from,to:null,receipt:$receipt}')"
+  log_event "failed" "$(jq -cn --arg id "$id" --arg reason "$reason" '{id:$id,reason:$reason}')"
+}
 
 handle_moved() {
   local fm_json="$1"
-  # TODO(cursor): implement handoff spec §3.1 end-to-end:
-  #   1. verify_source_unchanged
-  #   2. check_destination_safety
-  #   3. if contains_sensitive → ensure_gitignored
-  #   4. mkdir -p parent of destination
-  #   5. mv original_path → proposed_destination
-  #   6. update_receipt_status done, moved_at, moved_to
-  #   7. write_index_line disposition=moved, from, to, sha256, receipt
-  echo "handle_moved: not yet implemented" >&2
-  return 1
+  local receipt_file="$2"
+  local id original_path destination sha256 expected_size contains_sensitive sensitive_reason
+  id="$(printf '%s' "$fm_json" | jq -r '.id // ""')"
+  original_path="$(printf '%s' "$fm_json" | jq -r '.original_path // ""')"
+  destination="$(printf '%s' "$fm_json" | jq -r '.proposed_destination // ""')"
+  sha256="$(printf '%s' "$fm_json" | jq -r '.sha256 // ""')"
+  expected_size="$(printf '%s' "$fm_json" | jq -r '.original_size_bytes // -1')"
+  contains_sensitive="$(printf '%s' "$fm_json" | jq -r '.contains_sensitive // false')"
+  sensitive_reason="$(printf '%s' "$fm_json" | jq -r '.sensitive_reason // ""')"
+
+  verify_source_unchanged "$original_path" "$sha256" "$expected_size" || {
+    mark_failed "$receipt_file" "$id" "source changed between audit and move" "$original_path"
+    return 0
+  }
+  check_destination_safety "$destination" "$original_path" || {
+    mark_failed "$receipt_file" "$id" "unsafe destination: $destination" "$original_path"
+    return 0
+  }
+
+  if [ "$contains_sensitive" = "true" ]; then
+    local rel
+    rel="${destination#"$HOME_DIR"/}"
+    ensure_gitignored "$rel" "$id" "$sensitive_reason" || {
+      mark_failed "$receipt_file" "$id" "failed to update .gitignore for sensitive file" "$original_path"
+      return 0
+    }
+  fi
+
+  mkdir -p "$(dirname "$destination")"
+  mv "$original_path" "$destination" || {
+    mark_failed "$receipt_file" "$id" "mv failed to destination" "$original_path"
+    return 0
+  }
+
+  local ts
+  ts="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+  update_receipt_status "$receipt_file" "done" "moved_at" "$ts" "moved_to" "$destination" || true
+  write_index_line "$(jq -cn \
+    --arg ts "$ts" \
+    --arg id "$id" \
+    --arg disposition "moved" \
+    --arg from "$original_path" \
+    --arg to "$destination" \
+    --arg sha256 "$sha256" \
+    --arg receipt "ledgers/moves/receipts/$id.md" \
+    '{ts:$ts,id:$id,disposition:$disposition,from:$from,to:$to,sha256:$sha256,receipt:$receipt}')"
+  log_event "moved" "$(jq -cn --arg id "$id" --arg from "$original_path" --arg to "$destination" '{id:$id,from:$from,to:$to}')"
 }
 
 handle_left_in_place() {
   local fm_json="$1"
-  # TODO(cursor): implement handoff spec §3.2:
-  #   1. verify original_path exists
-  #   2. update_receipt_status done, left_in_place_at
-  #   3. write_index_line disposition=left-in-place, from=original, to=null
-  echo "handle_left_in_place: not yet implemented" >&2
-  return 1
+  local receipt_file="$2"
+  local id original_path
+  id="$(printf '%s' "$fm_json" | jq -r '.id // ""')"
+  original_path="$(printf '%s' "$fm_json" | jq -r '.original_path // ""')"
+
+  if [ ! -f "$original_path" ]; then
+    mark_failed "$receipt_file" "$id" "left-in-place source path missing" "$original_path"
+    return 0
+  fi
+
+  local ts
+  ts="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+  update_receipt_status "$receipt_file" "done" "left_in_place_at" "$ts" || true
+  write_index_line "$(jq -cn \
+    --arg ts "$ts" \
+    --arg id "$id" \
+    --arg disposition "left-in-place" \
+    --arg from "$original_path" \
+    --arg receipt "ledgers/moves/receipts/$id.md" \
+    '{ts:$ts,id:$id,disposition:$disposition,from:$from,to:null,receipt:$receipt}')"
+  log_event "left_in_place" "$(jq -cn --arg id "$id" '{id:$id}')"
 }
 
 handle_deferred() {
   local fm_json="$1"
-  # TODO(cursor): implement handoff spec §3.3:
-  #   1. update_receipt_status done, deferred_at
-  #   2. write_index_line disposition=deferred, from=original, to=null
-  echo "handle_deferred: not yet implemented" >&2
-  return 1
+  local receipt_file="$2"
+  local id original_path
+  id="$(printf '%s' "$fm_json" | jq -r '.id // ""')"
+  original_path="$(printf '%s' "$fm_json" | jq -r '.original_path // ""')"
+
+  local ts
+  ts="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+  update_receipt_status "$receipt_file" "done" "deferred_at" "$ts" || true
+  write_index_line "$(jq -cn \
+    --arg ts "$ts" \
+    --arg id "$id" \
+    --arg disposition "deferred" \
+    --arg from "$original_path" \
+    --arg receipt "ledgers/moves/receipts/$id.md" \
+    '{ts:$ts,id:$id,disposition:$disposition,from:$from,to:null,receipt:$receipt}')"
+  log_event "deferred" "$(jq -cn --arg id "$id" '{id:$id}')"
 }
 
 handle_delete_candidate() {
   local fm_json="$1"
-  # TODO(cursor): implement handoff spec §3.4:
-  #   1. DO NOT DELETE
-  #   2. update_receipt_status failed with reason noting sign-off required
-  #   3. write_index_line disposition=delete-candidate-surfaced, from=original, to=null
-  #   4. Append "- <id> — <original_path> — <sensitive_reason or rationale>" to delete-queue.md
-  echo "handle_delete_candidate: not yet implemented" >&2
-  return 1
+  local receipt_file="$2"
+  local id original_path sensitive_reason rationale
+  id="$(printf '%s' "$fm_json" | jq -r '.id // ""')"
+  original_path="$(printf '%s' "$fm_json" | jq -r '.original_path // ""')"
+  sensitive_reason="$(printf '%s' "$fm_json" | jq -r '.sensitive_reason // ""')"
+  rationale="$(printf '%s' "$fm_json" | jq -r '.rationale // ""')"
+
+  local reason="delete-candidate requires operator sign-off"
+  update_receipt_status "$receipt_file" "failed" "phase5_error" "$reason" || true
+
+  local ts
+  ts="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+  write_index_line "$(jq -cn \
+    --arg ts "$ts" \
+    --arg id "$id" \
+    --arg disposition "delete-candidate-surfaced" \
+    --arg from "$original_path" \
+    --arg receipt "ledgers/moves/receipts/$id.md" \
+    '{ts:$ts,id:$id,disposition:$disposition,from:$from,to:null,receipt:$receipt}')"
+
+  {
+    [ -f "$DELETE_QUEUE_FILE" ] || printf '# Delete Queue\n\n' >"$DELETE_QUEUE_FILE"
+    printf -- '- %s — %s — %s%s\n' "$id" "$original_path" \
+      "${sensitive_reason:-operator review required}" \
+      "${rationale:+ (rationale: $rationale)}"
+  } >>"$DELETE_QUEUE_FILE"
+  write_phase5_log "$receipt_file" "$reason"
+  log_event "delete_candidate_surfaced" "$(jq -cn --arg id "$id" '{id:$id}')"
 }
 
-# ─── main job loop ────────────────────────────────────────────────────────────
-
-# Returns 0 if a receipt was handled (success OR handled-failure),
-# 1 if no pending receipts.
 process_one_receipt() {
-  local receipt_file; receipt_file="$(oldest_pending_receipt)"
+  local receipt_file
+  receipt_file="$(oldest_pending_receipt)"
   [ -n "$receipt_file" ] || return 1
 
-  local id; id="$(basename "$receipt_file" .md)"
-
+  local id
+  id="$(basename "$receipt_file" .md)"
   local fm_json
   if ! fm_json="$(parse_receipt_frontmatter "$receipt_file" 2>/tmp/phase5-parse-err.$$)"; then
-    local err; err="$(cat /tmp/phase5-parse-err.$$ 2>/dev/null || true)"
+    local err
+    err="$(cat /tmp/phase5-parse-err.$$ 2>/dev/null || true)"
     rm -f /tmp/phase5-parse-err.$$
-    # TODO(cursor): write <id>.phase5.log, flip phase5_status to failed with
-    # reason "malformed frontmatter"; see handoff spec §4.
-    log_event "parse_failed" "$(jq -cn --arg id "$id" --arg err "$err" \
-      '{id:$id, err:$err}')"
+    fallback_mark_parse_failed "$receipt_file"
+    write_phase5_log "$receipt_file" "malformed frontmatter: $err"
+    write_index_line "$(jq -cn \
+      --arg ts "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+      --arg id "$id" \
+      --arg disposition "failed" \
+      --arg reason "malformed frontmatter: $err" \
+      --arg receipt "ledgers/moves/receipts/$id.md" \
+      '{ts:$ts,id:$id,disposition:$disposition,reason:$reason,from:null,to:null,receipt:$receipt}')"
+    log_event "parse_failed" "$(jq -cn --arg id "$id" --arg err "$err" '{id:$id,err:$err}')"
     return 0
   fi
   rm -f /tmp/phase5-parse-err.$$
 
-  local disposition; disposition="$(printf '%s' "$fm_json" | jq -r '.disposition // ""')"
+  local disposition
+  disposition="$(printf '%s' "$fm_json" | jq -r '.disposition // ""')"
 
-  # Dry-run: print the planned action and do nothing.
   if [ "$MODE" = "dry-run" ] || [ "$MODE" = "dry-run-once" ]; then
-    printf '[dry-run] id=%s disposition=%s → would run handle_%s\n' \
-      "$id" "$disposition" "${disposition//-/_}"
-    log_event "dry_run_plan" "$(jq -cn --arg id "$id" --arg disp "$disposition" \
-      '{id:$id, disposition:$disp}')"
-    # In dry-run we don't consume the receipt — next real tick will pick it up.
-    # Move to a different receipt next loop by touching this one's mtime
-    # forward a second so oldest_pending_receipt picks the next oldest.
+    printf '[dry-run] id=%s disposition=%s receipt=%s\n' "$id" "$disposition" "$receipt_file"
+    log_event "dry_run_plan" "$(jq -cn --arg id "$id" --arg disposition "$disposition" '{id:$id,disposition:$disposition}')"
     touch -A 01 "$receipt_file" 2>/dev/null || true
     return 0
   fi
 
   case "$disposition" in
-    "moved")             handle_moved             "$fm_json" ;;
-    "left-in-place")     handle_left_in_place     "$fm_json" ;;
-    "deferred")          handle_deferred          "$fm_json" ;;
-    "delete-candidate")  handle_delete_candidate  "$fm_json" ;;
+    moved) handle_moved "$fm_json" "$receipt_file" ;;
+    left-in-place) handle_left_in_place "$fm_json" "$receipt_file" ;;
+    deferred) handle_deferred "$fm_json" "$receipt_file" ;;
+    delete-candidate) handle_delete_candidate "$fm_json" "$receipt_file" ;;
     *)
-      # TODO(cursor): write <id>.phase5.log, flip to failed with reason
-      # "unknown disposition: $disposition". See handoff spec §4.
-      log_event "unknown_disposition" "$(jq -cn --arg id "$id" --arg disp "$disposition" \
-        '{id:$id, disposition:$disp}')"
+      local original_path
+      original_path="$(printf '%s' "$fm_json" | jq -r '.original_path // ""')"
+      mark_failed "$receipt_file" "$id" "unknown disposition: $disposition" "$original_path"
       ;;
   esac
-
   return 0
 }
-
-# ─── entrypoints ──────────────────────────────────────────────────────────────
 
 log_event "started" "$(jq -cn --arg mode "$MODE" '{mode:$mode}')"
 

@@ -168,8 +168,7 @@ Whenever a TCL entry's `Next` section lists work that doesn't get done in that s
 - [ ] **Skim `intake/2026-04-17-bootstrap/raw-ai-mission-control.html`** — prior dashboard concept; will inform NS-05 design.
 - [ ] **Ratio Lattice v0.1** — design the first real comparator schema once we have ≥3 scoreable pairs worth recording.
 - [ ] **Moves phase 4 (Cursor-owned)** — run phase 4 through Cursor Auto mode per `scripts/moves_phase4_cursor_spec.md` (inspect inbox jobs, write receipts, delete consumed jobs). No phase-4 bash daemon in this architecture.
-- [ ] **Moves phase 5** — spec in `scripts/moves_phase5_handoff.md`. Cursor to build. Covers mover semantics for all four dispositions, test matrix, open design questions.
-- [ ] **Phase 1 Photos Library filter** — `~/Pictures/Photos Library.photoslibrary/**` floods settled.log with photoanalysisd churn. Add a path-ignore in `scripts/moves_phase1_detector.sh` before phase 4 goes live on API calls, or it'll burn quota on ephemeral SQLite/plist files.
+- [ ] **Moves phase 5 certify+soak** — implementation files exist (`scripts/moves_phase5_mover.sh`, launchd plist/setup helper). Run dry-run, execute smoke matrix, then start live soak and certify in next TCL.
 - [ ] **Retire `audit_intake.sh` SessionStart hook** — once phase 5 soaks clean for ≥24h. Separate TCL, not bundled with the phase-5 landing commit.
 
 ---

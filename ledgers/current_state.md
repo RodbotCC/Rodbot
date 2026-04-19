@@ -18,7 +18,8 @@ Last updated: 2026-04-19
 - Component: `scripts/moves_phase1_detector.sh`
 - LaunchAgent: `com.rodbot.moves.phase1-detector`
 - Output: `ledgers/moves/events.log`
-- Notes: allowlist watchers are active; pipeline kill switch is `ledgers/moves/PAUSED`.
+- Notes: watcher scope is intentionally limited to `Desktop`, `Downloads`, and
+  `Documents`; pipeline kill switch is `ledgers/moves/PAUSED`.
 
 ### Phase 2 — Debouncer/filter
 
@@ -47,9 +48,15 @@ Last updated: 2026-04-19
 
 ### Phase 5 — Mover
 
-- Status: final build phase pending.
-- Handoff spec: `scripts/moves_phase5_handoff.md`
-- Goal: execute receipt dispositions, update `phase5_status`, append to `ledgers/moves/index.jsonl`.
+- Status: built, not certified/live yet.
+- Implementation: `scripts/moves_phase5_mover.sh`
+- Launchd artifacts: `scripts/launchd/com.rodbot.moves.phase5-mover.plist`,
+  `scripts/setup_moves_phase5_launchagent.sh`
+- Handoff/spec: `scripts/moves_phase5_handoff.md`
+- Goal: execute receipt dispositions, update `phase5_status`, append to
+  `ledgers/moves/index.jsonl`.
+- Current validation: one controlled synthetic `moved` receipt executed
+  successfully in `--once` mode (file moved, receipt updated, index appended).
 
 ## Key architecture decisions locked
 
@@ -62,12 +69,11 @@ Last updated: 2026-04-19
 
 1. Keep phases 1-3 soaking live.
 2. Run phase 4 in Cursor Auto mode against inbox jobs.
-3. Implement phase 5 mover in Cursor from handoff spec.
+3. Dry-run phase 5 mover, then run smoke matrix.
 4. Certify full chain with smoke matrix.
 5. Retire legacy `audit_intake.sh` hook only after clean 24h phase-5 soak.
 
 ## Open risks / watchpoints
 
-- `Photos Library.photoslibrary` churn should be filtered at detector level to reduce noise volume.
 - After Homebrew upgrades, re-check Full Disk Access for `/opt/homebrew/bin/bash` if launchd behavior regresses.
 - Avoid architecture drift: keep phase-4 logic in Cursor spec/session, not in new bash daemons.
