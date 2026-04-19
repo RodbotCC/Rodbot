@@ -1,6 +1,6 @@
 # Moves Pipeline — Receipts
 
-Phase 4 (auditor) writes one `<id>.md` receipt per inbox job. Phase 5 (mover)
+Phase 4 (Cursor auditor) writes one `<id>.md` receipt per inbox job. Phase 5 (mover)
 reads the YAML frontmatter at the top of each receipt and executes the
 proposed move (or leaves the file in place per `disposition`).
 
@@ -16,7 +16,7 @@ the frontmatter is authoritative.
 id:                         <12-hex, same as the consumed inbox job>
 sha256:                     <64-hex, content hash>
 audited_at:                 <ISO 8601 UTC>
-auditor_model:              <Anthropic model id that produced this receipt>
+auditor_model:              <model/runtime label used by Cursor>
 original_path:              "<absolute source path when detected>"
 original_filename:          "<basename>"
 original_size_bytes:        <integer>
@@ -53,11 +53,9 @@ phase5_status:              pending | skip | done | failed
 ```
 phase 3 writes inbox/<id>.json
   ↓
-phase 4 reads inbox/<id>.json
-  ↓ calls Anthropic API with metadata (+ image if applicable)
+phase 4 (Cursor) reads inbox/<id>.json
   ↓ writes receipts/<id>.md (frontmatter + body)
   ↓ deletes inbox/<id>.json
-  ↓ logs {kind:"audited", id, receipt} to auditor-events.jsonl
   ↓
 (operator optionally edits receipts/<id>.md)
   ↓
@@ -66,17 +64,6 @@ phase 5 reads receipts/<id>.md, executes, updates phase5_status, appends to inde
 
 ## Failure modes (phase 4)
 
-- **LLM call fails** (network / rate-limit / timeout): inbox job stays, attempt count in `.auditor-attempts/<id>` bumps, retry next tick.
-- **Receipt JSON is malformed or misses required fields:** inbox job stays, attempt bumps, `invalid_receipt` event logged.
-- **≥3 attempts:** job moves to `inbox/.poisoned/<id>.json`, `poisoned` event logged. No automatic retry — operator must inspect and either re-drop the file or manually restore the job.
-- **Missing API key:** `failed` event logged; job stays in inbox indefinitely. Resolution: set `ANTHROPIC_API_KEY` or write `~/.config/rodbot/anthropic.env`.
-
-## Testing without an API key
-
-```
-scripts/moves_phase4_auditor.sh --once --dry-run
-```
-
-produces a skeleton receipt with placeholder fields so phase 5 can be
-exercised against it without calling an LLM. Useful when bringing up the
-whole chain on a new machine.
+- Cursor can't classify confidently: write `disposition: deferred` with explicit rationale.
+- Cursor session unavailable: inbox jobs accumulate safely in `inbox/` until resumed.
+- Malformed receipt frontmatter: fix and rewrite receipt before phase 5 is enabled.

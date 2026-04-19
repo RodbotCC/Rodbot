@@ -1,9 +1,10 @@
 # Phase 5 — Mover. Cursor handoff spec.
 
-**Audience:** Cursor, picking up the moves pipeline after Claude Code landed
-phase 4. You have the same repo. Phases 1–4 are live (or loadable). Your job
+**Audience:** Cursor, picking up the moves pipeline after phase 4 receipt
+generation is running in Cursor. You have the same repo. Phases 1–3 are live;
+phase 4 is Cursor-operated per `scripts/moves_phase4_cursor_spec.md`. Your job
 is to implement phase 5 — the mover — following the same style and
-conventions as phases 1–4.
+conventions as phases 1–3.
 
 **Guiding principle:** phase 5 is the first phase that *mutates the
 filesystem outside `ledgers/moves/` itself*. Be conservative. Operator trust
@@ -112,7 +113,7 @@ Match phases 1–4:
 - `scripts/launchd/com.rodbot.moves.phase5-mover.plist` — `RunAtLoad`,
   `KeepAlive`, stdout/stderr logs into `ledgers/moves/`.
 - `scripts/setup_moves_phase5_launchagent.sh` — install/reload, following
-  the bootout → bootstrap → enable → kickstart pattern from phase 4's setup.
+  the bootout → bootstrap → enable → kickstart pattern from phases 1–3 setup helpers.
 - Uses `/opt/homebrew/bin/bash` (Bash 5.x, TCC-granted).
 - Honors `ledgers/moves/PAUSED` kill switch.
 - Poll interval: 5 seconds. Process one receipt per tick for serialization.

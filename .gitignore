@@ -32,7 +32,3 @@ ledgers/moves/vanished.log
 ledgers/moves/.phase3-cursor
 ledgers/moves/phase3-inbox-writer.stdout.log
 ledgers/moves/phase3-inbox-writer.stderr.log
-ledgers/moves/phase4-auditor.stdout.log
-ledgers/moves/phase4-auditor.stderr.log
-ledgers/moves/auditor-events.jsonl
-ledgers/moves/.auditor-attempts/

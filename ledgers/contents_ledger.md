@@ -42,6 +42,7 @@ Update rule: any file created/renamed/deleted → update in the same session it 
 - `ledgers/contents_ledger.md` — this file; map of file purposes.
 - `ledgers/ratio_lattice.md` — scoring system relating ledger entries to each other (v0 conventions).
 - `ledgers/north_star.md` — the goals RodBot is built to achieve; NS-01..NS-18 drafted, all pending operator ratification.
+- `ledgers/current_state.md` — operator-facing markdown snapshot of pipeline phase status, ownership boundaries, immediate next sequence, and active risks.
 - `ledgers/TCL/0008-intake-watcher.md` — builds the intake watcher: detection script, triage protocol, SessionStart hook, first sweep.
 - `ledgers/intake_ledger.md` — narrative index of every intake sweep (grouped events, rationale, open questions).
 - `ledgers/intake_events.jsonl` — append-only JSONL event log; one object per file triaged.
@@ -58,8 +59,7 @@ Update rule: any file created/renamed/deleted → update in the same session it 
 - `pieces/exports/2026-04-18/2026-04-18-HHMM-<slug>.md` — 10 Pieces-curated session summaries covering the 2026-04-17/18 bootstrap arc (project-initiation/initialization, system-setup, infrastructure-setup, ai-setup + ai-setup-complete, setup-ai-comm, project-setup + project-setup-analysis, ledger-ai-files).
 - `ledgers/TCL/0013-moves-phases-1-2-live.md` — Cursor brought phases 1 and 2 live under launchd (with `brew install fswatch` + Bash-3.2 `read -t` fix); phase 3 diagnosed as broken under launchd but working manually. Claude Code cold-returned to certify + log.
 - `ledgers/TCL/0014-phase3-tcc-fix-and-phase4-auditor.md` — Claude Code diagnoses phase 3 SIGPIPE + TCC root causes, patches phase 3, then builds phase 4 (LLM auditor) with dry-run mode; operator resolved TCC via `brew install bash` + Full Disk Access grant.
-- `scripts/moves_phase4_auditor.sh` — phase-4 LLM auditor daemon; consumes inbox jobs, calls Anthropic Messages API (with image blocks for screenshots), writes markdown receipts with YAML frontmatter. Supports `--once`, `--dry-run`, `--once --dry-run`.
-- `scripts/launchd/com.rodbot.moves.phase4-auditor.plist` — launchd LaunchAgent definition for phase-4 auditor autostart/restart.
-- `scripts/setup_moves_phase4_launchagent.sh` — helper to install/reload the phase-4 LaunchAgent into `~/Library/LaunchAgents/`.
+- `ledgers/TCL/0015-phase4-rescoped-to-cursor.md` — retires the phase-4 bash daemon and re-centers phase 4 as Cursor-owned work via a dedicated spec.
+- `scripts/moves_phase4_cursor_spec.md` — Cursor-owned phase-4 run spec (continuous inbox inspection -> receipt writing -> inbox consumption), replacing the prior bash-daemon approach.
 - `scripts/moves_phase5_handoff.md` — spec doc for Cursor to build phase 5 (mover) from. Disposition contracts, failure paths, test matrix, open design questions.
-- `ledgers/moves/receipts/README.md` — phase-4 receipt frontmatter schema; phase-5 consumption contract; disposition semantics; failure modes; dry-run usage.
+- `ledgers/moves/receipts/README.md` — phase-4 receipt frontmatter schema for Cursor-generated receipts; phase-5 consumption contract; disposition semantics; failure modes.

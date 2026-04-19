@@ -3,12 +3,12 @@
 <plist version="1.0">
 <dict>
   <key>Label</key>
-  <string>com.rodbot.moves.phase4-auditor</string>
+  <string>com.rodbot.moves.phase5-mover</string>
 
   <key>ProgramArguments</key>
   <array>
     <string>/opt/homebrew/bin/bash</string>
-    <string>/Users/rodbot/scripts/moves_phase4_auditor.sh</string>
+    <string>/Users/rodbot/scripts/moves_phase5_mover.sh</string>
   </array>
 
   <key>RunAtLoad</key>
@@ -18,9 +18,9 @@
   <true/>
 
   <key>StandardOutPath</key>
-  <string>/Users/rodbot/ledgers/moves/phase4-auditor.stdout.log</string>
+  <string>/Users/rodbot/ledgers/moves/phase5-mover.stdout.log</string>
 
   <key>StandardErrorPath</key>
-  <string>/Users/rodbot/ledgers/moves/phase4-auditor.stderr.log</string>
+  <string>/Users/rodbot/ledgers/moves/phase5-mover.stderr.log</string>
 </dict>
 </plist>
