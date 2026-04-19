@@ -167,6 +167,10 @@ Whenever a TCL entry's `Next` section lists work that doesn't get done in that s
 - [ ] **Diff the `extraction-section-*` files against the master `Extraction.txt`** to see whether any carry unique content. Low priority.
 - [ ] **Skim `intake/2026-04-17-bootstrap/raw-ai-mission-control.html`** — prior dashboard concept; will inform NS-05 design.
 - [ ] **Ratio Lattice v0.1** — design the first real comparator schema once we have ≥3 scoreable pairs worth recording.
+- [ ] **Moves phase 4 bring-up** — phase 4 auditor landed (session 0014) but LaunchAgent not yet loaded. Blocker: operator to set `ANTHROPIC_API_KEY` (env or `~/.config/rodbot/anthropic.env`), then run `scripts/setup_moves_phase4_launchagent.sh`. Verify the first real receipt looks sensible before leaving it soaking.
+- [ ] **Moves phase 5** — spec in `scripts/moves_phase5_handoff.md`. Cursor to build. Covers mover semantics for all four dispositions, test matrix, open design questions.
+- [ ] **Phase 1 Photos Library filter** — `~/Pictures/Photos Library.photoslibrary/**` floods settled.log with photoanalysisd churn. Add a path-ignore in `scripts/moves_phase1_detector.sh` before phase 4 goes live on API calls, or it'll burn quota on ephemeral SQLite/plist files.
+- [ ] **Retire `audit_intake.sh` SessionStart hook** — once phase 5 soaks clean for ≥24h. Separate TCL, not bundled with the phase-5 landing commit.
 
 ---
 

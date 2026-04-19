@@ -23,6 +23,9 @@ Update rule: any `mkdir` or new top-level folder → add an entry in the same co
 - `/Users/rodbot/pieces/exports/` — raw markdown exports from Pieces, subfoldered by capture date.
 - `/Users/rodbot/pieces/exports/2026-04-18/` — first drop: 10 bootstrap-era session summaries.
 - `/Users/rodbot/ledgers/moves/` — filesystem-trigger pipeline ledger workspace (phase 1 detector logs now; later inbox/receipts/index).
+- `/Users/rodbot/ledgers/moves/receipts/` — phase 4 auditor output; one `<id>.md` per audited inbox job, operator-editable, phase 5's input.
+- `/Users/rodbot/ledgers/moves/inbox/.poisoned/` — phase 4 "gave up on this job" archive after `MAX_ATTEMPTS` failures. Runtime-only, gitignored via `inbox/` parent rule.
+- `/Users/rodbot/ledgers/moves/.auditor-attempts/` — per-job retry counters for phase 4. Runtime-only, gitignored.
 
 ## Out-of-scope (for now)
 

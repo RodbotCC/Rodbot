@@ -12,6 +12,7 @@ PAUSED_FILE="$MOVES_DIR/PAUSED"
 PENDING_DIR="$MOVES_DIR/.phase2-pending"
 
 POLL_SECONDS="0.5"
+READ_TIMEOUT_SECONDS=1
 SETTLE_SECONDS=3
 ABANDON_SECONDS=$((10 * 60))
 
@@ -304,7 +305,7 @@ tail -n 0 -F "$EVENTS_LOG" | while true; do
     sleep 1
   done
 
-  if IFS= read -r -t "$POLL_SECONDS" raw_line; then
+  if IFS= read -r -t "$READ_TIMEOUT_SECONDS" raw_line; then
     process_raw_event "$raw_line"
   fi
 

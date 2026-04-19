@@ -4,17 +4,20 @@ Filesystem-trigger pipeline workspace.
 
 ## Phase status
 
-- Current: **Phase 3** (detector + debouncer/filter + inbox writer).
+- Current: **Phase 4** (detector + debouncer/filter + inbox writer + auditor).
 - Active components:
   - `scripts/moves_phase1_detector.sh` via launchd label `com.rodbot.moves.phase1-detector`.
   - `scripts/moves_phase2_debouncer.sh` via launchd label `com.rodbot.moves.phase2-debouncer`.
   - `scripts/moves_phase3_inbox_writer.sh` via launchd label `com.rodbot.moves.phase3-inbox-writer`.
-- Output in this phase:
+  - `scripts/moves_phase4_auditor.sh` via launchd label `com.rodbot.moves.phase4-auditor` (code landed; LaunchAgent not loaded automatically — operator loads via `setup_moves_phase4_launchagent.sh` once `ANTHROPIC_API_KEY` is in place).
+- Output in this pipeline:
   - `events.log` = raw detector stream.
   - `settled.log` = debounced/coalesced settled file events (JSONL), hard-noise filtered.
   - `inbox/<id>.json` = one content-hash job per unique settled file.
   - `duplicates.log` / `vanished.log` = phase-3 skip accounting.
-- Not active yet: auditor receipts, mover.
+  - `receipts/<id>.md` = phase-4 auditor output (markdown + YAML frontmatter). Operator-editable. See `receipts/README.md`.
+  - `auditor-events.jsonl` = phase-4 observability stream (started / audited / llm_failed / invalid_receipt / poisoned).
+- Not active yet: mover (phase 5) — spec in `scripts/moves_phase5_handoff.md`.
 
 ## Kill switch
 
@@ -32,3 +35,14 @@ Filesystem-trigger pipeline workspace.
 - `duplicates.log` — append-only duplicate detections (active inbox or historical receipts).
 - `vanished.log` — append-only records for files gone before job emission.
 - `phase3-inbox-writer.stdout.log` / `phase3-inbox-writer.stderr.log` — launchd runtime logs.
+- `receipts/` — phase-4 auditor output. Tracked (these are the operator-editable interlock that gates phase 5).
+- `auditor-events.jsonl` — phase-4 observability stream (runtime artifact, gitignored).
+- `.auditor-attempts/` — per-job retry counters (runtime artifact, gitignored).
+- `inbox/.poisoned/` — jobs phase 4 gave up on after `MAX_ATTEMPTS`. Operator inspects, then either restores by `mv` back into `inbox/` or deletes.
+- `phase4-auditor.stdout.log` / `phase4-auditor.stderr.log` — launchd runtime logs.
+
+## Permissions note (macOS TCC)
+
+- LaunchAgents now run via `/opt/homebrew/bin/bash` (Bash 5).
+- Grant Full Disk Access to that binary in System Settings so background agents can read `Downloads/`, `Desktop/`, and `Documents/` reliably.
+- Homebrew upgrades can repoint `/opt/homebrew/bin/bash` to a new cellar binary; if pipeline behavior regresses after `brew upgrade`, re-check and re-grant Full Disk Access.

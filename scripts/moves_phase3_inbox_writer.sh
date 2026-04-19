@@ -51,20 +51,10 @@ json_escape() {
 first_line_from_offset() {
   local offset="$1"
   local start=$((offset + 1))
-  tail -c +"$start" "$SETTLED_LOG" 2>/dev/null | awk 'NR==1 {print; exit}'
-}
-
-line_has_trailing_newline() {
-  local offset="$1"
-  local line="$2"
-  local line_bytes
-  local next_byte_pos
-  local next_char
-
-  line_bytes=$(printf '%s\n' "$line" | wc -c | tr -d ' ')
-  next_byte_pos=$((offset + line_bytes))
-  next_char="$(dd if="$SETTLED_LOG" bs=1 skip=$((next_byte_pos - 1)) count=1 2>/dev/null || true)"
-  [ "$next_char" = $'\n' ]
+  # Subshell with pipefail disabled: awk exits after line 1, tail keeps reading
+  # a large settled.log and dies with SIGPIPE (141). That's expected here and
+  # must not propagate through `set -o pipefail` and kill the agent.
+  (set +o pipefail; tail -c +"$start" "$SETTLED_LOG" 2>/dev/null | awk 'NR==1 {print; exit}')
 }
 
 sha256_file() {
@@ -128,15 +118,19 @@ log_duplicate() {
 log_vanished() {
   local path="$1"
   local settled_at="$2"
+  local reason="${3:-vanished_before_inbox}"
+  local diag="${4:-}"
   local ts
   ts="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 
   if have_jq; then
     jq -cn --arg ts "$ts" --arg path "$path" --arg settled_at "$settled_at" \
-      '{captured_at:$ts,path:$path,settled_at:$settled_at,reason:"vanished_before_inbox"}' >>"$VANISHED_LOG"
+           --arg reason "$reason" --arg diag "$diag" \
+      '{captured_at:$ts,path:$path,settled_at:$settled_at,reason:$reason,diag:$diag}' >>"$VANISHED_LOG"
   else
-    printf '{"captured_at":"%s","path":"%s","settled_at":"%s","reason":"vanished_before_inbox"}\n' \
-      "$(json_escape "$ts")" "$(json_escape "$path")" "$(json_escape "$settled_at")" >>"$VANISHED_LOG"
+    printf '{"captured_at":"%s","path":"%s","settled_at":"%s","reason":"%s","diag":"%s"}\n' \
+      "$(json_escape "$ts")" "$(json_escape "$path")" "$(json_escape "$settled_at")" \
+      "$(json_escape "$reason")" "$(json_escape "$diag")" >>"$VANISHED_LOG"
   fi
 }
 
@@ -176,13 +170,22 @@ emit_job() {
   [ -n "$path" ] || return 1
 
   if [ ! -e "$path" ] || [ ! -f "$path" ]; then
-    log_vanished "$path" "$captured_at"
+    # Capture diagnostic context so we can tell TCC / cwd / PATH bugs apart
+    # from genuinely-gone files.
+    local diag_e diag_f diag_stat diag_parent
+    [ -e "$path" ] && diag_e="1" || diag_e="0"
+    [ -f "$path" ] && diag_f="1" || diag_f="0"
+    diag_stat="$(stat -f '%z %m' "$path" 2>&1 | head -c 120)"
+    diag_parent="$(ls -ld "$(dirname "$path")" 2>&1 | head -c 120)"
+    log_vanished "$path" "$captured_at" "vanished_before_inbox" \
+      "e=$diag_e f=$diag_f cwd=$(pwd) home=${HOME:-unset} stat=[$diag_stat] parent=[$diag_parent]"
     return 0
   fi
 
   sha256="$(sha256_file "$path" 2>/dev/null || true)"
   [ -n "$sha256" ] || {
-    log_vanished "$path" "$captured_at"
+    log_vanished "$path" "$captured_at" "sha256_failed" \
+      "stat=$(stat -f '%z %m' "$path" 2>&1 | head -c 120) cwd=$(pwd)"
     return 0
   }
   id="${sha256:0:12}"
@@ -343,11 +346,6 @@ while true; do
 
   line="$(first_line_from_offset "$cursor")"
   if [ -z "$line" ]; then
-    sleep 1
-    continue
-  fi
-
-  if ! line_has_trailing_newline "$cursor" "$line"; then
     sleep 1
     continue
   fi
